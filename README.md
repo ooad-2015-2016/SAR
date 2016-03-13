@@ -47,9 +47,9 @@ Nakon određenog broja obavljenih vožnji, korisnik dobija notifikaciju na aplik
 ##FUNKCIONALNOSTI
 
 **Mobilna aplikacija**: 
-• Registrovanje novih korisnika
-• Prijava korisnika
-• Mogućnost automatskog pozivanja taxija
+- Registrovanje novih korisnika
+- Prijava korisnika
+- Mogućnost automatskog pozivanja taxija
 • Mogućnost biranja određenog vozila
 • Vršenje rezervacija
 • Odabir specificiranih usluga prevoza
