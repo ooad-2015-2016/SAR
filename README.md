@@ -1,10 +1,10 @@
 # SAR
 Članovi Tima:
 
-    1.Amina Spahić 
-    2.Nemanja Šljivić 
-    3.Dženan Šabanović
-    4.Selma Sorguč 
+1.Amina Spahić 
+2.Nemanja Šljivić 
+3.Dženan Šabanović
+4.Selma Sorguč 
     
    # Taxi servis
     
