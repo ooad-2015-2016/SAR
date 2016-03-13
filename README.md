@@ -10,7 +10,7 @@
     
 ##OPIS TEME
 
-Taxi servis „SAR“  obezbjeđuje klijentima bolju dostupnost, preglednost  
+    Taxi servis „SAR“  obezbjeđuje klijentima bolju dostupnost, preglednost  
 i funkcionalnost taxi vozila i usluga. Glavna i osnovna svrha taxi servisa 
 je da u sto kraćem roku obezbijedi taxi usluge na bilo kojoj lokaciji i u bilo 
 koje vrijeme. U okviru ovog opisa upoznat ćemo vas sa osnovnim 
