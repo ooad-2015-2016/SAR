@@ -18,19 +18,19 @@
 
 ##PROCESI
 
-###*Registracija klijenta*
+**Registracija klijenta**
 Nakon pokretanja mobilne ili web aplikacije, klijent  unosi osnovne podatke o sebi, kao i odabrano korisničko ime i šifru za pristup sistemu. 
 
-###*Registracija novih vozača*
+**Registracija novih vozača**
 Supervizor pomoću svoje forme registruje nove vozače i njihova vozila i time oni postaju dio sistema.
 
-###*Registracija dispečera*
+**Registracija dispečera**
 Supervizor putem zasebne forme registruje dispečera, i dodjeljuje mu pristupne podatke sistemu.
 
-###*Prijava korisnika sistema na sistem*
+**Prijava korisnika sistema na sistem**
 Svi registrovani korisnici sistema mogu da pristupe sistemu nakon unosa njihovih korisnickih imena i šifri.
 
-###*Naručivanje usluga taxi servisa*
+**Naručivanje usluga taxi servisa**
 Klijent putem aplikacije šalje zahtjev za taxi uslugu. Zahtjev može poslati na tri načina:
 1. Klikom na dugme, sistem na osnovu GPS lokacije klijenta upućuje najbliže slobodno taxi vozilo.
 2. Klikom na označeno slobodno vozilo praćeno GPS sistemom na mapi, klijent dobija osnovne podatke o vozilu i vozaču, i zatim klikom salje zahtjev za uslugu. 
@@ -40,13 +40,13 @@ Zatim, sistem šalje povratnu informaciju klijentu o vremenu dolaska taxia, kao 
 Nakon zahtjeva, sistem obavještava više, ili odabranog vozača taxi vozila o lokaciji na koju treba doći po korisnika, kao i dodatne informacije koje klijent zahtjeva. Sistem taxi vozaču, ili vozačima zatim postavlja klijenta na listu čekanja sortiranim po prioritetima, preko koje oni potvrđuju narudžbu. Status naručenog taxi vozila se nakon toga mijenja u zauzeto.
 Nakon obavljene vožnje, korisnik ima mogućnost ocjenjivanja usluga vožnje. Obavljena vožnja se evidentira na profilu korisnika u svrhu ostvarivanja definisanih popusta.
 
-###*Noitifkacije o popustima*
+**Noitifkacije o popustima**
 Nakon određenog broja obavljenih vožnji, korisnik dobija notifikaciju na aplikaciji o ostvarenom popustu, koji se obracunava na idućim vožnjama. 
 
 
 ##FUNKCIONALNOSTI
 
-###*Mobilna aplikacija*: 
+**Mobilna aplikacija**: 
 • Registrovanje novih korisnika
 • Prijava korisnika
 • Mogućnost automatskog pozivanja taxija
@@ -58,7 +58,7 @@ Nakon određenog broja obavljenih vožnji, korisnik dobija notifikaciju na aplik
 • Uvid u mapu sa vozačima u blizini
 • Deaktiviranje profila
 
-###*Web aplikacija*: 
+**Web aplikacija**: 
 • Registrovanje novih korisnika
 • Prijava korisnika
 • Mogućnost biranja određenog vozila
@@ -70,14 +70,14 @@ Nakon određenog broja obavljenih vožnji, korisnik dobija notifikaciju na aplik
 • Deaktiviranje profila
 
 
-###*Desktop aplikacija dispecera*: 
+**Desktop aplikacija dispecera**: 
 • Prijava na sistem
 • Uvid u lokacije svih taxi vozila
 • Komunikacija sa vozačima
 • Komunikacija sa korisnicima
 • Odjava sa sistema
 
-###*Desktop aplikacija supervizora*:
+**Desktop aplikacija supervizora**:
 • Prijava na sistem
 • Registracija novih vozača i njihovih vozila
 • Registracija dispečera
@@ -88,7 +88,7 @@ Nakon određenog broja obavljenih vožnji, korisnik dobija notifikaciju na aplik
 • Modifikacija popusta i dodatnih beneficija
 • Odjava sa sistema
 
-###*Tablet aplikacija vozača*:
+**Tablet aplikacija vozača**:
 • Prijava na sistem
 • Postavljanje aktivnog, neaktivnog, slobodnog ili zauzetog stanja taxi vozila
 • Uvid u mapu sa korisnicima, kao i ostalim vozačima
@@ -100,7 +100,7 @@ Nakon određenog broja obavljenih vožnji, korisnik dobija notifikaciju na aplik
 • Odjava sa sistema
 
 
-##**AKTERI**
+##AKTERI
 
 Akteri su na listi sortirani po pravu pristupa sistemu:
 
