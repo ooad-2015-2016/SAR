@@ -10,7 +10,11 @@
     
 ##**OPIS TEME**
 
-    Taxi servis „SAR“  obezbjeđuje klijentima bolju dostupnost, preglednost  i funkcionalnost taxi vozila i usluga. Glavna i osnovna svrha taxi servisa je da u sto kraćem roku obezbijedi taxi usluge na bilo kojoj lokaciji i u bilo koje vrijeme. U okviru ovog opisa upoznat ćemo vas sa osnovnim funkcionalnostima i tehnologijama koje korisiti naš taxi servis, koje nam upravo umogućavaju spomenute usluge. Pozivanje taxi vozila nikad nije bilo jednostavnije. 
+    Taxi servis „SAR“  obezbjeđuje klijentima bolju dostupnost, preglednost  i funkcionalnost taxi vozila i usluga. Glavna i osnovna
+    svrha taxi servisa je da u sto kraćem roku obezbijedi taxi usluge na bilo kojoj lokaciji i u bilo koje vrijeme. U okviru ovog
+    opisa upoznat ćemo vas sa osnovnim funkcionalnostima i tehnologijama koje korisiti naš taxi servis, koje nam upravo umogućavaju
+    spomenute usluge. Pozivanje taxi vozila nikad nije bilo jednostavnije. 
+    
 
     Desilo vam se da dugo i uzaludno čekate prijevoz na nekoj lokaciji ? Nemate broj taxia za to područje ili nemate dovoljno kredita za poziv ? U žurbi ste,  ali nemate informaciju da li ima slobodnih taxi vozila u vašoj blizini ? Trebate rezervaciju za, po vašoj volji, specificirane taxi usluge na određenu lokaciju, kao i da unaprijed imate uvid u cijenu tražene usluge? Mi smo pravi odgovor za Vas! Mi  štedimo Vaše vrijeme i novac. Naše usluge su uvijek dostupne za vas, u bilo koje vrijeme. Pored dobre usluge, nudimo Vam i dodatne beneficije, kao što su određeni popusti, besplatne vožnje, i jos mnogo toga. Po vašem zahtjevu, sistem će vam dodijeliti najbliži taxi ili taxi po Vašoj volji, prikazati će vam detalje o vozilu, prosječno vrijeme dolaska do vaše lokacije kao i cijenu uslugu u odnosu na odredište.  Sve ovo se odvija 5 puta brže od standardnih usluga taxi prijevoza.
  	
