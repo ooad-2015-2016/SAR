@@ -50,54 +50,54 @@ Nakon određenog broja obavljenih vožnji, korisnik dobija notifikaciju na aplik
 - Registrovanje novih korisnika
 - Prijava korisnika
 - Mogućnost automatskog pozivanja taxija
-• Mogućnost biranja određenog vozila
-• Vršenje rezervacija
-• Odabir specificiranih usluga prevoza
-• Pregled ostvarenih voznji
-• Pregled ostvarenih popusta
-• Uvid u mapu sa vozačima u blizini
-• Deaktiviranje profila
+- Mogućnost biranja određenog vozila
+- Vršenje rezervacija
+- Odabir specificiranih usluga prevoza
+- Pregled ostvarenih voznji
+- Pregled ostvarenih popusta
+- Uvid u mapu sa vozačima u blizini
+- Deaktiviranje profila
 
 **Web aplikacija**: 
-• Registrovanje novih korisnika
-• Prijava korisnika
-• Mogućnost biranja određenog vozila
-• Vršenje rezervacija
-• Odabir specificiranih usluga prevoza
-• Pregled ostvarenih voznji
-• Pregled ostvarenih popusta
-• Uvid u mapu 
-• Deaktiviranje profila
+- Registrovanje novih korisnika
+- Prijava korisnika
+- Mogućnost biranja određenog vozila
+- Vršenje rezervacija
+- Odabir specificiranih usluga prevoza
+- Pregled ostvarenih voznji
+- Pregled ostvarenih popusta
+- Uvid u mapu 
+- Deaktiviranje profila
 
 
 **Desktop aplikacija dispecera**: 
-• Prijava na sistem
-• Uvid u lokacije svih taxi vozila
-• Komunikacija sa vozačima
-• Komunikacija sa korisnicima
-• Odjava sa sistema
+- Prijava na sistem
+- Uvid u lokacije svih taxi vozila
+- Komunikacija sa vozačima
+- Komunikacija sa korisnicima
+- Odjava sa sistema
 
 **Desktop aplikacija supervizora**:
-• Prijava na sistem
-• Registracija novih vozača i njihovih vozila
-• Registracija dispečera
-• Brisanje određenih korisnika sistema
-• Uvid u aktivnosti sistema
-• Uvid u ocjene i komentare na vozače i vozila
-• Uvid u listu i opis korisnika sistema
-• Modifikacija popusta i dodatnih beneficija
-• Odjava sa sistema
+- Prijava na sistem
+- Registracija novih vozača i njihovih vozila
+- Registracija dispečera
+- Brisanje određenih korisnika sistema
+- Uvid u aktivnosti sistema
+- Uvid u ocjene i komentare na vozače i vozila
+- Uvid u listu i opis korisnika sistema
+- Modifikacija popusta i dodatnih beneficija
+- Odjava sa sistema
 
 **Tablet aplikacija vozača**:
-• Prijava na sistem
-• Postavljanje aktivnog, neaktivnog, slobodnog ili zauzetog stanja taxi vozila
-• Uvid u mapu sa korisnicima, kao i ostalim vozačima
-• Komunikacija sa dispečerom
-• Komunikacija sa korisnikom
-• Komunikacija sa ostalim vozačima
-• Uvid u osnovne podatke o korisnicima
-• Potvrđivanje narudžbe, dolaska po korisnika, te pristizanja na lokaciju
-• Odjava sa sistema
+- Prijava na sistem
+- Postavljanje aktivnog, neaktivnog, slobodnog ili zauzetog stanja taxi vozila
+- Uvid u mapu sa korisnicima, kao i ostalim vozačima
+- Komunikacija sa dispečerom
+- Komunikacija sa korisnikom
+- Komunikacija sa ostalim vozačima
+- Uvid u osnovne podatke o korisnicima
+- Potvrđivanje narudžbe, dolaska po korisnika, te pristizanja na lokaciju
+- Odjava sa sistema
 
 
 ##AKTERI
