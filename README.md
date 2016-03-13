@@ -8,21 +8,23 @@
     
                                                     
     
-##**OPIS TEME**
+##OPIS TEME
 
-    Taxi servis „SAR“  obezbjeđuje klijentima bolju dostupnost, preglednost  i funkcionalnost taxi vozila i usluga. Glavna i osnovna
-    svrha taxi servisa je da u sto kraćem roku obezbijedi taxi usluge na bilo kojoj lokaciji i u bilo koje vrijeme. U okviru ovog
-    opisa upoznat ćemo vas sa osnovnim funkcionalnostima i tehnologijama koje korisiti naš taxi servis, koje nam upravo umogućavaju
-    spomenute usluge. Pozivanje taxi vozila nikad nije bilo jednostavnije. 
-    
+Taxi servis „SAR“  obezbjeđuje klijentima bolju dostupnost, preglednost  
+i funkcionalnost taxi vozila i usluga. Glavna i osnovna svrha taxi servisa 
+je da u sto kraćem roku obezbijedi taxi usluge na bilo kojoj lokaciji i u bilo 
+koje vrijeme. U okviru ovog opisa upoznat ćemo vas sa osnovnim 
+funkcionalnostima i tehnologijama koje korisiti naš taxi servis, koje nam 
+upravo umogućavaju spomenute usluge. Pozivanje taxi vozila nikad nije bilo 
+jednostavnije. 
 
-    Desilo vam se da dugo i uzaludno čekate prijevoz na nekoj lokaciji ? Nemate broj taxia za to područje ili nemate dovoljno kredita za poziv ? U žurbi ste,  ali nemate informaciju da li ima slobodnih taxi vozila u vašoj blizini ? Trebate rezervaciju za, po vašoj volji, specificirane taxi usluge na određenu lokaciju, kao i da unaprijed imate uvid u cijenu tražene usluge? Mi smo pravi odgovor za Vas! Mi  štedimo Vaše vrijeme i novac. Naše usluge su uvijek dostupne za vas, u bilo koje vrijeme. Pored dobre usluge, nudimo Vam i dodatne beneficije, kao što su određeni popusti, besplatne vožnje, i jos mnogo toga. Po vašem zahtjevu, sistem će vam dodijeliti najbliži taxi ili taxi po Vašoj volji, prikazati će vam detalje o vozilu, prosječno vrijeme dolaska do vaše lokacije kao i cijenu uslugu u odnosu na odredište.  Sve ovo se odvija 5 puta brže od standardnih usluga taxi prijevoza.
+ 	Desilo vam se da dugo i uzaludno čekate prijevoz na nekoj lokaciji ? Nemate broj taxia za to područje ili nemate dovoljno kredita za poziv ? U žurbi ste,  ali nemate informaciju da li ima slobodnih taxi vozila u vašoj blizini ? Trebate rezervaciju za, po vašoj volji, specificirane taxi usluge na određenu lokaciju, kao i da unaprijed imate uvid u cijenu tražene usluge? Mi smo pravi odgovor za Vas! Mi  štedimo Vaše vrijeme i novac. Naše usluge su uvijek dostupne za vas, u bilo koje vrijeme. Pored dobre usluge, nudimo Vam i dodatne beneficije, kao što su određeni popusti, besplatne vožnje, i jos mnogo toga. Po vašem zahtjevu, sistem će vam dodijeliti najbliži taxi ili taxi po Vašoj volji, prikazati će vam detalje o vozilu, prosječno vrijeme dolaska do vaše lokacije kao i cijenu uslugu u odnosu na odredište.  Sve ovo se odvija 5 puta brže od standardnih usluga taxi prijevoza.
  	
  	Ukoliko ste taxi kompanija i želite unaprijediti vaše poslovanje na jednostan i efikasan način, naš sistem će sigurno odgovarati vašim zahtjevima. Ugradnja našeg sistema u vašu kompaniju je brza i povoljna. Mi Vam garantujemo da će poslovanje Vaše kompanije biti daleko poboljšano i organizovano. S jednog mjesta imaće te uvid na sveukupno funkcionisanje taxi usluga, bazi podataka svih vozača, vozila, pa čak i registrovanih i stalnih korisnika. Sistem usmjerava najbliže slobodno taxi vozilo ka lokaciji na kojoj se nalazi klijent koji je naručioc u cilju sto manjih troškova i što kraćeg vremena.
 
    
 
-##**PROCESI**
+##PROCESI
 
 ###*Registracija klijenta*
 Nakon pokretanja mobilne ili web aplikacije, klijent  unosi osnovne podatke o sebi, kao i odabrano korisničko ime i šifru za pristup sistemu. 
@@ -50,7 +52,7 @@ Nakon obavljene vožnje, korisnik ima mogućnost ocjenjivanja usluga vožnje. Ob
 Nakon određenog broja obavljenih vožnji, korisnik dobija notifikaciju na aplikaciji o ostvarenom popustu, koji se obracunava na idućim vožnjama. 
 
 
-##**FUNKCIONALNOSTI**
+##FUNKCIONALNOSTI
 
 ###*Mobilna aplikacija*: 
 • Registrovanje novih korisnika
@@ -106,7 +108,7 @@ Nakon određenog broja obavljenih vožnji, korisnik dobija notifikaciju na aplik
 • Odjava sa sistema
 
 
-##**AKTERI**
+**AKTERI**
 
 Akteri su na listi sortirani po pravu pristupa sistemu:
 
