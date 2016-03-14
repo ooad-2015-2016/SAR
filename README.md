@@ -39,7 +39,7 @@ Klijent putem aplikacije šalje zahtjev za taxi uslugu. Zahtjev može poslati na
 
 Zatim, sistem šalje povratnu informaciju klijentu o vremenu dolaska taxia, kao i cijeni sa uračunatim popustima, ukoliko je unio odredište. Ukoliko nema ni jedno slobodno taxi vozilo, klijent se obavještava i o prosječnom vremenu čekanja.
 
-Nakon zahtjeva, sistem obavještava više, ili odabranog vozača taxi vozila o lokaciji na koju treba doći po korisnika, kao i dodatne informacije koje klijent zahtjeva. Sistem taxi vozaču, ili vozačima zatim postavlja klijenta na listu čekanja sortiranim po prioritetima, preko koje oni potvrđuju narudžbu. Status naručenog taxi vozila se nakon toga mijenja u zauzeto.
+Nakon zahtjeva, sistem obavještava vozače, ili odabranog vozača taxi vozila o lokaciji na koju treba doći po korisnika, kao i dodatne informacije koje klijent zahtjeva. Sistem taxi vozaču, ili vozačima zatim postavlja klijenta na listu čekanja sortiranim po prioritetima, preko koje oni potvrđuju narudžbu. Status naručenog taxi vozila se nakon toga mijenja u zauzeto.
 Nakon obavljene vožnje, korisnik ima mogućnost ocjenjivanja usluga vožnje. Obavljena vožnja se evidentira na profilu korisnika u svrhu ostvarivanja definisanih popusta.
 
 **Noitifkacije o popustima**
