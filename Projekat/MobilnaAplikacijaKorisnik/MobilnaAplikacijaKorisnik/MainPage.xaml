@@ -1,0 +1,22 @@
+﻿<Page
+    x:Class="MobilnaAplikacijaKorisnik.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:MobilnaAplikacijaKorisnik"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid RequestedTheme="Dark">
+        <Grid.Background>
+            <ImageBrush Stretch="UniformToFill" ImageSource="Assets/PocetnaPozadina.jpg"/>
+        </Grid.Background>
+        <Image x:Name="PocetnaLogo" HorizontalAlignment="Center" Height="300" Margin="35,10,25,0" VerticalAlignment="Top" Width="300" Source="Assets/PocetnaLogo2.png"/>
+        <TextBox x:Name="Username" HorizontalAlignment="Center" Margin="35,388,25,0" TextWrapping="Wrap" Text="Username" VerticalAlignment="Top" Width="300"/>
+        <PasswordBox x:Name="Password" HorizontalAlignment="Center" Margin="35,425,25,0" VerticalAlignment="Top" Width="300" Password="Password"/>
+        <Button x:Name="buttonPrijava" HorizontalAlignment="Center" Margin="35,462,25,0" VerticalAlignment="Top" RenderTransformOrigin="0.548,0.539" Height="45" Width="300" Background="#D3FFA000" Click="button_Click" Content="Prijava"/>
+        <TextBlock x:Name="UputeZaPrijavuTextBlock" HorizontalAlignment="Center" Margin="35,532,87,0" TextWrapping="Wrap" Text="Niste registrovani? Napravite nalog!" VerticalAlignment="Top" SelectionChanged="UputeZaPrijavuTextBlock_SelectionChanged" Foreground="Black"/>
+        <Button x:Name="button_Copy" Content="Registrujte se!" HorizontalAlignment="Center" Margin="35,557,25,0" VerticalAlignment="Top" RenderTransformOrigin="0.548,0.539" Height="45" Width="300" Background="#D300F0C8" Click="button_Copy_Click"/>
+
+    </Grid>
+</Page>
