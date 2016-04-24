@@ -124,8 +124,12 @@
     <Compile Include="StatusNarudzbe.cs" />
     <Compile Include="Supervizor.cs" />
     <Compile Include="TaxiServisBaza\Models\DefaultPodaci.cs" />
+    <Compile Include="TaxiServisBaza\Models\RegistrovaniKlijent.cs" />
+    <Compile Include="TaxiServisBaza\Models\RegistrovaniKlijentDbContext.cs" />
+    <Compile Include="TaxiServisBaza\Models\TaxiVoziloDbContext.cs" />
     <Compile Include="TaxiServisBaza\Models\Uposlenik.cs" />
     <Compile Include="TaxiServisBaza\Models\UposlenikDbContext.cs" />
+    <Compile Include="TaxiServisBaza\Models\TaxiVozilo.cs" />
     <Compile Include="TaxiVozilo.cs" />
     <Compile Include="TipElementa.cs" />
     <Compile Include="Uposlenik.cs" />

@@ -8,6 +8,7 @@ namespace TabletAplikacijaVozac
 {
     public class RegistrovaniKlijent:Klijent
     {
+        int id { get; set; }
         string ime { get; set; }
         string prezime { get; set; }
         string mail { get; set; }

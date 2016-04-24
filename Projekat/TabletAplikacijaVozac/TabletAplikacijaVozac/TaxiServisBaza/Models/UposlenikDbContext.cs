@@ -22,6 +22,8 @@ namespace TabletAplikacijaVozac.TaxiServisBaza.Models
             }
             catch (InvalidOperationException) { }
             optionsBuilder.UseSqlite($"Data source={databaseFilePath}");
-        }
+        }
+        
+
     }
 }
