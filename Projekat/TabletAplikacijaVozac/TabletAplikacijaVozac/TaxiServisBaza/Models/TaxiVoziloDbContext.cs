@@ -15,7 +15,7 @@ namespace TabletAplikacijaVozac.TaxiServisBaza.Models
     class TaxiVoziloDbContext : TaxiVozilo
     {
         public DbSet<TaxiVozilo> TaxiVozila { get; set; }
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        protected  void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             string databaseFilePath = "TaxiServisBaza.db";
             try

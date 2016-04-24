@@ -12,9 +12,10 @@ namespace TabletAplikacijaVozac.TaxiServisBaza.Models
     class RegistrovaniKlijentDbContext
     {
         public DbSet<RegistrovaniKlijent> RegistrovaniKlijenti { get; set; }
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+//        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        protected  void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            string databaseFilePath = "Ooadbaza.db";
+            string databaseFilePath = "TaxiServisBaza.db";
             try
             {
                 //za tačnu putanju gdje se nalazi baza uraditi ovdje debug i procitati Path
