@@ -1,0 +1,59 @@
+Dijagram klasa-mobilna aplikacija uprosteno
+
+1. PRINCIP POJEDINAÈNE ODGOVORNOSTI
+Zadovoljen je ovaj princip, razdvojili smo odgovornosti svake klase na jednu funkcionalnost, npr. klasa 
+RegistracijaKlijenta sluzi samo za registracije klijenta i sadrzi samo metode potrebne prilikom obavljanja tog
+procesa, ili klasa ElementMape i Mapa koje su detaljinije obradene na sljedecim dijagramima.
+2. OTVORENO ZATVORENI PRINCIP
+Ogleda se na iznad navedenim klasama, gdje je moguce nadograditi odredene funkcionalonsti kod registracije ili same mape, 
+ali nema potrebe za modifikacijama obzirom da sadrze osnovne elemente za ostavrivanje funkcionalnosti za koje su predvidene,
+kao sto je kod elementa mape predvideno da drzi samo polozaj, a da mapa sadrzi elemente tipa te klase, te tako drzi
+podatke o polozaju svih lokacija. Mozemo navesti i to da je registracija odvojena kao klasa od klijenta i nije samo 
+jedna od metoda klase Klijent time se rasterecuje opterecenje jedne klase, mozemo nadograditi lakse obje klase po potrebi.
+3. LISKOV PRINCIP ZAMJENE
+Ovaj princip nije ovdje zadovoljen direktno jer nismo prikazali sve dijelove klasa jer je cilj bio da se istaku klase
+cije smo atribute u potpunosti naveli. U nastavku cemo objasniti da je ovaj princip zadovoljen na drugim dijagramima
+4. PRINCIP INVERZIJE OVISNOSTI
+Ovdje nisu prikazana nasljedivanja ali se spominju na sljedecim dijagramima kao nor. klasa Klijent, 
+ovaj princip je zadovoljen ali nije prikazan direktno na ovom dijagramu. 
+5. PRINCIP IZOLIRANJA INTERFEJSA
+Princip je zadovoljen, nemamo pojavu "debelih" klasa. Dijagram pokazuje jedan dio rada sistema. Medutim, klasa Registracija je malo duza
+ali se uglavom sastoji od get i set metoda tako da mozemo reci da samo vizuelno daje utisak "debele" klase.
+
+Dijagram klasa-osnovno
+
+1. PRINCIP POJEDINAÈNE ODGOVORNOSTI
+Prvi princip je zadovoljen, moezmo vidjeti na primjeru klase Uposlenik, te klase Supervizor, Dispecer i Vozac koje
+su nasljedene iz klase Uposlenik te time obzirom da imaju razlicite funkcionalnosti smo ih razdvojili - "Klase imaju
+samo jedan razlog za promjenu"
+2. OTVORENO ZATVORENI PRINCIP
+Princip je zadovoljen i ogleda se u globlizaciji kroz klase Uposlenik, ZahtjevZaPrevoz, Klijent.
+3. LISKOV PRINCIP ZAMJENE
+Na ovom dijagramu princip je zadovoljen kod klasa Uposlenik i njenih podklasa te Klijent i njenih podklasa.
+4. PRINCIP INVERZIJE OVISNOSTI
+Klase iz kojih je nasljedivano su apstraktne i ako je moguce takos e izraziti manje opcenite, tako da detalji zavise od
+"apstrakcija", tj. recimo klasa Vozac ili Dispecer zavise od apstraktne Uposlenik, i detalji vezani direktno za takvu vrstu 
+zaposlenika su odvojeni, isto vazi i za klase Klijent, ZahtjevZaPrevoz.
+5. PRINCIP IZOLIRANJA INTERFEJSA
+Na ovom dijagramu imam veci broj klasa i neke od njih su duze, ali princip je zadovoljen klase imaju samo metode 
+usko vezane za funkcionalnost koju klasa obavlja, odnosno vezane samo za namjenu klase. Vizuelno izgledaju duge obzirom 
+na veci broj get i set metoda. Moguce je da cemo neke od klasa prosiriti nekim novim metodama (pored get i set metoda)
+kao nadgradnja klase, npr kalsa RegistrovaniKlijent ili ZahtjevZaVoznju je sastavljena vecinom od get set metoda 
+iako vizuelno izgelda kao "debela" klasa.
+
+Dijagram klasa-tablet aplikacija uprosteno
+
+1. PRINCIP POJEDINAÈNE ODGOVORNOSTI
+Zadovoljen je ovaj princip, slicno kao kod prvog dijagrama, kod klasa Prijava, zatim ElementMape i Mapa
+2. OTVORENO ZATVORENI PRINCIP
+Princip je zadovoljen i vidimo to na odvajanju DBInterfejsa od ostalih klasa kao i klasa koje su vec spominjanje u 
+dijagramima iznad.
+3. LISKOV PRINCIP ZAMJENE
+Na prvi pogled izgleda da princip nije zadovoljen jer nismo prikazali sve klase tacnije podklase, ali je to vec navedeno
+na dijaramu iznad na kome je princip zadovoljen kroz klasu Uposlenik.
+4. PRINCIP INVERZIJE OVISNOSTI
+Ovdje nisu prikazana nasljedivanja ali se spominju na sljedecim dijagramima kao nor. klasa Uposlenik,
+ovaj princip je zadovoljen ali nije prikazan direktno na ovom dijagramu. 
+5. PRINCIP IZOLIRANJA INTERFEJSA
+Princip je zadovoljen, nemamo pojavu debelih klasa. Dijagram pokazuje jedan dio rada sistema.
+
