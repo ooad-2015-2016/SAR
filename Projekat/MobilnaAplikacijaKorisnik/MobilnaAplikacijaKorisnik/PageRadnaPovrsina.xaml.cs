@@ -28,8 +28,8 @@ namespace MobilnaAplikacijaKorisnik
             this.InitializeComponent();
             BasicGeoposition cityGeoposition = new BasicGeoposition() { Latitude = 43.858929, Longitude= 18.415170 };
             Geopoint sarajevoCentar = new Geopoint(cityGeoposition);
-            MapaTaxi.Center = sarajevoCentar;
-            MapaTaxi.ZoomLevel = 15;
+            //MapaTaxi.Center = sarajevoCentar;
+           // MapaTaxi.ZoomLevel = 15;
 
         }
         void GoBack()

@@ -1,10 +1,8 @@
-﻿using Microsoft.Data.Entity;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
-using TabletAplikacijaVozac.TaxiServisBaza.Models;
 using Windows.ApplicationModel;
 using Windows.ApplicationModel.Activation;
 using Windows.Foundation;
@@ -17,7 +15,7 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
-namespace TabletAplikacijaVozac
+namespace DesktopAplikacijaKodVozaca
 {
     /// <summary>
     /// Provides application-specific behavior to supplement the default Application class.
@@ -33,11 +31,6 @@ namespace TabletAplikacijaVozac
             Microsoft.ApplicationInsights.WindowsAppInitializer.InitializeAsync(
                 Microsoft.ApplicationInsights.WindowsCollectors.Metadata |
                 Microsoft.ApplicationInsights.WindowsCollectors.Session);
-            using (var db = new TaxiServisDbContext())
-            {
-                db.Database.ApplyMigrations();
-                DefaultPodaci.Initialize(db);
-            }
             this.InitializeComponent();
             this.Suspending += OnSuspending;
         }

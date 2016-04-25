@@ -8,18 +8,15 @@ namespace TabletAplikacijaVozac.TaxiServisBaza.Models
 {
     class DefaultPodaci
     {
-        public static void Initialize(UposlenikDbContext context)
+        public static void Initialize(TaxiServisDbContext context)
         {
             if (!context.Uposlenici.Any())
             {
                 context.Uposlenici.AddRange(
-                new Uposlenik()
-                {
-                    id = 0, ime = "X", prezime = "Y", datumRodjenja = Convert.ToDateTime("9/9/1999"), korisnickoIme = "XY", sifra = "XY"
-    }
-                );
+                new Vozač (0, "X", "Y", Convert.ToDateTime("1/1/1911"), "XY", "XY"));
                 context.SaveChanges();
             }
-        }
+        }
+
     }
 }

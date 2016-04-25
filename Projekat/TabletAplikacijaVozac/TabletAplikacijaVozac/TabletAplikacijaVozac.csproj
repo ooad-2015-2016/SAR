@@ -98,49 +98,38 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="BingMaps.cs" />
+    <Compile Include="Migrations\20160425212807_MigracijaTaxiServis.cs" />
+    <Compile Include="Migrations\20160425212807_MigracijaTaxiServis.designer.cs">
+      <DependentUpon>20160425212807_MigracijaTaxiServis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\TaxiServisDbContextModelSnapshot.cs" />
+    <Compile Include="TaxiServisBaza\Models\BingMaps.cs" />
     <Compile Include="DBinterfejs.cs" />
-    <Compile Include="Dispečer.cs" />
-    <Compile Include="ElementMape.cs" />
-    <Compile Include="Klijent.cs" />
-    <Compile Include="Lokacija.cs" />
+    <Compile Include="TaxiServisBaza\Models\Dispečer.cs" />
+    <Compile Include="TaxiServisBaza\Models\ElementMape.cs" />
+    <Compile Include="TaxiServisBaza\Models\Klijent.cs" />
+    <Compile Include="TaxiServisBaza\Models\Lokacija.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Mapa.cs" />
-    <Compile Include="Migrations\20160424202903_InitialMigration.cs" />
-    <Compile Include="Migrations\20160424202903_InitialMigration.designer.cs">
-      <DependentUpon>20160424202903_InitialMigration.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\20160424220554_Migration2.cs" />
-    <Compile Include="Migrations\20160424220554_Migration2.designer.cs">
-      <DependentUpon>20160424220554_Migration2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\UposlenikDbContextModelSnapshot.cs" />
-    <Compile Include="NarudzbaOdmah.cs" />
-    <Compile Include="NeregistrovaniKlijent.cs" />
-    <Compile Include="Prijava.cs" />
+    <Compile Include="TaxiServisBaza\Models\Mapa.cs" />
+    <Compile Include="TaxiServisBaza\Models\NarudzbaOdmah.cs" />
+    <Compile Include="TaxiServisBaza\Models\NeregistrovaniKlijent.cs" />
+    <Compile Include="TaxiServisBaza\Models\Prijava.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RegistrovaniKlijent.cs" />
-    <Compile Include="Rezervacija.cs" />
-    <Compile Include="SesijaKlijent.cs" />
-    <Compile Include="Spol.cs" />
-    <Compile Include="StatusNarudzbe.cs" />
-    <Compile Include="Supervizor.cs" />
-    <Compile Include="TaxiServisBaza\Models\DefaultPodaci.cs" />
     <Compile Include="TaxiServisBaza\Models\RegistrovaniKlijent.cs" />
-    <Compile Include="TaxiServisBaza\Models\RegistrovaniKlijentDbContext.cs" />
-    <Compile Include="TaxiServisBaza\Models\TaxiVoziloDbContext.cs" />
-    <Compile Include="TaxiServisBaza\Models\Uposlenik.cs" />
-    <Compile Include="TaxiServisBaza\Models\UposlenikDbContext.cs" />
+    <Compile Include="TaxiServisBaza\Models\Rezervacija.cs" />
+    <Compile Include="TaxiServisBaza\Models\SesijaKlijent.cs" />
+    <Compile Include="TaxiServisBaza\Models\Spol.cs" />
+    <Compile Include="TaxiServisBaza\Models\StatusNarudzbe.cs" />
+    <Compile Include="TaxiServisBaza\Models\Supervizor.cs" />
+    <Compile Include="TaxiServisBaza\Models\DefaultPodaci.cs" />
+    <Compile Include="TaxiServisBaza\Models\TaxiServisDbContext.cs" />
     <Compile Include="TaxiServisBaza\Models\TaxiVozilo.cs" />
+    <Compile Include="TaxiServisBaza\Models\TipElementa.cs" />
+    <Compile Include="TaxiServisBaza\Models\Uposlenik.cs" />
+    <Compile Include="TaxiServisBaza\Models\Vozač.cs" />
     <Compile Include="TaxiServisBaza\Models\ZahtjevZaPrijevoz.cs" />
-    <Compile Include="TaxiServisBaza\Models\ZahtjevZaPrijevozDbContext.cs" />
-    <Compile Include="TaxiVozilo.cs" />
-    <Compile Include="TipElementa.cs" />
-    <Compile Include="Uposlenik.cs" />
-    <Compile Include="Vozač.cs" />
-    <Compile Include="ZahtjevZaPrijevoz.cs" />
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">
@@ -182,6 +171,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="TaxiServisBaza\Views\" />
+    <Folder Include="Trash\" />
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>

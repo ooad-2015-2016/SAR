@@ -1,22 +1,15 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Microsoft.Data.Entity;
-using Microsoft.Data.Sqlite;
-using System.IO;
-using Windows.Storage;
-namespace TabletAplikacijaVozac.Models.TaxiServisBaza
+
+namespace TabletAplikacijaVozac
 {
-    class TaxiVozilo
+    public class TaxiVozilo
     {
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int id { get; set; }
-        public string boja { get; set; }
-        public string proizvodjac { get; set; }
-        public DateTime godiste { get; set; }
-        public string opis { get; set; }
+        int id { get; set; }
+        string boja { get; set; }
+        string proizvodjac { get; set; }
+        DateTime godiste { get; set; }
+        string opis { get; set; }
     }
 }

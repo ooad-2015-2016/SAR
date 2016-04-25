@@ -16,10 +16,7 @@
         <Button x:Name="button" Content="Button" HorizontalAlignment="Left" Margin="0,592,0,0" VerticalAlignment="Top" Height="40" Width="350"/>
         <Button x:Name="button_Copy" Content="Button" HorizontalAlignment="Left" Margin="0,547,0,0" VerticalAlignment="Top" Height="40" Width="350"/>
         <Button x:Name="button_Copy1" Content="Button" HorizontalAlignment="Left" Margin="0,502,0,0" VerticalAlignment="Top" Height="40" Width="350" Click="button_Copy1_Click"/>
-        <Grid HorizontalAlignment="Left" Height="423" Margin="10,79,0,0" VerticalAlignment="Top" Width="350">
-            <Maps1:MapControl  x:Name="MapaTaxi" MapServiceToken="ois1uNA3x2DJUTgdplO1~2foFEDJgDtzslFL6nBuSKg~Ar05QsKorpOPv95HOlSMS_IfXT1LgrCyzNo0w0JVtleydukGTfJBOgTFWuPqqk4A
-" HorizontalAlignment="Left" Width="360" Margin="-10,0,0,0" TiltInteractionMode="GestureAndControl" RotateInteractionMode="GestureAndControl"/>
-        </Grid>
+        <Grid HorizontalAlignment="Left" Height="423" Margin="10,79,0,0" VerticalAlignment="Top" Width="350"/>
         <Button x:Name="button1" Content="Button" HorizontalAlignment="Left" VerticalAlignment="Top" Height="74" Width="73"/>
 
     </Grid>
