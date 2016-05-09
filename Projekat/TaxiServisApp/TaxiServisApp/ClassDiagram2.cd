@@ -40,7 +40,7 @@
   <Class Name="TaxiServisApp.Lokacija" Collapsed="true">
     <Position X="13.75" Y="1.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAIAQAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAIAQAAAAAAAAAAAAAAAAAAAAgA=</HashCode>
       <FileName>TaxiServis\Models\Lokacija.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -54,21 +54,21 @@
   <Class Name="TaxiServisApp.NarudzbaOdmah" Collapsed="true">
     <Position X="2.75" Y="4.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgA=</HashCode>
       <FileName>TaxiServis\Models\NarudzbaOdmah.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="TaxiServisApp.NeregistrovaniKlijent" Collapsed="true">
     <Position X="7.75" Y="4.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgA=</HashCode>
       <FileName>TaxiServis\Models\NeregistrovaniKlijent.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="TaxiServisApp.Prijava" Collapsed="true">
     <Position X="17.25" Y="2.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAgAAAAAAIAAAAgAAIAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAgAAAAAAIAAAAgAAIAAAAAAAAAAgA=</HashCode>
       <FileName>TaxiServis\Models\Prijava.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -96,7 +96,7 @@
   <Class Name="TaxiServisApp.Supervizor" Collapsed="true">
     <Position X="5.25" Y="1.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgA=</HashCode>
       <FileName>TaxiServis\Models\Supervizor.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -138,7 +138,7 @@
   <Class Name="TaxiServisApp.LogInPage" Collapsed="true">
     <Position X="12" Y="1.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAACAACAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAE=</HashCode>
+      <HashCode>AAAAAACAACAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAE=</HashCode>
       <FileName>TaxiServis\Views\LogInPage.xaml.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
@@ -195,8 +195,8 @@
   <Class Name="TaxiServisApp.TaxiServis.Views.MainPage" Collapsed="true">
     <Position X="15.5" Y="1.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAABBAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>TaxiServis\Views\MainPage.xaml.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAABBAAAAAAQAABAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>TaxiServis\Views\MainPageView.xaml.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>

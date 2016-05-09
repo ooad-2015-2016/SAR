@@ -8,5 +8,11 @@ namespace TaxiServisApp.TaxiServis.ViewModels
 {
     class RegistracijaPageViewModel
     {
+        private LogInViewModel logInViewModel;
+
+        public RegistracijaPageViewModel(LogInViewModel logInViewModel)
+        {
+            this.logInViewModel = logInViewModel;
+        }
     }
 }

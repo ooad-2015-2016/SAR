@@ -145,8 +145,10 @@
     <Compile Include="TaxiServis\ViewModels\MeniStavkeViewModel.cs" />
     <Compile Include="TaxiServis\ViewModels\PocetnaDispecerViewModel.cs" />
     <Compile Include="TaxiServis\ViewModels\PocetnaKorisnikViewModel.cs" />
+    <Compile Include="TaxiServis\ViewModels\PocetnaSupervizorViewModel.cs" />
     <Compile Include="TaxiServis\ViewModels\PocetnaVozacViewModel.cs" />
     <Compile Include="TaxiServis\ViewModels\PodaciOKlijentuViewModel.cs" />
+    <Compile Include="TaxiServis\ViewModels\PodaciOVozacuViewModel.cs" />
     <Compile Include="TaxiServis\ViewModels\RegistracijaPageViewModel.cs" />
     <Compile Include="TaxiServis\ViewModels\RegistracijaUposlenikaViewModel.cs" />
     <Compile Include="TaxiServis\ViewModels\RezervacijaViewModel.cs" />
@@ -156,26 +158,32 @@
     <Compile Include="TaxiServis\Views\PocetnaKorisnikView.xaml.cs">
       <DependentUpon>PocetnaKorisnikView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="TaxiServis\Views\PocetnaSupervizorView.xaml.cs">
+      <DependentUpon>PocetnaSupervizorView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="TaxiServis\Views\PocetnaVozacView.xaml.cs">
       <DependentUpon>PocetnaVozacView.xaml</DependentUpon>
     </Compile>
     <Compile Include="TaxiServis\Views\PodaciOKlijentuView.xaml.cs">
       <DependentUpon>PodaciOKlijentuView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="TaxiServis\Views\PodaciOVozacuView.xaml.cs">
+      <DependentUpon>PodaciOVozacuView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="TaxiServis\Views\RegistracijaUposlenikaView.xaml.cs">
       <DependentUpon>RegistracijaUposlenikaView.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="TaxiServis\Views\RezervacijaPageView.xaml.cs">
-      <DependentUpon>RezervacijaPageView.xaml</DependentUpon>
     </Compile>
     <Compile Include="TaxiServis\Views\LogInPage.xaml.cs">
       <DependentUpon>LogInPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="TaxiServis\Views\MainPage.xaml.cs">
-      <DependentUpon>MainPage.xaml</DependentUpon>
+    <Compile Include="TaxiServis\Views\MainPageView.xaml.cs">
+      <DependentUpon>MainPageView.xaml</DependentUpon>
     </Compile>
     <Compile Include="TaxiServis\Views\PageRegistracija.xaml.cs">
       <DependentUpon>PageRegistracija.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TaxiServis\Views\RezervacijaPageView.xaml.cs">
+      <DependentUpon>RezervacijaPageView.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -216,6 +224,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="TaxiServis\Views\PocetnaSupervizorView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="TaxiServis\Views\PocetnaVozacView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -224,11 +236,11 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="TaxiServis\Views\RegistracijaUposlenikaView.xaml">
+    <Page Include="TaxiServis\Views\PodaciOVozacuView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="TaxiServis\Views\RezervacijaPageView.xaml">
+    <Page Include="TaxiServis\Views\RegistracijaUposlenikaView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -236,13 +248,17 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="TaxiServis\Views\MainPage.xaml">
+    <Page Include="TaxiServis\Views\MainPageView.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
     <Page Include="TaxiServis\Views\PageRegistracija.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="TaxiServis\Views\RezervacijaPageView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
