@@ -1,0 +1,240 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="TaxiServisApp.App" Collapsed="true">
+    <Position X="10.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAQAAIAAA=</HashCode>
+      <FileName>App.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="TaxiServisApp.MainPage" Collapsed="true">
+    <Position X="17.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MainPage.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="TaxiServisApp.TaxiServis.DataSource.DataSourceMeni" Collapsed="true">
+    <Position X="12" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABEAAAAAIAAAAAQAAAAAEYEAAAAABAAAAAAAAAAAAAA=</HashCode>
+      <FileName>TaxiServis\DataSource\DataSourceMeni.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TaxiServisApp.ElementMape" Collapsed="true">
+    <Position X="15.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAgIAAAAA=</HashCode>
+      <FileName>TaxiServis\Models\ElementMape.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TaxiServisApp.Klijent" Collapsed="true">
+    <Position X="6.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAgA=</HashCode>
+      <FileName>TaxiServis\Models\Klijent.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TaxiServisApp.Lokacija" Collapsed="true">
+    <Position X="13.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAIAQAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>TaxiServis\Models\Lokacija.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TaxiServisApp.Mapa" Collapsed="true">
+    <Position X="10.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAA=</HashCode>
+      <FileName>TaxiServis\Models\Mapa.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TaxiServisApp.NarudzbaOdmah" Collapsed="true">
+    <Position X="2.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>TaxiServis\Models\NarudzbaOdmah.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TaxiServisApp.NeregistrovaniKlijent" Collapsed="true">
+    <Position X="7.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>TaxiServis\Models\NeregistrovaniKlijent.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TaxiServisApp.Prijava" Collapsed="true">
+    <Position X="17.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAgAAAAAAIAAAAgAAIAAAAAAAAAAAA=</HashCode>
+      <FileName>TaxiServis\Models\Prijava.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TaxiServisApp.RegistrovaniKlijent" Collapsed="true">
+    <Position X="5.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAgAAAEAAAAAEAAgAEAAACAAgAAgAAAAAAAAAAAAAgE=</HashCode>
+      <FileName>TaxiServis\Models\RegistrovaniKlijent.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TaxiServisApp.Rezervacija" Collapsed="true">
+    <Position X="0.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAAAAAAAAAAAAAAAIAAAAEAAAAAAAAAAAAAgA=</HashCode>
+      <FileName>TaxiServis\Models\Rezervacija.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TaxiServisApp.SesijaKlijent" Collapsed="true">
+    <Position X="10.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgA=</HashCode>
+      <FileName>TaxiServis\Models\SesijaKlijent.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TaxiServisApp.Supervizor" Collapsed="true">
+    <Position X="5.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>TaxiServis\Models\Supervizor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TaxiServisApp.TaxiServisDbContext" Collapsed="true">
+    <Position X="12" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAAAAQAQgAAAAAAAQAAAAAAAAAIAABCEAQAAQAoAA=</HashCode>
+      <FileName>TaxiServis\Models\TaxiServisDbContext.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TaxiServisApp.TaxiVozilo" Collapsed="true">
+    <Position X="13.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAgAAQQAABAAAAAAAAAAAAAAAgA=</HashCode>
+      <FileName>TaxiServis\Models\TaxiVozilo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TaxiServisApp.Uposlenik" Collapsed="true">
+    <Position X="3" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAAAAAEAAgAEAAAAAAAAAgAAAAAAAAAAAAAgA=</HashCode>
+      <FileName>TaxiServis\Models\Uposlenik.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TaxiServisApp.Vozač" Collapsed="true">
+    <Position X="3" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAACAAAAACAAAAAEAAAAAAAAAIAAAAgA=</HashCode>
+      <FileName>TaxiServis\Models\Vozač.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TaxiServisApp.ZahtjevZaPrijevoz" Collapsed="true">
+    <Position X="1.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAACAAAAAAAABAAAAAAABAAAIAAAAAAAgA=</HashCode>
+      <FileName>TaxiServis\Models\ZahtjevZaPrijevoz.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TaxiServisApp.LogInPage" Collapsed="true">
+    <Position X="12" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAACAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAE=</HashCode>
+      <FileName>TaxiServis\Views\LogInPage.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="TaxiServisApp.TaxiServis.Models.DefaultPodaci" Collapsed="true">
+    <Position X="13.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>TaxiServis\Models\DefaultPodaci.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TaxiServisApp.TaxiServis.Models.Korisnik" Collapsed="true">
+    <Position X="10.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAEAAAACAAAIgAACAAAAEAAAAAgAA=</HashCode>
+      <FileName>TaxiServis\Models\Korisnik.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TaxiServisApp.TaxiServis.Models.MeniStavka" Collapsed="true">
+    <Position X="12" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAhAAAAAAAAAAAAAAAAAAAAABAAAACAAAAAAAAAA=</HashCode>
+      <FileName>TaxiServis\Models\MeniStavka.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TaxiServisApp.TaxiServis.Models.Uloga" Collapsed="true">
+    <Position X="17.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQABAAAAAAAAAAAAAAAAAAAAAAAAAIACAAAAAAAAA=</HashCode>
+      <FileName>TaxiServis\Models\Uloga.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TaxiServisApp.TaxiServis.Models.UlogaKorisnik" Collapsed="true">
+    <Position X="10.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIAAAAAAEAAAAAAAAAAAAAAJAAAAAAAAAAA=</HashCode>
+      <FileName>TaxiServis\Models\UlogaKorisnik.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TaxiServisApp.TaxiServis.Models.UlogaMeniStavka" Collapsed="true">
+    <Position X="12" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAICAAAAEAAAAA=</HashCode>
+      <FileName>TaxiServis\Models\UlogaMeniStavka.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TaxiServisApp.TaxiServis.ViewModels.MeniStavkeViewModel" Collapsed="true">
+    <Position X="13.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAhAAAAAAAAAAAAAAAAIQAAAAAAAACAAAAAAAAAA=</HashCode>
+      <FileName>TaxiServis\ViewModels\MeniStavkeViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TaxiServisApp.TaxiServis.Views.MainPage" Collapsed="true">
+    <Position X="15.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAABBAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>TaxiServis\Views\MainPage.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="TaxiServiProject.PageRegistracija" Collapsed="true">
+    <Position X="15.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAAAAAAAAQAAAAAAAAAABAAEAACAAAACAAAA=</HashCode>
+      <FileName>TaxiServis\Views\PageRegistracija.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Interface Name="TaxiServisApp.BingMaps" Collapsed="true">
+    <Position X="10.25" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>TaxiServis\Models\BingMaps.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="TaxiServisApp.Spol" Collapsed="true">
+    <Position X="10.25" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAIAAAAAA=</HashCode>
+      <FileName>TaxiServis\Models\Spol.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="TaxiServisApp.StatusNarudzbe" Collapsed="true">
+    <Position X="12" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAgAAAAAAAAA=</HashCode>
+      <FileName>TaxiServis\Models\StatusNarudzbe.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="TaxiServisApp.TipElementa" Collapsed="true">
+    <Position X="13.75" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAEAAAAgAAABAAAAAAAAA=</HashCode>
+      <FileName>TaxiServis\Models\TipElementa.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
