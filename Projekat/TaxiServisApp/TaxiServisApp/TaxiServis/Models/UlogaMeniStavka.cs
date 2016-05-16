@@ -19,5 +19,6 @@ namespace TaxiServisApp.TaxiServis.Models
             this.UlogaId = uloga.UlogaId;
             this.MeniStavkaId = meniStavka.MeniStavkaId;
         }
-    }
+    }
+
 }

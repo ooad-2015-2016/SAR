@@ -1,11 +1,18 @@
 ﻿<Page
-    x:Class="TaxiServisApp.TaxiServis.Views.PocetnaKorisnikView"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:TaxiServisApp.TaxiServis.Views"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:Maps="using:Windows.UI.Xaml.Controls.Maps"
+    x:Class="TaxiServisApp.TaxiServis.Views.PocetnaKorisnikView"
     mc:Ignorable="d">
 
-    <Grid Background="Red"/>
+    <Grid>
+        <Grid.Background>
+            <ImageBrush Stretch="UniformToFill" ImageSource="ms-appx:///Assets/PocetnaPozadina.jpg"/>
+        </Grid.Background>
+        <Maps:MapControl HorizontalAlignment="Left" VerticalAlignment="Top" Height="608" Width="360"/>
+        <Button x:Name="button" Content="Button" HorizontalAlignment="Left" Margin="0,608,0,0" VerticalAlignment="Top" Width="360"/>
+    </Grid>
 </Page>

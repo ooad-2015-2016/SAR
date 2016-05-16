@@ -4,10 +4,58 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:TaxiServisApp.TaxiServis.Views"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:Maps="using:Windows.UI.Xaml.Controls.Maps"
+
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Page.Background>
+        <ImageBrush Stretch="UniformToFill" ImageSource="ms-appx:///Assets/PocetnaPozadina.jpg"/>
+    </Page.Background>
+
+    <Grid RequestedTheme="Light">
+        <Grid.Background>
+            <ImageBrush Stretch="Fill" ImageSource="Assets/PocetnaPozadina.jpg"/>
+        </Grid.Background>
+        <Grid HorizontalAlignment="Left" Height="121" VerticalAlignment="Top" Width="1440" RequestedTheme="Light" Background="White">
+            <Button x:Name="button" Content="Status" HorizontalAlignment="Center" Margin="10,10,1078,0" VerticalAlignment="Top" Height="100" Width="352" Background="#D300DCC8" FontSize="32" />
+            <Button x:Name="button_Copy" Content="Obavijesti" HorizontalAlignment="Center" Margin="368,10,721,0" VerticalAlignment="Top" Height="100" Width="351" RequestedTheme="Light" Background="#D300DCC8" FontSize="32"/>
+            <Button x:Name="button_Copy1" Content="Lista poruka" HorizontalAlignment="Center" Margin="725,10,363,0" VerticalAlignment="Top" Height="100" Width="352" Background="#D300DCC8" FontSize="32"/>
+            <Button x:Name="button_Copy2" Content="Odjavi se" HorizontalAlignment="Center" Margin="1083,10,5,0" VerticalAlignment="Top" Height="100" Width="352" RequestedTheme="Light" Background="#D3FD834A" FontSize="32"/>
+        </Grid>
+        <Grid HorizontalAlignment="Left" Height="829" Margin="10,121,0,0" VerticalAlignment="Top" Width="1420">
+            <GridView x:Name="gridView" HorizontalAlignment="Left" Margin="-1,10,0,0" VerticalAlignment="Top" Width="270" Height="809" BorderThickness="1">
+                <ListBox x:Name="listBox" Height="799" Width="260">
+                    <ListBoxItem Content="Mujo Mujić&#xD;&#xA;Ive Andrića, Alipašino polje&#xD;&#xA;2 km, prije 2 min." Height="120" Background="#FF8CFF72" FontSize="18.667" BorderBrush="#FF969696" BorderThickness="1"/>
+                    <ListBoxItem Content="Huso Husić&#xA;Trg Solidarnosti, RTV&#xA;5 km, prije 1 min." Height="120" Background="#FFB4FFA0" FontSize="18.667" BorderBrush="#FF969696" BorderThickness="1"/>
+                    <ListBoxItem Content="Emina Eminić&#xA;Safeta Zajke&#xA;12 km, prije 3 min." Height="120" Background="#FFB4FFA0" FontSize="18.667" BorderBrush="#FF969696" BorderThickness="1"/>
+                    <ListBoxItem Content="R: Maja Majić, u 16:30&#xA;Aleja Lipa&#xA;22 km, više..." Height="120" Background="#FFFFAE00" FontSize="18.667" BorderBrush="#FF969696" BorderThickness="1"/>
+                    <ListBoxItem Content="Haris Harić&#xA;Želj. stanica, Alipašino polje&#xA;4 km, prije 1 min." Height="120" Background="#FFB4FFA0" FontSize="18.667" BorderBrush="#FF969696" BorderThickness="1"/>
+                    <ListBoxItem Content="Huso Husić&#xA;Aut. stanica, Pofalići&#xA;15 km, prije 4 min." Height="120" Background="#FFB4FFA0" FontSize="18.667" BorderBrush="#FF969696" BorderThickness="1"/>
+                    <ListBoxItem Content="..." Height="120" Background="#FFB4FFA0" FontSize="18.667" BorderBrush="#FF969696" BorderThickness="1"/>
+                    <ListBoxItem Content="Emina Eminić&#xA;Safeta Zajke&#xA;12 km, prije 7 min." Height="120" Background="#FFB4FFA0" FontSize="18.667"/>
+                </ListBox>
+            </GridView>
+            <Grid HorizontalAlignment="Left" Height="819" Margin="269,0,0,0" VerticalAlignment="Top" Width="1141">
+                <Maps:MapControl HorizontalAlignment="Left" Margin="0,10,0,0" VerticalAlignment="Top" Height="660" Width="1141" BorderBrush="Black" BorderThickness="1"/>
+                <GridView x:Name="gridView1" HorizontalAlignment="Left" Margin="-1,675,0,0" VerticalAlignment="Top" Width="263" Height="134" BorderBrush="Black" BorderThickness="1">
+                    <GridViewItem Content="Slobodan" Margin="0" Height="134" Width="130" FontSize="21.333" Background="#D3B4B4B4"/>
+                    <GridViewItem Content="Zauzet" Margin="0" Height="134" Width="130" FontSize="21.333" Background="#D3FD834A"/>
+                </GridView>
+                <GridView x:Name="gridView1_Copy" HorizontalAlignment="Left" Margin="393,675,0,0" VerticalAlignment="Top" Width="263" Height="134" BorderBrush="Black" BorderThickness="1">
+                    <GridViewItem Content="Aktivan" Margin="0" Height="134" Width="130" FontSize="21.333" Background="#D300F74F"/>
+                    <GridViewItem Content="Neaktivan" Margin="0" Height="134" Width="130" FontSize="21.333" Background="#D3B4B4B4"/>
+                </GridView>
+                <Grid HorizontalAlignment="Left" Height="134" Margin="798,675,0,0" VerticalAlignment="Top" Width="333" BorderBrush="Black" BorderThickness="1">
+                    <TextBlock x:Name="textBlock" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Prikaz:" VerticalAlignment="Top" FontSize="29.333"/>
+                    <ToggleSwitch x:Name="toggleSwitch" Header="Svi klijenti" HorizontalAlignment="Left" Margin="10,64,0,0" VerticalAlignment="Top"/>
+                    <ToggleSwitch x:Name="toggleSwitch_Copy" Header="Slobodni taxi" HorizontalAlignment="Left" Margin="170,10,0,0" VerticalAlignment="Top"/>
+                    <ToggleSwitch x:Name="toggleSwitch_Copy1" Header="Zauzeti taxi" HorizontalAlignment="Left" Margin="170,70,0,0" VerticalAlignment="Top"/>
+                </Grid>
+            </Grid>
+        </Grid>
 
     </Grid>
+
+
 </Page>

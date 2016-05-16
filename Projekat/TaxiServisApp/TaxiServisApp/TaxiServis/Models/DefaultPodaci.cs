@@ -10,7 +10,8 @@ namespace TaxiServisApp.TaxiServis.Models
     {
         public static void Initialize(TaxiServisDbContext context)
         {
-          /*  if (!context.TaxiVozila.Any())
+            if (context == null) context = new TaxiServisDbContext();
+           if (context.TaxiVozila==null || !context.TaxiVozila.Any())
             {
                 context.TaxiVozila.AddRange(new TaxiVozilo(0, "Crvena", "Yugo", Convert.ToDateTime("1.1.1985"), "Ocuvan" ) );
                 context.TaxiVozila.AddRange( new TaxiVozilo(1, "Plava", "Porche", Convert.ToDateTime("1.1.2002"), "Malo ostecen"));
@@ -45,7 +46,7 @@ namespace TaxiServisApp.TaxiServis.Models
                 context.Klijenti.AddRange(new RegistrovaniKlijent(1, "Klijent2", "Klijent2", "mail2", "Klijent2", "Klijent2", Convert.ToDateTime("5.5.1955"), Convert.ToDateTime("1.1.2015"), Spol.Zenski, 2, 345));
                 context.SaveChanges();
             }
-            if (!context.Klijenti.Any())
+            /*if (!context.Klijenti.Any())
             {
                 context.Klijenti.AddRange(new NeregistrovaniKlijent(0));
                 context.Klijenti.AddRange(new RegistrovaniKlijent(1, "Klijent", "Klijent", "mail", "Klijent", "Klijent", Convert.ToDateTime("5.5.1955"), Convert.ToDateTime("1.1.2015"), Spol.Muski, 1, 123));

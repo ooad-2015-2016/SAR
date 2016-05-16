@@ -8,14 +8,6 @@
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
-  <Class Name="TaxiServisApp.MainPage" Collapsed="true">
-    <Position X="17.25" Y="1.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>MainPage.xaml.cs</FileName>
-    </TypeIdentifier>
-    <Lollipop Position="0.2" />
-  </Class>
   <Class Name="TaxiServisApp.TaxiServis.DataSource.DataSourceMeni" Collapsed="true">
     <Position X="12" Y="0.5" Width="1.5" />
     <TypeIdentifier>
@@ -138,7 +130,7 @@
   <Class Name="TaxiServisApp.LogInPage" Collapsed="true">
     <Position X="12" Y="1.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAACAACAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAE=</HashCode>
+      <HashCode>AAAAAACAACAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>TaxiServis\Views\LogInPage.xaml.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
@@ -192,18 +184,10 @@
       <FileName>TaxiServis\ViewModels\MeniStavkeViewModel.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="TaxiServisApp.TaxiServis.Views.MainPage" Collapsed="true">
-    <Position X="15.5" Y="1.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAABBAAAAAAQAABAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>TaxiServis\Views\MainPageView.xaml.cs</FileName>
-    </TypeIdentifier>
-    <Lollipop Position="0.2" />
-  </Class>
   <Class Name="TaxiServiProject.PageRegistracija" Collapsed="true">
     <Position X="15.5" Y="2.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>EAAAAAAAAAAAAAAAQAAAAAAAAAABAAEAACAAAACAAAA=</HashCode>
+      <HashCode>EAAAAAAAAAAAAAAAQAAAAAAAABABAAEAAAAAAACAAAA=</HashCode>
       <FileName>TaxiServis\Views\PageRegistracija.xaml.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />

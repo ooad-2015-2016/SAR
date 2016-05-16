@@ -37,8 +37,8 @@ namespace TaxiServisApp
             this.Suspending += OnSuspending;
             using (var db = new TaxiServisDbContext())
             {
-                db.Database.ApplyMigrations();
-                DefaultPodaci.Initialize(db);
+            //  db.Database.ApplyMigrations();
+              //  DefaultPodaci.Initialize(db);
             }
         }
 

@@ -26,15 +26,21 @@ namespace TaxiServisApp
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
+    /// 
+
+
+
     public sealed partial class LogInPage : Page
     {
+        //LogInViewModel loginVM;
+
         public object Start { get; private set; }
 
         public LogInPage()
         {
             this.InitializeComponent();
             var inicijalizacija = new DataSourceMeni();
-            DataContext = new LogInViewModel();
+            //DataContext = new loginVM;
             NavigationCacheMode = NavigationCacheMode.Required;
         }
 
@@ -47,16 +53,19 @@ namespace TaxiServisApp
 
 
 
-        private void button_Registracija(object sender, RoutedEventArgs e)
+       /* private void button_Registracija(object sender, RoutedEventArgs e)
         {
            
            this.Frame.Navigate(typeof(PageRegistracija));
                         
-        }
+        }*/
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             var currentView = SystemNavigationManager.GetForCurrentView();
             currentView.AppViewBackButtonVisibility = AppViewBackButtonVisibility.Collapsed;
+            //loginVM = (LogInViewModel)e.Parameter;
+            DataContext = new LogInViewModel();
+            NavigationCacheMode = NavigationCacheMode.Required;
         }
 
 
@@ -68,7 +77,9 @@ namespace TaxiServisApp
              var korisnik = DataSourceMeni.ProvjeraKorisnika(korisnickoIme, sifra);
              if (korisnik != null && korisnik.KorisnikId > 0)
              {
-                 this.Frame.Navigate(typeof(MainPageView), korisnik);
+                MainPageViewModel MPVM = new MainPageViewModel(this);
+                MPVM.korisnik = korisnik;
+                 this.Frame.Navigate(typeof(MainPageView), MPVM);
              }
              else
              {
@@ -77,5 +88,7 @@ namespace TaxiServisApp
                  await dialog.ShowAsync();
              }
          }
+
+
     }
 }

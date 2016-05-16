@@ -22,4 +22,5 @@ namespace TaxiServisApp.TaxiServis.Models
             this.KorisnikId = korisnik.KorisnikId;
         }
     }
+
 }
