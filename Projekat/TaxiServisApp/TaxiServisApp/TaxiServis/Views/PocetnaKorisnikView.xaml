@@ -6,13 +6,27 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:Maps="using:Windows.UI.Xaml.Controls.Maps"
     x:Class="TaxiServisApp.TaxiServis.Views.PocetnaKorisnikView"
+    xmlns:Models="TaxiServisApp.TaxiServis.Models"
+    xmlns:viewmodels="using:TaxiServisApp.TaxiServis.ViewModels"
     mc:Ignorable="d">
 
     <Grid>
         <Grid.Background>
             <ImageBrush Stretch="UniformToFill" ImageSource="ms-appx:///Assets/PocetnaPozadina.jpg"/>
         </Grid.Background>
-        <Maps:MapControl HorizontalAlignment="Left" VerticalAlignment="Top" Height="608" Width="360"/>
-        <Button x:Name="button" Content="Button" HorizontalAlignment="Left" Margin="0,608,0,0" VerticalAlignment="Top" Width="360"/>
+
+        <Maps:MapControl x:Name="korisnickaMapa_MapControl" HorizontalAlignment="Stretch"    VerticalAlignment="Stretch" ZoomLevelChanged="KorisnickaMapa_MapControl_ZoomLevelChanged" MapServiceToken="ois1uNA3x2DJUTgdplO1~2foFEDJgDtzslFL6nBuSKg~Ar05QsKorpOPv95HOlSMS_IfXT1LgrCyzNo0w0JVtleydukGTfJBOgTFWuPqqk4A"  Margin="0,-5,0,111"/>
+        <Slider x:Name="mySlider" Orientation="Vertical" HorizontalAlignment="Right" Height="211" Width="45" Margin="0,199,42,230" Minimum="10" Maximum="20" Value="0" ValueChanged="ZoomValueChanged" Foreground="SteelBlue"/>
+        <Button x:Name="button" Content="Naruči Taxi" HorizontalAlignment="Left" Margin="0,534,0,0" VerticalAlignment="Top" Height="70" Width="360" Command="{Binding Path=naruciTaxiOdmah}"/>
+        <TextBlock x:Name="geoDuzina_TextBlock"  Text="{Binding TaxiServisApp.TaxiServis.ViewModels.PocetnaKorisnikViewModel}" HorizontalAlignment="Left" Margin="10,504,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Visibility="Collapsed"/>
+        <TextBlock x:Name="geoSirina_TextBlock"  Text="{Binding TaxiServisApp.TaxiServis.ViewModels.PocetnaKorisnikViewModel}" HorizontalAlignment="Left" Margin="10,529,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Visibility="Collapsed"/>
+        <!-- <Text="{x:Bind geoSirina, Mode=TwoWay}" -->
     </Grid>
+    <!--
+    <Page.BottomAppBar>
+        <CommandBar ClosedDisplayMode="Minimal" Opacity="0.5">
+            <AppBarButton Label="locate me" Icon="Target" Click="LocateMe_Click" />
+        </CommandBar>
+    </Page.BottomAppBar>
+    -->
 </Page>

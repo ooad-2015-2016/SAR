@@ -1,8 +1,8 @@
 ﻿<Page
-    x:Class="TaxiServiProject.TaxiServis.Views.PageRegistracija"
+    x:Class="TaxiServisApp.TaxiServis.Views.PageRegistracija"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="using:TaxiServiProject"
+    xmlns:local="using:TaxiServisApp"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
@@ -14,7 +14,7 @@
         <Grid.Background>
             <ImageBrush Stretch="UniformToFill" ImageSource="Assets/PocetnaPozadina.jpg"/>
         </Grid.Background>
-        <Button x:Name="buttonPrijava_Copy" Content="Registruj se" HorizontalAlignment="Center" Margin="45,0,165,10" VerticalAlignment="Bottom" RenderTransformOrigin="0.548,0.539" Height="45" Width="150" Background="#D300F0C8" Click="button_Click" Foreground="White"/>
+        <Button x:Name="buttonPrijava_Copy" Content="Registruj se" HorizontalAlignment="Center" Margin="45,0,165,10" VerticalAlignment="Bottom" RenderTransformOrigin="0.548,0.539" Height="45" Width="150" Background="#D300F0C8" Command="{Binding Path=NapraviNalog}" Foreground="White"/>
         <Button x:Name="buttonPrijava_Copy1" Content="Poništi" HorizontalAlignment="Center" Margin="200,0,10,10" VerticalAlignment="Bottom" RenderTransformOrigin="0.548,0.539" Height="45" Width="150" Background="#D6FF6200" Click="button_Click" Foreground="White"/>
         <Grid HorizontalAlignment="Center" Height="45" VerticalAlignment="Top" Width="360" Margin="0" BorderThickness="0,0,0,1" RequestedTheme="Dark" BorderBrush="#7F000000">
             <Grid.Background>
@@ -26,13 +26,13 @@
             <TextBlock x:Name="textBlock" HorizontalAlignment="Center" Margin="15,0,94,0" TextWrapping="Wrap" Text="Registracija" VerticalAlignment="Top" Width="250" FontSize="29.333" Height="45" Foreground="Black"/>
             <TextBlock x:Name="textBlock_Copy" HorizontalAlignment="Center" Margin="16,50,94,-50" TextWrapping="Wrap" Text="Unesite vaše podatke: " VerticalAlignment="Top" Width="250" FontSize="21.333" Height="45" Foreground="Black" SelectionChanged="textBlock_Copy_SelectionChanged"/>
         </Grid>
-        <TextBox x:Name="textBox" HorizontalAlignment="Center" Margin="35,118,25,0" TextWrapping="Wrap" Text="Ime" VerticalAlignment="Top" Width="300"/>
-        <TextBox x:Name="textBox_Copy" HorizontalAlignment="Center" Margin="35,155,25,0" TextWrapping="Wrap" Text="Prezime" VerticalAlignment="Top" Width="300"/>
-        <TextBox x:Name="textBox_Copy1" HorizontalAlignment="Center" Margin="35,192,25,0" TextWrapping="Wrap" Text="e-mail adresa" VerticalAlignment="Top" Width="300"/>
-        <TextBox x:Name="textBox_Copy2" HorizontalAlignment="Center" Margin="35,270,25,0" TextWrapping="Wrap" Text="Korisničko ime" VerticalAlignment="Top" Width="300"/>
-        <PasswordBox x:Name="Password" HorizontalAlignment="Center" Margin="35,307,25,0" VerticalAlignment="Top" Width="300" Password="Šifra (min. 8 znakova)" PasswordRevealMode="Visible" PasswordChanged="Password_PasswordChanged"/>
-        <PasswordBox x:Name="Password_Copy" HorizontalAlignment="Center" Margin="35,344,25,0" VerticalAlignment="Top" Width="300" Password="Ponovite šifru"  PasswordRevealMode="Visible" PasswordChanged="Password_PasswordChanged"/>
-        <DatePicker HorizontalAlignment="Center" Margin="35,441,25,0" VerticalAlignment="Top" Width="300"/>
+        <TextBox x:Name="textBox" HorizontalAlignment="Center" Margin="35,118,25,0" TextWrapping="Wrap" Text="{Binding Path=ime, Mode=TwoWay}" VerticalAlignment="Top" Width="300" PlaceholderText="Ime"/>
+        <TextBox x:Name="textBox_Copy" HorizontalAlignment="Center" Margin="35,155,25,0" TextWrapping="Wrap" Text="{Binding Path=prezime, Mode=TwoWay}" VerticalAlignment="Top" Width="300" PlaceholderText="Prezime"/>
+        <TextBox x:Name="textBox_Copy1" HorizontalAlignment="Center" Margin="35,192,25,0" TextWrapping="Wrap" Text="{Binding Path=mail, Mode=TwoWay}" VerticalAlignment="Top" Width="300" PlaceholderText="E-mail"/>
+        <TextBox x:Name="textBox_Copy2" HorizontalAlignment="Center" Margin="35,270,25,0" TextWrapping="Wrap" Text="{Binding Path=korisnickoIme, Mode=TwoWay}" VerticalAlignment="Top" Width="300" PlaceholderText="Korisnicko ime"/>
+        <PasswordBox x:Name="Password" HorizontalAlignment="Center" Margin="35,307,25,0" VerticalAlignment="Top" Width="300" Password="{Binding Path=sifra, Mode=TwoWay}"  PasswordRevealMode="Visible" PasswordChanged="Password_PasswordChanged" PlaceholderText="Šifra (min. 8 znakova)"/>
+        <PasswordBox x:Name="Password_Copy" HorizontalAlignment="Center" Margin="35,344,25,0" VerticalAlignment="Top" Width="300" Password="{Binding Path=sifra, Mode=TwoWay}"  PasswordRevealMode="Visible" PasswordChanged="Password_PasswordChanged" ToolTipService.ToolTip="Ponovite šifru"/>
+        <DatePicker HorizontalAlignment="Center" Margin="35,441,25,0" VerticalAlignment="Top" Date="{Binding Path=datumRodjenja, Mode=TwoWay}" Width="300"/> 
         <TextBlock x:Name="UputeZaPrijavuTextBlock" HorizontalAlignment="Center" Margin="36,416,221,0" TextWrapping="Wrap" Text="Datum rođenja:" VerticalAlignment="Top" SelectionChanged="UputeZaPrijavuTextBlock_SelectionChanged" Foreground="Black"/>
 
     </Grid>

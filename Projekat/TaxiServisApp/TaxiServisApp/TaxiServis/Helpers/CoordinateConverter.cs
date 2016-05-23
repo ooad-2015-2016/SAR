@@ -1,14 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Device.Location; // Provides the GeoCoordinate class.
 using Windows.Devices.Geolocation; //Provides the Geocoordinate class.
-
 namespace TaxiServisApp.TaxiServis.Helpers
 {
-    public static class CoordinateConverter
+    class CoordinateConverter
     {
         public static GeoCoordinate ConvertGeocoordinate(Geocoordinate geocoordinate)
         {

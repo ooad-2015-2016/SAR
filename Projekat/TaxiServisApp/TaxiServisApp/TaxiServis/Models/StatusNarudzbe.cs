@@ -8,6 +8,6 @@ namespace TaxiServisApp
 {
     public enum StatusNarudzbe
     {
-        Prihvacena, Odbijena, Ispunjena
+        Prihvacena, Odbijena, Ispunjena, Kreirana
     }
 }

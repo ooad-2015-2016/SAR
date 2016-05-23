@@ -4,8 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
-using TaxiServiProject;
-using TaxiServiProject.TaxiServis.Views;
+using TaxiServisApp;
+using TaxiServisApp.TaxiServis.Views;
 using TaxiServisApp.TaxiServis.DataSource;
 using TaxiServisApp.TaxiServis.Helpers;
 using TaxiServisApp.TaxiServis.Models;
@@ -36,60 +36,57 @@ namespace TaxiServisApp.TaxiServis.ViewModels
 
         public void stranicaRegistracije(object parametar)
         {
-            NavigationService.Navigate(typeof(PageRegistracija), new RegistracijaPageViewModel(this));
+            NavigationService.Navigate(typeof(TaxiServisApp.TaxiServis.Views.PageRegistracija), new RegistracijaPageViewModel(this));
         }
 
-
-
-        /*public bool prijavaOk(object parametar)
-        {
-
-         
-        }*/
         public async void pocetnaStranica(object parametar)
         {
             korisnik = new Korisnik();
             korisnik.KorisnickoIme = username;
             korisnik.Sifra = pass;
-            korisnik = DataSourceMeni.ProvjeraKorisnika(username, pass);
-            if (korisnik != null && korisnik.KorisnikId > 0)
-            {
-                NavigationService.Navigate(typeof(MainPageView), new MainPageViewModel(this));
-
-                //return true;
-                //this.Frame.Navigate(typeof(MainPage), korisnik);
-            }
-            else
-            {
-                var dialog = new MessageDialog("Pogrešno korisničko ime/šifra!", "Neuspješna prijava");
-
-                await dialog.ShowAsync();
-                //return false;
-
-            }
-        }
-        /*           private async void buttonPrijava_Click(object sender, RoutedEventArgs e)
             {
 
-                var korisnickoIme = textBoxUsername.Text;
-                var sifra = textBoxPassword.Password;
-                var korisnik = DataSourceMeni.ProvjeraKorisnika(korisnickoIme, sifra);
+                //DataSourceMeni.unesiKlijenteUKorisnike(listaRegKlijenata);
+                korisnik = DataSourceMeni.ProvjeraKorisnika(username, pass);
                 if (korisnik != null && korisnik.KorisnikId > 0)
                 {
-                   MainPageViewModel MPVM = new MainPageViewModel(this);
-                   MPVM.korisnik = korisnik;
-                    this.Frame.Navigate(typeof(MainPageView), MPVM);
+                    NavigationService.Navigate(typeof(MainPageView), new MainPageViewModel(this));
+
+                    //return true;
+                    //this.Frame.Navigate(typeof(MainPage), korisnik);
                 }
                 else
                 {
                     var dialog = new MessageDialog("Pogrešno korisničko ime/šifra!", "Neuspješna prijava");
 
                     await dialog.ShowAsync();
+                    //return false;
+
                 }
             }
+            /*           private async void buttonPrijava_Click(object sender, RoutedEventArgs e)
+                {
 
-           }*/
+                    var korisnickoIme = textBoxUsername.Text;
+                    var sifra = textBoxPassword.Password;
+                    var korisnik = DataSourceMeni.ProvjeraKorisnika(korisnickoIme, sifra);
+                    if (korisnik != null && korisnik.KorisnikId > 0)
+                    {
+                       MainPageViewModel MPVM = new MainPageViewModel(this);
+                       MPVM.korisnik = korisnik;
+                        this.Frame.Navigate(typeof(MainPageView), MPVM);
+                    }
+                    else
+                    {
+                        var dialog = new MessageDialog("Pogrešno korisničko ime/šifra!", "Neuspješna prijava");
+
+                        await dialog.ShowAsync();
+                    }
+                }
+
+               }*/
+        }
+
+
     }
-
-
 }

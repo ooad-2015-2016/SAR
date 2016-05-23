@@ -4,19 +4,19 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
-    <ProjectGuid>{23ABCCE5-64A6-4CE9-A5D9-9C0AE141356A}</ProjectGuid>
+    <ProjectGuid>{007C0015-0FB2-4FD8-A5B1-3373DF7D4819}</ProjectGuid>
     <OutputType>AppContainerExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>TaxiServisApp</RootNamespace>
-    <AssemblyName>TaxiServisApp</AssemblyName>
+    <RootNamespace>TaxiServisKompletnaAplikacija</RootNamespace>
+    <AssemblyName>TaxiServisKompletnaAplikacija</AssemblyName>
     <DefaultLanguage>en-US</DefaultLanguage>
     <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
-    <TargetPlatformVersion>10.0.10240.0</TargetPlatformVersion>
+    <TargetPlatformVersion>10.0.10586.0</TargetPlatformVersion>
     <TargetPlatformMinVersion>10.0.10240.0</TargetPlatformMinVersion>
     <MinimumVisualStudioVersion>14</MinimumVisualStudioVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{A5A43C5B-DE2A-4C0C-9213-0A381AF9435A};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
-    <PackageCertificateKeyFile>TaxiServisApp_TemporaryKey.pfx</PackageCertificateKeyFile>
+    <PackageCertificateKeyFile>TaxiServisKompletnaAplikacija_TemporaryKey.pfx</PackageCertificateKeyFile>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
     <DebugSymbols>true</DebugSymbols>
@@ -92,17 +92,15 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <None Include="ClassDiagram1.cd" />
-    <None Include="ClassDiagram2.cd" />
     <None Include="project.json" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\20160516223724_TaxiServisMigracijaDb.cs" />
-    <Compile Include="Migrations\20160516223724_TaxiServisMigracijaDb.designer.cs">
-      <DependentUpon>20160516223724_TaxiServisMigracijaDb.cs</DependentUpon>
+    <Compile Include="Migrations\20160520155124_Migracija.cs" />
+    <Compile Include="Migrations\20160520155124_Migracija.designer.cs">
+      <DependentUpon>20160520155124_Migracija.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\TaxiServisDbContextModelSnapshot.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -149,6 +147,15 @@
     <Compile Include="TaxiServis\ViewModels\RegistracijaPageViewModel.cs" />
     <Compile Include="TaxiServis\ViewModels\RegistracijaUposlenikaViewModel.cs" />
     <Compile Include="TaxiServis\ViewModels\RezervacijaViewModel.cs" />
+    <Compile Include="TaxiServis\Views\LogInPage.xaml.cs">
+      <DependentUpon>LogInPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TaxiServis\Views\MainPageView.xaml.cs">
+      <DependentUpon>MainPageView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TaxiServis\Views\PageRegistracija.xaml.cs">
+      <DependentUpon>PageRegistracija.xaml</DependentUpon>
+    </Compile>
     <Compile Include="TaxiServis\Views\PocetnaDispecerView.xaml.cs">
       <DependentUpon>PocetnaDispecerView.xaml</DependentUpon>
     </Compile>
@@ -170,15 +177,6 @@
     <Compile Include="TaxiServis\Views\RegistracijaUposlenikaView.xaml.cs">
       <DependentUpon>RegistracijaUposlenikaView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="TaxiServis\Views\LogInPage.xaml.cs">
-      <DependentUpon>LogInPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="TaxiServis\Views\MainPageView.xaml.cs">
-      <DependentUpon>MainPageView.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="TaxiServis\Views\PageRegistracija.xaml.cs">
-      <DependentUpon>PageRegistracija.xaml</DependentUpon>
-    </Compile>
     <Compile Include="TaxiServis\Views\RezervacijaPageView.xaml.cs">
       <DependentUpon>RezervacijaPageView.xaml</DependentUpon>
     </Compile>
@@ -187,14 +185,9 @@
     <AppxManifest Include="Package.appxmanifest">
       <SubType>Designer</SubType>
     </AppxManifest>
-    <None Include="TaxiServisApp_TemporaryKey.pfx" />
+    <None Include="TaxiServisKompletnaAplikacija_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Assets\IkonaKlijenta.ico" />
-    <Content Include="Assets\PocetnaLogo2.png" />
-    <Content Include="Assets\PocetnaLogoSlika.jpg" />
-    <Content Include="Assets\PocetnaPozadina - Copy.jpg" />
-    <Content Include="Assets\PocetnaPozadina.jpg" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />
@@ -209,34 +202,6 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="TaxiServis\Views\PocetnaDispecerView.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="TaxiServis\Views\PocetnaKorisnikView.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="TaxiServis\Views\PocetnaSupervizorView.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="TaxiServis\Views\PocetnaVozacView.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="TaxiServis\Views\PodaciOKlijentuView.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="TaxiServis\Views\PodaciOVozacuView.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="TaxiServis\Views\RegistracijaUposlenikaView.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="TaxiServis\Views\LogInPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -249,9 +214,37 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="TaxiServis\Views\RezervacijaPageView.xaml">
-      <SubType>Designer</SubType>
+    <Page Include="TaxiServis\Views\PocetnaDispecerView.xaml">
       <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="TaxiServis\Views\PocetnaKorisnikView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="TaxiServis\Views\PocetnaSupervizorView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="TaxiServis\Views\PocetnaVozacView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="TaxiServis\Views\PodaciOKlijentuView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="TaxiServis\Views\PodaciOVozacuView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="TaxiServis\Views\RegistracijaUposlenikaView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="TaxiServis\Views\RezervacijaPageView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">

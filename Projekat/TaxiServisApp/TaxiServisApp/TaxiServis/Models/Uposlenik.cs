@@ -10,12 +10,12 @@ namespace TaxiServisApp
     abstract public class Uposlenik
     {
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        int id { get; set; }
-         string ime { get; set; }
-         string prezime { get; set; }
-         DateTime datumRodjenja { get; set; }
-         string korisnickoIme { get; set; }
-         string sifra { get; set; }
+        public int id { get; set; }
+        public string ime { get; set; }
+        public string prezime { get; set; }
+        public DateTime datumRodjenja { get; set; }
+        public string korisnickoIme { get; set; }
+        public string sifra { get; set; }
 
        /* Uposlenik(int id,string ime, string prezime, DateTime datumRodjenja, string korisnickoIme, string Sifra)
         {

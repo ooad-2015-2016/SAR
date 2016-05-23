@@ -6,11 +6,11 @@ namespace TaxiServisApp
     public class TaxiVozilo
     {
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        int id { get; set; }
-        string boja { get; set; }
-        string proizvodjac { get; set; }
-        DateTime godiste { get; set; }
-        string opis { get; set; }
+        public int id { get; set; }
+        public string boja { get; set; }
+        public string proizvodjac { get; set; }
+        public DateTime godiste { get; set; }
+        public string opis { get; set; }
         public TaxiVozilo(int id, string boja, string proizvodjac, DateTime godiste, string opis)
         {
             this.id = id;
@@ -19,6 +19,10 @@ namespace TaxiServisApp
             this.godiste = godiste;
             this.opis = opis;
             
+        }
+
+        public TaxiVozilo()
+        {
         }
     }
 }

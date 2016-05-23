@@ -17,7 +17,6 @@ namespace TaxiServisApp
         public DbSet<RegistrovaniKlijent> RegistrovaniKlijenti { get; set; }
         public DbSet<TaxiVozilo> TaxiVozila { get; set; }
         public DbSet<ZahtjevZaPrijevoz> ZahtjeviZaPrijevoz { get; set; }
-
         public DbSet<Klijent> Klijenti { get; set; }
         public DbSet<Lokacija> Lokacije { get; set; }
         public DbSet<NarudzbaOdmah> NarudzbeOdmah { get; set; }
@@ -27,10 +26,10 @@ namespace TaxiServisApp
         //public DbSet<Spol> Spolovi { get; set; }
         public DbSet<Supervizor> Supervizori { get; set; }
         public DbSet<Dispecer> Dispeceri { get; set; }
-        public DbSet<Vozač> Vozači { get; set; }
+        public DbSet<Vozac> Vozači { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            string databaseFilePath = "TaxiServisBaza.db";
+            string databaseFilePath = "TaxiServisBazaPodataka02.db";
             try
             {
                 databaseFilePath = Path.Combine(ApplicationData.Current.LocalFolder.Path,

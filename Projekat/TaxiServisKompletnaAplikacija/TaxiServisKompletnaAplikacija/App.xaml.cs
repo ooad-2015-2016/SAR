@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
-using TaxiServisApp.TaxiServis.Models;
+using TaxiServisKompletnaAplikacija.TaxiServis.Models;
 using Windows.ApplicationModel;
 using Windows.ApplicationModel.Activation;
 using Windows.Foundation;
@@ -17,7 +17,7 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
-namespace TaxiServisApp
+namespace TaxiServisKompletnaAplikacija
 {
     /// <summary>
     /// Provides application-specific behavior to supplement the default Application class.
@@ -29,17 +29,17 @@ namespace TaxiServisApp
         /// executed, and as such is the logical equivalent of main() or WinMain().
         /// </summary>
         public App()
-        {this.InitializeComponent();
+        {
             Microsoft.ApplicationInsights.WindowsAppInitializer.InitializeAsync(
                 Microsoft.ApplicationInsights.WindowsCollectors.Metadata |
                 Microsoft.ApplicationInsights.WindowsCollectors.Session);
-                        using (var db = new TaxiServisDbContext())
-            {
-             db.Database.ApplyMigrations();
-               DefaultPodaci.Initialize(db);
-            }
+            this.InitializeComponent();
             this.Suspending += OnSuspending;
-
+            using (var db = new TaxiServisDbContext())
+            {
+                db.Database.ApplyMigrations();
+                DefaultPodaci.Initialize(db);
+            }
         }
 
         /// <summary>
@@ -53,7 +53,7 @@ namespace TaxiServisApp
 #if DEBUG
             if (System.Diagnostics.Debugger.IsAttached)
             {
-                this.DebugSettings.EnableFrameRateCounter = false;
+                this.DebugSettings.EnableFrameRateCounter = true;
             }
 #endif
 

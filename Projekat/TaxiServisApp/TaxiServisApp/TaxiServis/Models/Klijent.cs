@@ -10,8 +10,8 @@ namespace TaxiServisApp
     abstract public class Klijent
     {
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        int id { get; set; }
-        Lokacija trenutnaLokacija { get; set; }
+        public int id { get; set; }
+        public Lokacija trenutnaLokacija { get; set; }
 
         /*Klijent(int id, Lokacija trenutnaLokacija)
         {
@@ -23,5 +23,6 @@ namespace TaxiServisApp
         {
             this.id = id;
         }
+        public Klijent() { }
     }
 }

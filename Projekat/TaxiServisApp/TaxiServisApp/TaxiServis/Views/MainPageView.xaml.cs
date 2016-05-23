@@ -29,6 +29,7 @@ namespace TaxiServisApp.TaxiServis.Views
         public MainPageView()
         {
             this.InitializeComponent();
+           // DataContext = new MainPageViewModel();
             var currentView = SystemNavigationManager.GetForCurrentView();
             currentView.AppViewBackButtonVisibility = AppViewBackButtonVisibility.Visible;
             SystemNavigationManager.GetForCurrentView().BackRequested += ThisPage_BackRequested;
@@ -52,11 +53,6 @@ namespace TaxiServisApp.TaxiServis.Views
             {
                 korisnik = ((MainPageViewModel)e.Parameter).korisnik;//(Korisnik)e.Parameter;
             }
-            string ispis;
-            ispis = "Ispis: ";
-   int brojUloga=0;
-            int brojMS=0;
-            //Stavke menija koje će se prikazati
             var stavke = MeniStavkeListView.ItemsSource as List<MeniStavkeViewModel>;
 
             //dobavljanje svih meni stavki za koje prijavljeni korisnik ima pravo pristupa
@@ -64,42 +60,29 @@ namespace TaxiServisApp.TaxiServis.Views
             if (stavke == null && korisnik != null && korisnik.UlogaKorisnika != null)
             {
                 stavke = new List<MeniStavkeViewModel>();
-                brojUloga = stavke.Count();
-
                 var ulogeKorisnika = korisnik.UlogaKorisnika.Distinct().ToList();
                 foreach(var u in ulogeKorisnika)
                 {
                     u.Uloga.UlogaMeniStavke = u.Uloga.UlogaMeniStavke.Distinct().ToList();
                 }
-                brojMS = ulogeKorisnika.Count();
                 foreach (var uloga in ulogeKorisnika)
                 {
-                    ispis += uloga.ToString()+"\n";
                     
-
                     foreach (var ulogaMeniStavka in uloga.Uloga.UlogaMeniStavke)
                     {
                         
-                        ispis += ulogaMeniStavka.MeniStavka+", ";
                        stavke.Add(MeniStavkeViewModel.SaMeniStavke(ulogaMeniStavka.MeniStavka));
                         if (ulogaMeniStavka.MeniStavka.Naziv == "LogOut") break;
                     }
                     break;
                 }
                 var stavkeFiltriranoOdDuplikata=stavke.Distinct().ToList();
-                //pridruzivanje odabranih stavki menija, listview-u koji prikazuje meni
-              //  funkcijaProvjere(stavkeFiltriranoOdDuplikata, brojUloga, brojMS, ispis);
                 MeniStavkeListView.ItemsSource = stavkeFiltriranoOdDuplikata;
                 
 
             }
         }
-        public async void funkcijaProvjere(List<MeniStavkeViewModel> lS, int brojUloga, int brojUlogaMeniStavka, string ispis)
-        {
-            var dialog = new MessageDialog(lS.Count().ToString() + ", uloge: " + brojUloga.ToString() +", meniStavki: "+ brojUlogaMeniStavka.ToString(), "broj meni stavki"+"\n"+ispis);
-            await dialog.ShowAsync();
 
-        }
         //show-hide funkcionalnost menija
         private void PrikaziMeni_Click(object sender, RoutedEventArgs e)
         {
@@ -112,7 +95,7 @@ namespace TaxiServisApp.TaxiServis.Views
             if (e.AddedItems.Count > 0)
             {
                 var menuPodstranica = (e.AddedItems[0] as MeniStavkeViewModel).Podstranica;
-                if (menuPodstranica != null) sadrzajPodstranice.Navigate(menuPodstranica, null);
+                if (menuPodstranica != null) sadrzajPodstranice.Navigate(menuPodstranica, this);
             }
         }
 

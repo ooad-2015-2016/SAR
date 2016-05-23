@@ -10,17 +10,17 @@ namespace TaxiServisApp
     public class RegistrovaniKlijent:Klijent
     {
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        int id { get; set; }
-        string ime { get; set; }
-        string prezime { get; set; }
-        string mail { get; set; }
-        string korisnickoIme { get; set; }
-        string sifra { get; set; }
-        DateTime datumRodjenja { get; set; }
-        DateTime datumRegistracije { get; set; }
-        Spol spol { get; set; }
-        int brojVoznji { get; set; }
-        int kilometriVoznje { get; set; }
+        public int id { get; set; }
+        public string ime { get; set; }
+        public string prezime { get; set; }
+        public string mail { get; set; }
+        public string korisnickoIme { get; set; }
+        public string sifra { get; set; }
+        public DateTime datumRodjenja { get; set; }
+        public DateTime datumRegistracije { get; set; }
+        public Spol spol { get; set; }
+        public int brojVoznji { get; set; }
+        public int kilometriVoznje { get; set; }
         
         public RegistrovaniKlijent(int id, string ime,string prezime, string mail,
             string korisnickoIme, string sifra, DateTime datumRodjenja,DateTime datumRegistracije,
@@ -39,5 +39,8 @@ namespace TaxiServisApp
             this.kilometriVoznje = kilometriVoznje;
         }
 
+        public RegistrovaniKlijent()
+        {
+        }
     }
 }

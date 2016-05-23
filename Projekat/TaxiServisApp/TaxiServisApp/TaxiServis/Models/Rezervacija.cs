@@ -10,12 +10,12 @@ namespace TaxiServisApp
     public class Rezervacija:ZahtjevZaPrijevoz
     {
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        int id { get; set; }
-        Lokacija polaznaLokacija { get; set; }
-        DateTime vrijemeRezervacije { get; set; }
-        String dodatniZahtjevi { get; set; }
+        public int id { get; set; }
+        public Lokacija polaznaLokacija { get; set; }
+        public DateTime vrijemeRezervacije { get; set; }
+        public String dodatniZahtjevi { get; set; }
 
-        public Rezervacija(int id, DateTime vrijemeNarudzbe, Klijent klijent, Vozač idVozačPrihvatio,
+        public Rezervacija(int id, DateTime vrijemeNarudzbe, Klijent klijent, Vozac idVozačPrihvatio,
             Lokacija odrediste, StatusNarudzbe statusNarudzbe,
             Lokacija polaznaLokacija,DateTime vrijemeRezervacije, string dodatniZahtjevi):
                 base(id,vrijemeNarudzbe,klijent,idVozačPrihvatio,odrediste,statusNarudzbe)

@@ -29,6 +29,7 @@ namespace TaxiServisApp.TaxiServis.ViewModels
         {
             this.logInPage = logInPage;
             this.parent = parent;
+            korisnik = parent.korisnik;
            // korisnik = new Korisnik(logInPage.korisnik);
         }
     }

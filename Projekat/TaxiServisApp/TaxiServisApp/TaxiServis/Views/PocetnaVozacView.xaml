@@ -37,7 +37,7 @@
                 </ListBox>
             </GridView>
             <Grid HorizontalAlignment="Left" Height="819" Margin="269,0,0,0" VerticalAlignment="Top" Width="1141">
-                <Maps:MapControl HorizontalAlignment="Left" Margin="0,10,0,0" VerticalAlignment="Top" Height="660" Width="1141" BorderBrush="Black" BorderThickness="1"/>
+                <Maps:MapControl HorizontalAlignment="Left" Margin="0,10,0,0" VerticalAlignment="Top" Height="660" Width="1141" BorderBrush="Black" BorderThickness="1" MapServiceToken="ois1uNA3x2DJUTgdplO1~2foFEDJgDtzslFL6nBuSKg~Ar05QsKorpOPv95HOlSMS_IfXT1LgrCyzNo0w0JVtleydukGTfJBOgTFWuPqqk4A"/>
                 <GridView x:Name="gridView1" HorizontalAlignment="Left" Margin="-1,675,0,0" VerticalAlignment="Top" Width="263" Height="134" BorderBrush="Black" BorderThickness="1">
                     <GridViewItem Content="Slobodan" Margin="0" Height="134" Width="130" FontSize="21.333" Background="#D3B4B4B4"/>
                     <GridViewItem Content="Zauzet" Margin="0" Height="134" Width="130" FontSize="21.333" Background="#D3FD834A"/>

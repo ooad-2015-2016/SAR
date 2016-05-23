@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
-using TaxiServiProject;
+using TaxiServisApp;
 using TaxiServisApp.TaxiServis.DataSource;
 using TaxiServisApp.TaxiServis.ViewModels;
 using TaxiServisApp.TaxiServis.Views;
@@ -32,44 +32,27 @@ namespace TaxiServisApp
 
     public sealed partial class LogInPage : Page
     {
-        //LogInViewModel loginVM;
-
         public object Start { get; private set; }
 
         public LogInPage()
         {
             this.InitializeComponent();
             var inicijalizacija = new DataSourceMeni();
-            //DataContext = new loginVM;
+            DataContext = new LogInViewModel();
             NavigationCacheMode = NavigationCacheMode.Required;
         }
 
-      /*  private async void button_Prijava(object sender, RoutedEventArgs e)
-        {
-
-           
-        }*/
-
-
-
-
-       /* private void button_Registracija(object sender, RoutedEventArgs e)
-        {
-           
-           this.Frame.Navigate(typeof(PageRegistracija));
-                        
-        }*/
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             var currentView = SystemNavigationManager.GetForCurrentView();
             currentView.AppViewBackButtonVisibility = AppViewBackButtonVisibility.Collapsed;
             //loginVM = (LogInViewModel)e.Parameter;
-            DataContext = new LogInViewModel();
+            //DataContext = new LogInViewModel();
             NavigationCacheMode = NavigationCacheMode.Required;
         }
 
 
-        private async void buttonPrijava_Click(object sender, RoutedEventArgs e)
+      /*  private async void buttonPrijava_Click(object sender, RoutedEventArgs e)
          {
 
              var korisnickoIme = textBoxUsername.Text;
@@ -88,7 +71,7 @@ namespace TaxiServisApp
                  await dialog.ShowAsync();
              }
          }
-
+         */
 
     }
 }

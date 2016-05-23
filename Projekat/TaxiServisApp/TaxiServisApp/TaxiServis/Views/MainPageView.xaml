@@ -30,19 +30,19 @@ BaseTextBlockStyle}" />
             <ImageBrush Stretch="UniformToFill" ImageSource="ms-appx:///Assets/PocetnaPozadina.jpg"/>
         </Grid.Background>
         <Grid.RowDefinitions>
-            <RowDefinition Height="Auto" />
-            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" MinHeight="48" />
+            <RowDefinition />
         </Grid.RowDefinitions>
-        <RelativePanel>
+        <RelativePanel Margin="0,0,0,0">
             <Button Name="PrikaziMeni" FontFamily="Segoe MDL2 Assets" Content="&#xE700;"
-FontSize="36" Click="PrikaziMeni_Click" />
-        </RelativePanel>
+FontSize="36" Click="PrikaziMeni_Click" Background="White" Width="55" Canvas.ZIndex="1"  />
+        </RelativePanel >
         <SplitView Name="MojSplitView"
  Grid.Row="1"
  DisplayMode="CompactOverlay"
  OpenPaneLength="200"
- CompactPaneLength="56"
- HorizontalAlignment="Left">
+ CompactPaneLength="0"
+ HorizontalAlignment="Left" Width="200">
             <SplitView.Pane>
                 <ListView
  x:Name="MeniStavkeListView"
@@ -61,10 +61,9 @@ FontSize="36" Click="PrikaziMeni_Click" />
 
             </SplitView.Pane>
             <SplitView.Content>
-                <Frame x:Name="sadrzajPodstranice"/>
+                <Frame x:Name="sadrzajPodstranice" Margin="0,0,-160,0"  />
             </SplitView.Content>
         </SplitView>
-        <Button x:Name="button" Content="Button" HorizontalAlignment="Left" Margin="205,212,0,0" Grid.Row="1" VerticalAlignment="Top"/>
     </Grid>
 
 </Page>
