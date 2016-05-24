@@ -15,6 +15,8 @@ namespace TaxiServisApp.TaxiServis.ViewModels
         //private LogInViewModel logInViewModel;
         public LogInViewModel  parent {get; set;}
         public Korisnik korisnik { get; set; }
+        public string naslovPodstranice { get; set; }
+
         public INavigationService NavigationService { get; set; }
 
 
@@ -31,6 +33,10 @@ namespace TaxiServisApp.TaxiServis.ViewModels
             this.parent = parent;
             korisnik = parent.korisnik;
            // korisnik = new Korisnik(logInPage.korisnik);
+        }
+
+        public MainPageViewModel()
+        {
         }
     }
 }

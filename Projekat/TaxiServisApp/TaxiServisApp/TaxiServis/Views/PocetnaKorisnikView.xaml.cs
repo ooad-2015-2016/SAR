@@ -38,7 +38,7 @@ namespace TaxiServisApp.TaxiServis.Views
         {
             this.InitializeComponent();
 
-            DataContext = new PocetnaKorisnikViewModel();
+            DataContext = new PocetnaKorisnikViewModel(this);
             this.Loaded += PocetnaKorisnikView_Loaded;
             //lociranje = locirajMe();
             //lociranje.RunSynchronously();

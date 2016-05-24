@@ -33,9 +33,10 @@ BaseTextBlockStyle}" />
             <RowDefinition Height="Auto" MinHeight="48" />
             <RowDefinition />
         </Grid.RowDefinitions>
-        <RelativePanel Margin="0,0,0,0">
+        <RelativePanel Margin="0,0,0,0" Background="White" BorderThickness="1,0,0,0">
             <Button Name="PrikaziMeni" FontFamily="Segoe MDL2 Assets" Content="&#xE700;"
 FontSize="36" Click="PrikaziMeni_Click" Background="White" Width="55" Canvas.ZIndex="1"  />
+            <TextBlock x:Name="naslovna" HorizontalAlignment="Center" Margin="60,0,-1,-3" TextWrapping="Wrap" VerticalAlignment="Top" Width="300" FontSize="29.333" Height="48" Foreground="Black" SelectionChanged="textBlock_SelectionChanged" Text="Dobrodošli"/>
         </RelativePanel >
         <SplitView Name="MojSplitView"
  Grid.Row="1"
@@ -61,7 +62,7 @@ FontSize="36" Click="PrikaziMeni_Click" Background="White" Width="55" Canvas.ZIn
 
             </SplitView.Pane>
             <SplitView.Content>
-                <Frame x:Name="sadrzajPodstranice" Margin="0,0,-160,0"  />
+                <Frame x:Name="sadrzajPodstranice" Margin="0,0,-160,0" BorderBrush="Black"  />
             </SplitView.Content>
         </SplitView>
     </Grid>

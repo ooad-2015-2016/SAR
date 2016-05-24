@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using TaxiServisApp.TaxiServis.DataSource;
 using TaxiServisApp.TaxiServis.Models;
 using TaxiServisApp.TaxiServis.ViewModels;
 using Windows.Foundation;
@@ -29,7 +30,7 @@ namespace TaxiServisApp.TaxiServis.Views
         public MainPageView()
         {
             this.InitializeComponent();
-           // DataContext = new MainPageViewModel();
+            DataContext = new MainPageViewModel();
             var currentView = SystemNavigationManager.GetForCurrentView();
             currentView.AppViewBackButtonVisibility = AppViewBackButtonVisibility.Visible;
             SystemNavigationManager.GetForCurrentView().BackRequested += ThisPage_BackRequested;
@@ -77,6 +78,7 @@ namespace TaxiServisApp.TaxiServis.Views
                     break;
                 }
                 var stavkeFiltriranoOdDuplikata=stavke.Distinct().ToList();
+
                 MeniStavkeListView.ItemsSource = stavkeFiltriranoOdDuplikata;
                 
 
@@ -95,7 +97,9 @@ namespace TaxiServisApp.TaxiServis.Views
             if (e.AddedItems.Count > 0)
             {
                 var menuPodstranica = (e.AddedItems[0] as MeniStavkeViewModel).Podstranica;
+                naslovna.Text = (e.AddedItems[0] as MeniStavkeViewModel).Naziv;
                 if (menuPodstranica != null) sadrzajPodstranice.Navigate(menuPodstranica, this);
+
             }
         }
 
@@ -108,5 +112,9 @@ namespace TaxiServisApp.TaxiServis.Views
             }
         }
 
+        private void textBlock_SelectionChanged(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
