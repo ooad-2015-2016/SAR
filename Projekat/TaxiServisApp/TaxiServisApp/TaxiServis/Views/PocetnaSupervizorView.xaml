@@ -7,7 +7,21 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Grid Background="#B2D8D8D5">
+        <Button x:Name="button_Copy1" Content="Izbrisi" HorizontalAlignment="Left" Height="146" Margin="740,0,0,0" VerticalAlignment="Top" Width="240" Background="#3319DAEE"/>
+        <RelativePanel HorizontalAlignment="Left" Height="146" VerticalAlignment="Top" Width="1280">
+            <AppBarButton x:Name="nazadButton" Label="Nazad" Margin="0,0,1020,-8" Width="260" Height="146" HorizontalAlignment="Center" VerticalAlignment="Top" Click="nazadButton_Click" Background="#66EE17DA" Icon="Back" FontSize="20">
+                <RelativePanel Height="100" Width="100"/>
+            </AppBarButton>
+            <Button x:Name="button" Content="Dodaj" HorizontalAlignment="Left" Height="146" VerticalAlignment="Top" Width="240" Background="#3319DAEE" Margin="260,0,-260,-8" Click="button_Click"/>
+            <Button x:Name="button_Copy2" Content="Izmjeni" HorizontalAlignment="Left" Height="146" VerticalAlignment="Top" Width="240" Background="#3319DAEE" Margin="500,0,-500,-8"/>
+            <AppBarButton x:Name="promjenaLozinkeButton" Icon="Edit" Label="Izmjeni lozinku" Margin="976,0,-976,-6" Height="144" Width="240" Background="#B2EA85EE" FontSize="22">
+                <CaptureElement Height="100" Width="100"/>
+            </AppBarButton>
+        </RelativePanel>
+        <GridView x:Name="bazaGridView" HorizontalAlignment="Left" Height="314" Margin="59,194,0,0" VerticalAlignment="Top" Width="1160">
+            <Grid Height="100" Width="100"/>
+        </GridView>
 
     </Grid>
 </Page>

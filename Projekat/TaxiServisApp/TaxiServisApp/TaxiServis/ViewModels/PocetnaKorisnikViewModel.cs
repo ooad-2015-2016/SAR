@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Windows.Input;
 using TaxiServisApp.TaxiServis.Helpers;
 using TaxiServisApp.TaxiServis.Models;
+using TaxiServisApp.TaxiServis.Views;
 using Windows.UI.Popups;
 
 namespace TaxiServisApp.TaxiServis.ViewModels
@@ -19,6 +20,7 @@ namespace TaxiServisApp.TaxiServis.ViewModels
         
         Lokacija lokacija { get; set; }
         MainPageViewModel parent;
+        private PocetnaKorisnikView pocetnaKorisnikView;
 
         public PocetnaKorisnikViewModel()
         {
@@ -39,6 +41,11 @@ namespace TaxiServisApp.TaxiServis.ViewModels
             this.parent = parent;
             korisnik = parent.korisnik;
             naruciTaxiOdmah = new RelayCommand<object>(naruciTaxiOdmahCommand, okNarudzba);
+        }
+
+        public PocetnaKorisnikViewModel(PocetnaKorisnikView pocetnaKorisnikView)
+        {
+            this.pocetnaKorisnikView = pocetnaKorisnikView;
         }
 
         public void naruciTaxiOdmahCommand(object obj)

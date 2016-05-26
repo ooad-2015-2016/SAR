@@ -190,7 +190,9 @@
     <None Include="TaxiServisApp_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\directions.png" />
     <Content Include="Assets\IkonaKlijenta.ico" />
+    <Content Include="Assets\logo1.png" />
     <Content Include="Assets\PocetnaLogo2.png" />
     <Content Include="Assets\PocetnaLogoSlika.jpg" />
     <Content Include="Assets\PocetnaPozadina - Copy.jpg" />

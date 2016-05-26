@@ -7,7 +7,22 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Grid Background="#B2D8D8D5">
+
+        <AppBarButton x:Name="nazadButton" Label="Nazad" Margin="0,0,1072,0" Width="208" Height="131" HorizontalAlignment="Center" VerticalAlignment="Top" Click="nazadButton_Click" Background="#66EE17DA" Icon="Back" FontSize="20">
+            <RelativePanel Height="100" Width="100"/>
+        </AppBarButton>
+        <RelativePanel HorizontalAlignment="Left" Height="612" Margin="261,10,0,0" VerticalAlignment="Top" Width="704">
+            <RadioButton x:Name="radioButton1" Content="Dispečer" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="1.483,0.385" Margin="539,556,-539,-556"/>
+            <RadioButton x:Name="radioButton" Content="Vozač" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="289,556,-289,-556"/>
+            <DatePicker HorizontalAlignment="Left" Height="32" VerticalAlignment="Top" Width="370" Foreground="#FFEA6FD9" Margin="289,475,-289,-475"/>
+            <TextBlock x:Name="datumRodenjaLabel" HorizontalAlignment="Left" Height="32" TextWrapping="Wrap" Text="Datum rođenja" VerticalAlignment="Top" Width="165" FontSize="24" Foreground="#FF4B4848" Margin="66,475,-66,-475"/>
+            <TextBlock x:Name="prezimeLabel" HorizontalAlignment="Left" Height="32" TextWrapping="Wrap" Text="Prezime" VerticalAlignment="Top" Width="165" FontSize="24" Foreground="#FF4B4848" RenderTransformOrigin="0.57,2.083" Margin="66,391,-66,-391"/>
+            <TextBox x:Name="prezimeTB" HorizontalAlignment="Center" Margin="289,391,45,-391" TextWrapping="Wrap"  VerticalAlignment="Top" Width="370" Text="{Binding username, Mode=TwoWay}"/>
+            <TextBlock x:Name="imeLabel" HorizontalAlignment="Left" Height="32" TextWrapping="Wrap" Text="Ime" VerticalAlignment="Top" Width="165" FontSize="24" Foreground="#FF4B4848" Margin="66,308,-66,-308"/>
+            <TextBox x:Name="imeTB" HorizontalAlignment="Center" Margin="289,308,45,-308" TextWrapping="Wrap"  VerticalAlignment="Top" Width="370" Text="{Binding username, Mode=TwoWay}"/>
+            <Image x:Name="image" HorizontalAlignment="Center" Height="267" VerticalAlignment="Top" Width="704" Source="ms-appx:///Assets/logo1.png" Stretch="Fill" Margin="0,0,0,-20"/>
+        </RelativePanel>
 
     </Grid>
 </Page>

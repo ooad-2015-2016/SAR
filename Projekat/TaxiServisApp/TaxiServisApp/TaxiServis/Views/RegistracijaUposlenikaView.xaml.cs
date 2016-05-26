@@ -26,5 +26,10 @@ namespace TaxiServisApp.TaxiServis.Views
         {
             this.InitializeComponent();
         }
+
+        private void nazadButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
