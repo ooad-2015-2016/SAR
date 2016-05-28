@@ -292,7 +292,7 @@ namespace TaxiServisApp.TaxiServis.DataSource
             foreach (Supervizor lK in listaSupervizora)
             {
                 Korisnik korisnikZaListu = new Korisnik() { KorisnikId = lK.id, KorisnickoIme = lK.korisnickoIme, Sifra = lK.sifra };
-                korisnikZaListu.DodajUloguKorisnika(u2);
+                korisnikZaListu.DodajUloguKorisnika(u4);
                 _korisnici.Add(korisnikZaListu);
             }
             #endregion

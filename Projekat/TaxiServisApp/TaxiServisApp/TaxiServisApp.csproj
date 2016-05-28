@@ -100,9 +100,9 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\20160527165426_InitialMigration.cs" />
-    <Compile Include="Migrations\20160527165426_InitialMigration.designer.cs">
-      <DependentUpon>20160527165426_InitialMigration.cs</DependentUpon>
+    <Compile Include="Migrations\20160528153019_InitialMigration.cs" />
+    <Compile Include="Migrations\20160528153019_InitialMigration.designer.cs">
+      <DependentUpon>20160528153019_InitialMigration.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\TaxiServisDbContextModelSnapshot.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
