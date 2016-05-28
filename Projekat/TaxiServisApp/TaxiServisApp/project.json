@@ -7,6 +7,8 @@
     "Microsoft.ApplicationInsights.WindowsApps": "1.0.0",
     "Microsoft.CodeAnalysis.CSharp": "1.0.0",
     "Microsoft.NETCore.UniversalWindowsPlatform": "5.0.0",
+    "MvvmLight": "5.3.0",
+    "OpenRiaServices.Client": "4.5.0-beta3",
     "System.Data.SQLite": "1.0.101",
     "XAML.MapControl": "2.9.0"
   },

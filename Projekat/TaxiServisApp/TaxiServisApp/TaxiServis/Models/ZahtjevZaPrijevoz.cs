@@ -12,7 +12,7 @@ namespace TaxiServisApp
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int id { get; set; }
         public DateTime vrijemeNarudzbe { get; set; }
-        public Klijent klijent { get; set; }
+        public RegistrovaniKlijent klijent { get; set; }
         public Vozac idVozačPrihvatio { get; set; }
         public Lokacija lokacijaKorisika { get; set; }
         public StatusNarudzbe statusNarudzbe { get; set; }
@@ -28,7 +28,7 @@ namespace TaxiServisApp
             this.statusNarudzbe = statusNarudzbe;
         }*/
         public ZahtjevZaPrijevoz() { }
-        public ZahtjevZaPrijevoz(int id, DateTime vrijemeNarudzbe, Klijent klijent, Vozac idVozačPrihvatio, Lokacija polaziste, StatusNarudzbe statusNarudzbe1)
+        public ZahtjevZaPrijevoz(int id, DateTime vrijemeNarudzbe, RegistrovaniKlijent klijent, Vozac idVozačPrihvatio, Lokacija polaziste, StatusNarudzbe statusNarudzbe1)
         {
             this.id = id;
             this.vrijemeNarudzbe = vrijemeNarudzbe;

@@ -9,7 +9,7 @@
     mc:Ignorable="d">
     <Page.Resources>
         <DataTemplate x:Key="MeniStavkeItemTemplate"
-x:DataType="viewmodels:MeniStavkeViewModel">
+x:DataType="viewmodels:MeniStavkeViewModel">
             <Grid Margin="0,11,0,13">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto" />
@@ -43,7 +43,7 @@ FontSize="36" Click="PrikaziMeni_Click" Background="White" Width="55" Canvas.ZIn
  DisplayMode="CompactOverlay"
  OpenPaneLength="200"
  CompactPaneLength="0"
- HorizontalAlignment="Left" Width="200">
+ HorizontalAlignment="Left" Width="1910">
             <SplitView.Pane>
                 <ListView
  x:Name="MeniStavkeListView"
@@ -51,7 +51,6 @@ FontSize="36" Click="PrikaziMeni_Click" Background="White" Width="55" Canvas.ZIn
  ItemContainerTransitions="{x:Null}"
  ItemTemplate="{StaticResource MeniStavkeItemTemplate}"
  IsItemClickEnabled="True"
-                    
  SelectionChanged="MeniStavkeListView_SelectionChanged">
                     <ListView.ItemContainerStyle>
                         <Style TargetType="ListViewItem">
@@ -62,7 +61,7 @@ FontSize="36" Click="PrikaziMeni_Click" Background="White" Width="55" Canvas.ZIn
 
             </SplitView.Pane>
             <SplitView.Content>
-                <Frame x:Name="sadrzajPodstranice" Margin="0,0,-160,0" BorderBrush="Black"  />
+                <Frame x:Name="sadrzajPodstranice" Margin="0,0,0,0" BorderBrush="Black"  />
             </SplitView.Content>
         </SplitView>
     </Grid>

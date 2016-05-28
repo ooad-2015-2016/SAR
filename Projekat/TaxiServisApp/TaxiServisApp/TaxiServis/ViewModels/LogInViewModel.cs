@@ -20,6 +20,7 @@ namespace TaxiServisApp.TaxiServis.ViewModels
         public ICommand MainPageCommand { get; set; }
         public ICommand RegistracijaCommand { get; set; }
         public Korisnik korisnik { get; set; }
+        public RegistrovaniKlijent registrovaniKlijent { get; set; }
         public string username { get; set; }
         public string pass { get; set; }
 

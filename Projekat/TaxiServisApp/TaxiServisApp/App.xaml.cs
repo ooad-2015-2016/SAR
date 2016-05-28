@@ -33,7 +33,7 @@ namespace TaxiServisApp
             Microsoft.ApplicationInsights.WindowsAppInitializer.InitializeAsync(
                 Microsoft.ApplicationInsights.WindowsCollectors.Metadata |
                 Microsoft.ApplicationInsights.WindowsCollectors.Session);
-                        using (var db = new TaxiServisDbContext())
+                       using (var db = new TaxiServisDbContext())
             {
              db.Database.ApplyMigrations();
                DefaultPodaci.Initialize(db);

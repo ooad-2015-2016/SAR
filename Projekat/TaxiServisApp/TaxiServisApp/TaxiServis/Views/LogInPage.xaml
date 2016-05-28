@@ -21,7 +21,7 @@
         <Image x:Name="PocetnaLogo" HorizontalAlignment="Center" Height="300" Margin="35,10,25,0" VerticalAlignment="Top" Width="300" Source="ms-appx:///Assets/PocetnaLogo2.png"/>
         <TextBox x:Name="textBoxUsername" HorizontalAlignment="Center" Margin="35,388,25,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="300" Text="{Binding Path=username, Mode=TwoWay}"/>
         <PasswordBox x:Name="textBoxPassword" HorizontalAlignment="Center" Margin="35,425,25,0" VerticalAlignment="Top" Width="300" Password="{Binding Path=pass, Mode=TwoWay}"/>
-        <Button x:Name="buttonPrijava" HorizontalAlignment="Center" Margin="35,462,25,0" VerticalAlignment="Top" RenderTransformOrigin="0.548,0.539" Height="45" Width="300" Background="#D3FFA000"  Content="Prijava" Command="{Binding Path=MainPageCommand}" Click="buttonPrijava_Click" />
+        <Button x:Name="buttonPrijava" HorizontalAlignment="Center" Margin="35,462,25,0" VerticalAlignment="Top" RenderTransformOrigin="0.548,0.539" Height="45" Width="300" Background="#D3FFA000"  Content="Prijava" Command="{Binding Path=MainPageCommand}" />
         <TextBlock x:Name="textBlockRegistracija" HorizontalAlignment="Center" Margin="35,532,87,0" TextWrapping="Wrap" Text="Niste registrovani? Napravite nalog!" VerticalAlignment="Top" Foreground="Black"/>
         <Button x:Name="buttonRegistracija" Content="Registrujte se!" HorizontalAlignment="Center" Margin="35,557,25,0" VerticalAlignment="Top" RenderTransformOrigin="0.548,0.539" Height="45" Width="300" Background="#D300F0C8" Command="{Binding Path=RegistracijaCommand}"/>
 

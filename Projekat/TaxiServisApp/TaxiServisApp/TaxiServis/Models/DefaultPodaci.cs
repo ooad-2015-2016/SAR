@@ -44,7 +44,7 @@ namespace TaxiServisApp.TaxiServis.Models
             }
             if (!context.Supervizori.Any())
             {
-                context.Uposlenici.AddRange(new Supervizor() { ime = "supervizor", prezime = "Supervizor", datumRodjenja = Convert.ToDateTime("1/1/1941"), korisnickoIme = "Dispecer", sifra = "Dispecer" });
+                context.Uposlenici.AddRange(new Supervizor() { ime = "supervizor", prezime = "Supervizor", datumRodjenja = Convert.ToDateTime("1/1/1941"), korisnickoIme = "supervizor", sifra = "supervizor" });
                 context.SaveChanges();
             }
             if (!context.Lokacije.Any())

@@ -20,6 +20,9 @@ namespace TaxiServisApp.TaxiServis.Views
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
+// <summary>
+    /// An empty page that can be used on its own or navigated to within a Frame.
+    /// </summary>
     /// 
     //_______________________SS-komentar______________________________
     //nisa napravila bas sve sto trebalo sto se tice  dizajna jer nije htjelo da se pokrene, 

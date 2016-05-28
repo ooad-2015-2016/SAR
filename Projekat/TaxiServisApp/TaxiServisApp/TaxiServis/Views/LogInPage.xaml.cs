@@ -51,32 +51,27 @@ namespace TaxiServisApp
             NavigationCacheMode = NavigationCacheMode.Required;
         }
 
-        //_______________________SS-komentar______________________________
-        //zar ne bi na dugmetu prijava tebao biti event kao button click koji prvo u 
-        //bazi nade taj user name i pass i zatim na osnovu  uloge osobe otvori odg formu i prosljedi
-        //joj podatke. Ne razumijem sta radi ova neka asinhrona metoda 
 
-       
-        /* private async void buttonPrijava_Click(object sender, RoutedEventArgs e)
-           {
+      /*  private async void buttonPrijava_Click(object sender, RoutedEventArgs e)
+         {
 
-               var korisnickoIme = textBoxUsername.Text;
-               var sifra = textBoxPassword.Password;
-               var korisnik = DataSourceMeni.ProvjeraKorisnika(korisnickoIme, sifra);
-               if (korisnik != null && korisnik.KorisnikId > 0)
-               {
-                  MainPageViewModel MPVM = new MainPageViewModel(this);
-                  MPVM.korisnik = korisnik;
-                   this.Frame.Navigate(typeof(MainPageView), MPVM);
-               }
-               else
-               {
-                   var dialog = new MessageDialog("Pogrešno korisničko ime/šifra!", "Neuspješna prijava");
+             var korisnickoIme = textBoxUsername.Text;
+             var sifra = textBoxPassword.Password;
+             var korisnik = DataSourceMeni.ProvjeraKorisnika(korisnickoIme, sifra);
+             if (korisnik != null && korisnik.KorisnikId > 0)
+             {
+                MainPageViewModel MPVM = new MainPageViewModel(this);
+                MPVM.korisnik = korisnik;
+                 this.Frame.Navigate(typeof(MainPageView), MPVM);
+             }
+             else
+             {
+                 var dialog = new MessageDialog("Pogrešno korisničko ime/šifra!", "Neuspješna prijava");
 
-                   await dialog.ShowAsync();
-               }
-           }
-           
-    */
+                 await dialog.ShowAsync();
+             }
+         }
+         */
+
     }
 }

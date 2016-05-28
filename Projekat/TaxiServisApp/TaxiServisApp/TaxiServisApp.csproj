@@ -100,9 +100,9 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\20160516223724_TaxiServisMigracijaDb.cs" />
-    <Compile Include="Migrations\20160516223724_TaxiServisMigracijaDb.designer.cs">
-      <DependentUpon>20160516223724_TaxiServisMigracijaDb.cs</DependentUpon>
+    <Compile Include="Migrations\20160527165426_InitialMigration.cs" />
+    <Compile Include="Migrations\20160527165426_InitialMigration.designer.cs">
+      <DependentUpon>20160527165426_InitialMigration.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\TaxiServisDbContextModelSnapshot.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -119,6 +119,7 @@
     <Compile Include="TaxiServis\Models\Lokacija.cs" />
     <Compile Include="TaxiServis\Models\Mapa.cs" />
     <Compile Include="TaxiServis\Models\MeniStavka.cs" />
+    <Compile Include="TaxiServis\Models\NarudzbaNeregistrovanogKlijenta.cs" />
     <Compile Include="TaxiServis\Models\NarudzbaOdmah.cs" />
     <Compile Include="TaxiServis\Models\NeregistrovaniKlijent.cs" />
     <Compile Include="TaxiServis\Models\Prijava.cs" />
@@ -136,6 +137,7 @@
     <Compile Include="TaxiServis\Models\UlogaMeniStavka.cs" />
     <Compile Include="TaxiServis\Models\Uposlenik.cs" />
     <Compile Include="TaxiServis\Models\Vozac.cs" />
+    <Compile Include="TaxiServis\Models\ZahtjevZaPrevozZaListe.cs" />
     <Compile Include="TaxiServis\Models\ZahtjevZaPrijevoz.cs" />
     <Compile Include="TaxiServis\ViewModels\LogInViewModel.cs" />
     <Compile Include="TaxiServis\ViewModels\MainPageViewModel.cs" />
@@ -190,9 +192,7 @@
     <None Include="TaxiServisApp_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Assets\directions.png" />
     <Content Include="Assets\IkonaKlijenta.ico" />
-    <Content Include="Assets\logo1.png" />
     <Content Include="Assets\PocetnaLogo2.png" />
     <Content Include="Assets\PocetnaLogoSlika.jpg" />
     <Content Include="Assets\PocetnaPozadina - Copy.jpg" />

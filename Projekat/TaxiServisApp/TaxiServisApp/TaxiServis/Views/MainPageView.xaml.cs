@@ -18,6 +18,7 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
+
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
 
 namespace TaxiServisApp.TaxiServis.Views
@@ -27,10 +28,12 @@ namespace TaxiServisApp.TaxiServis.Views
     /// </summary>
     public sealed partial class MainPageView : Page
     {
+        public Korisnik _korisnik;
+        //public MainPageViewModel parent;
         public MainPageView()
         {
             this.InitializeComponent();
-            DataContext = new MainPageViewModel();
+            //DataContext = new MainPageViewModel();
             var currentView = SystemNavigationManager.GetForCurrentView();
             currentView.AppViewBackButtonVisibility = AppViewBackButtonVisibility.Visible;
             SystemNavigationManager.GetForCurrentView().BackRequested += ThisPage_BackRequested;
@@ -40,19 +43,21 @@ namespace TaxiServisApp.TaxiServis.Views
         {
        }*/
 
-
+//Dodati: ovaj dio mora ici pod main page view model
         //Metoda u kojoj se procesira ono što je došlo sa stranice koja je pozvala ovu stranicu
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
 
             DataContext = (MainPageViewModel)e.Parameter;
+            
             base.OnNavigatedTo(e);
-
+            //_korisnik = (MainPageViewModel)e.
             Korisnik korisnik = null;
             //Dobavljanje korisnika iz parametra budući da je isti sa logina poslan kao parametar
             if (e.Parameter != null)
             {
-                korisnik = ((MainPageViewModel)e.Parameter).korisnik;//(Korisnik)e.Parameter;
+                korisnik = ((MainPageViewModel)e.Parameter)._korisnik;//(Korisnik)e.Parameter;
+                _korisnik = korisnik;
             }
             var stavke = MeniStavkeListView.ItemsSource as List<MeniStavkeViewModel>;
 
@@ -94,9 +99,13 @@ namespace TaxiServisApp.TaxiServis.Views
         private void MeniStavkeListView_SelectionChanged(object sender, SelectionChangedEventArgs
        e)
         {
+            
             if (e.AddedItems.Count > 0)
             {
                 var menuPodstranica = (e.AddedItems[0] as MeniStavkeViewModel).Podstranica;
+                //Type menuPodstranicaViewModel = (e.AddedItems[0] as MeniStavkeViewModel).PodstranicaViewModel.GetType();
+                //var mpvm = new object();
+                //menuPodstranica = new typeof();
                 naslovna.Text = (e.AddedItems[0] as MeniStavkeViewModel).Naziv;
                 if (menuPodstranica != null) sadrzajPodstranice.Navigate(menuPodstranica, this);
 

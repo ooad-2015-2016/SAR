@@ -9,6 +9,9 @@ namespace TaxiServisApp
 {
    public class Lokacija
     {
+        //private string geoDuzina;
+       // private string geoSirina;
+
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int id { get; set; }
         public string sirina { get; set; }
@@ -23,6 +26,12 @@ namespace TaxiServisApp
 
         public Lokacija()
         {
+        }
+
+        public Lokacija(string geoDuzina, string geoSirina)
+        {
+            this.duzina = geoDuzina;
+            this.sirina = geoSirina;
         }
     }
 }

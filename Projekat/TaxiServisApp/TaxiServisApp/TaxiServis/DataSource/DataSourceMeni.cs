@@ -59,6 +59,7 @@ namespace TaxiServisApp.TaxiServis.DataSource
             // _korisnici = listaKlijenata;
         }
 
+
         public static IList<Korisnik> DajSveKorisnike()
         {
 
@@ -124,42 +125,48 @@ namespace TaxiServisApp.TaxiServis.DataSource
     MeniStavkaId=1,
    Naziv="Naruci Taxi! ",
    Kod="K1",
-   Podstranica = typeof(PocetnaKorisnikView)
+   Podstranica = typeof(PocetnaKorisnikView),
+   PodstranicaViewModel = typeof(PocetnaKorisnikViewModel)
     },
     new MeniStavka()
     {
     MeniStavkaId=2,
    Naziv="Napravi Rezervaciju",
     Kod="K2",
-    Podstranica = typeof(RezervacijaPageView)
+    Podstranica = typeof(RezervacijaPageView),
+    PodstranicaViewModel = typeof(RezervacijaViewModel)
     },
     new MeniStavka()
     {
     MeniStavkaId=3,
    Naziv="Podaci o racunu",
    Kod="K3",
-    Podstranica = typeof(PodaciOKlijentuView)
+    Podstranica = typeof(PodaciOKlijentuView),
+    PodstranicaViewModel = typeof(PodaciOKlijentuViewModel)
     },
     new MeniStavka()
     {
     MeniStavkaId=4,
    Naziv="Pocetna Vozac",
    Kod="V1",
-   Podstranica = typeof(PocetnaVozacView)
+   Podstranica = typeof(PocetnaVozacView),
+   PodstranicaViewModel = typeof(PocetnaVozacViewModel)
     },
        new MeniStavka()
     {
     MeniStavkaId=5,
    Naziv="Podaci o Vozacu",
    Kod="V2",
-   Podstranica = typeof(PodaciOVozacuView)
+   Podstranica = typeof(PodaciOVozacuView),
+           PodstranicaViewModel = typeof(PodaciOVozacuViewModel)
     },
      new MeniStavka()
     {
     MeniStavkaId=6,
    Naziv="Pocetna Dispecer",
    Kod="D1",
-   Podstranica = typeof(PocetnaDispecerView)
+   Podstranica = typeof(PocetnaDispecerView),
+   PodstranicaViewModel = typeof(PocetnaDispecerViewModel)
     },
 
        new MeniStavka()
@@ -167,14 +174,16 @@ namespace TaxiServisApp.TaxiServis.DataSource
     MeniStavkaId=7,
    Naziv="Pocetna Supervizor",
    Kod="S1",
-   Podstranica = typeof(PocetnaSupervizorView)
+   Podstranica = typeof(PocetnaSupervizorView),
+   PodstranicaViewModel = typeof(PocetnaSupervizorViewModel)
     },
            new MeniStavka()
     {
     MeniStavkaId=8,
    Naziv="Registracija uposlenika",
    Kod="S2",
-   Podstranica = typeof(PocetnaSupervizorView)
+   Podstranica = typeof(RegistracijaUposlenikaView),
+   PodstranicaViewModel = typeof(RegistracijaUposlenikaViewModel)
     },
     new MeniStavka()
     {

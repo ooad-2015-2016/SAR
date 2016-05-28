@@ -24,7 +24,7 @@
             <Maps:MapControl Margin="-1,-1,1,-1"/>
         </Border>
 
-        <ListBox x:Name="listView1" Width="260" Margin="10,170,1010,70">
+        <ListBox x:Name="listView1" Width="260" Margin="10,170,1010,70" HorizontalAlignment="Left" VerticalAlignment="Top">
             <ListBoxItem Content="Mujo Mujić&#xD;&#xA;Ive Andrića, Alipašino polje&#xD;&#xA;2 km, prije 2 min." Height="120" Background="#3319DAEE" FontSize="18.667" BorderBrush="#FF969696" BorderThickness="1"/>
             <ListBoxItem Content="Huso Husić&#xA;Trg Solidarnosti, RTV&#xA;5 km, prije 1 min." Height="120" Background="#B2B4FFA0" FontSize="18.667" BorderBrush="#FF969696" BorderThickness="1"/>
             <ListBoxItem Content="Emina Eminić&#xA;Safeta Zajke&#xA;12 km, prije 3 min." Height="120" Background="#4CEA85EE" FontSize="18.667" BorderBrush="#FF969696" BorderThickness="1"/>

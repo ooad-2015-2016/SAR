@@ -21,7 +21,8 @@ namespace TaxiServisApp
         public Spol spol { get; set; }
         public int brojVoznji { get; set; }
         public int kilometriVoznje { get; set; }
-        
+        public DateTime datumZadnjePrijave { get; set; }
+        public bool online { get; set; }
         public RegistrovaniKlijent(int id, string ime,string prezime, string mail,
             string korisnickoIme, string sifra, DateTime datumRodjenja,DateTime datumRegistracije,
             Spol spol,int brojVoznji,int kilometriVoznje)
@@ -37,6 +38,7 @@ namespace TaxiServisApp
             this.spol = spol;
             this.brojVoznji=brojVoznji;
             this.kilometriVoznje = kilometriVoznje;
+            online = false;
         }
 
         public RegistrovaniKlijent()

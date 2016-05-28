@@ -15,7 +15,7 @@ namespace TaxiServisApp
         public DateTime vrijemeRezervacije { get; set; }
         public String dodatniZahtjevi { get; set; }
 
-        public Rezervacija(int id, DateTime vrijemeNarudzbe, Klijent klijent, Vozac idVozačPrihvatio,
+        public Rezervacija(int id, DateTime vrijemeNarudzbe, RegistrovaniKlijent klijent, Vozac idVozačPrihvatio,
             Lokacija odrediste, StatusNarudzbe statusNarudzbe,
             Lokacija polaznaLokacija,DateTime vrijemeRezervacije, string dodatniZahtjevi):
                 base(id,vrijemeNarudzbe,klijent,idVozačPrihvatio,odrediste,statusNarudzbe)

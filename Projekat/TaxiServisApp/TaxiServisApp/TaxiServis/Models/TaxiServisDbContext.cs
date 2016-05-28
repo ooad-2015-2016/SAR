@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using Windows.Storage;
 using Microsoft.CodeAnalysis.CSharp;
 using System.Data.Common;
+using TaxiServisApp.TaxiServis.Models;
 
 namespace TaxiServisApp
 {
@@ -20,6 +21,8 @@ namespace TaxiServisApp
         public DbSet<Klijent> Klijenti { get; set; }
         public DbSet<Lokacija> Lokacije { get; set; }
         public DbSet<NarudzbaOdmah> NarudzbeOdmah { get; set; }
+
+        public DbSet<NarudzbaNeregistrovanogKlijenta> NarudzbeNeregistrovanihKlijenata { get; set; }
         public DbSet<NeregistrovaniKlijent> NeregistrovaniKlijenti { get; set; }
         public DbSet<Rezervacija> Rezervacije { get; set; }
         public DbSet<SesijaKlijent> SesijeKlijenta { get; set; }
@@ -29,9 +32,10 @@ namespace TaxiServisApp
         public DbSet<Vozac> Vozači { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            string databaseFilePath = "TaxiServisBazaPodataka02.db";
+            string databaseFilePath = "TaxiServisBazaPodataka14.db";
             try
             {
+
                 databaseFilePath = Path.Combine(ApplicationData.Current.LocalFolder.Path,
                databaseFilePath);
             }

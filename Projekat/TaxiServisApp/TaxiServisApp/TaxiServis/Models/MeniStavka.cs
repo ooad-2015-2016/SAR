@@ -12,6 +12,7 @@ namespace TaxiServisApp.TaxiServis.Models
         public string Naziv { get; set; }
         public string Kod { get; set; }
         public Type Podstranica { get; set; }
+        public Type PodstranicaViewModel { get; set; }
         public virtual ICollection<UlogaMeniStavka> UlogaMeniStavke
         {
             get;

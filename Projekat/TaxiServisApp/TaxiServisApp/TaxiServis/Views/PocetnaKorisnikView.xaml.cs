@@ -4,7 +4,10 @@ using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using System.Threading.Tasks;
+using TaxiServisApp.TaxiServis.Models;
 using TaxiServisApp.TaxiServis.ViewModels;
+using TaxiServisApp.TaxiServis.Views;
+
 using Windows.Devices.Geolocation;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
@@ -34,11 +37,12 @@ namespace TaxiServisApp.TaxiServis.Views
         Geoposition geoposition;
         MapIcon mapIcon;
         bool ponavljanjePetljeLociranja;
+        Korisnik _korisnik { get; set; }
         public PocetnaKorisnikView()
         {
             this.InitializeComponent();
 
-            DataContext = new PocetnaKorisnikViewModel(this);
+            //DataContext = new PocetnaKorisnikViewModel(this);
             this.Loaded += PocetnaKorisnikView_Loaded;
             //lociranje = locirajMe();
             //lociranje.RunSynchronously();
@@ -58,7 +62,7 @@ namespace TaxiServisApp.TaxiServis.Views
         }
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
-            //DataContext = (MainPageView)e.Parameter;
+            DataContext = new PocetnaKorisnikViewModel((MainPageView)e.Parameter);
         }
         public async void pomocnaNotifikacija()
         {
@@ -94,7 +98,7 @@ namespace TaxiServisApp.TaxiServis.Views
             }
             catch (UnauthorizedAccessException)
             {
-                MessageBox("Location service is turned off!");
+                MessageBox("Lokacija na uređaju je isključena!");
             }
             // base.OnNavigatedTo(e);
         }
@@ -129,20 +133,21 @@ namespace TaxiServisApp.TaxiServis.Views
             }
             catch (UnauthorizedAccessException)
             {
-                MessageBox("Location service is turned off!");
+                MessageBox("Lokacija na uređaju je isključena!");
             }
             //await(1000);
         }
         public async void locirajMe()
         {
             // progressBar.Visibility = Windows.UI.Xaml.Visibility.Visible;
-            while (ponavljanjePetljeLociranja)
-            {
+
                 //ponavljanjePetljeLociranja = false;
                 geolocator = new Geolocator();
                 geolocator.DesiredAccuracyInMeters = 50;
                 try
                 {
+                while (ponavljanjePetljeLociranja)
+            {
                     geoposition = await geolocator.GetGeopositionAsync(
                        maximumAge: TimeSpan.FromMinutes(5),
                        timeout: TimeSpan.FromSeconds(10));
@@ -160,17 +165,24 @@ namespace TaxiServisApp.TaxiServis.Views
                     korisnickaMapa_MapControl.ZoomLevel = mySlider.Value;
                     //mySlider.Value = korisnickaMapa_MapControl.ZoomLevel;
                     // progressBar.Visibility = Windows.UI.Xaml.Visibility.Collapsed;
+
+                    //Ovaj dio je zakomentarisan zbog popravki lokacije
                     geoDuzina_TextBlock.Text = Convert.ToString(korisnickaMapa_MapControl.Center.Position.Longitude);
                     geoSirina_TextBlock.Text = Convert.ToString(korisnickaMapa_MapControl.Center.Position.Latitude);
                     
+                }  
                 }
                 catch (UnauthorizedAccessException)
                 {
-                    MessageBox("Location service is turned off!");
-                    break;
+                    MessageBox("Lokacija na uređaju je isključena!");
+                   // break;
                 }
-                await Task.Delay(500);
+            catch (System.Exception)
+            {
+                MessageBox("Vaš uređaj trenutno ne podržava uslugu lociranja. Uključite lokaciju i proverite Internet konekciju!");
             }
+                await Task.Delay(500);
+            
         }
 
         // Custom Message Dialog Box  
@@ -180,21 +192,7 @@ namespace TaxiServisApp.TaxiServis.Views
             await Dispatcher.RunAsync(CoreDispatcherPriority.Normal, async () => await dialog.ShowAsync());
         }
 
-        private void button_Click(object sender, RoutedEventArgs e)
-        {
-            using (var db = new TaxiServisDbContext())
-            {
-                var zahtjev = new NarudzbaOdmah()
-                {
-                    vrijemeNarudzbe = DateTime.Now,
-                    //klijent=
-
-
-                };
-
-
-            }
-        }
+     
     }
     /*
     public sealed partial class PocetnaKorisnikView : Page
