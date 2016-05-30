@@ -26,5 +26,15 @@ namespace TaxiServisApp.TaxiServis.Views
         {
             this.InitializeComponent();
         }
+
+        private void textBlock_SelectionChanged(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void textBlock_Copy3_SelectionChanged(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

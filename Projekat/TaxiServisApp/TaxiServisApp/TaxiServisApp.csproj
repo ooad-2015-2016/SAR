@@ -92,6 +92,7 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <None Include="Assets\klijentIkonaPhotoshop.psb" />
     <None Include="ClassDiagram1.cd" />
     <None Include="ClassDiagram2.cd" />
     <None Include="project.json" />
@@ -100,9 +101,9 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\20160528153019_InitialMigration.cs" />
-    <Compile Include="Migrations\20160528153019_InitialMigration.designer.cs">
-      <DependentUpon>20160528153019_InitialMigration.cs</DependentUpon>
+    <Compile Include="Migrations\20160530125018_InitialMigration.cs" />
+    <Compile Include="Migrations\20160530125018_InitialMigration.designer.cs">
+      <DependentUpon>20160530125018_InitialMigration.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\TaxiServisDbContextModelSnapshot.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -132,11 +133,13 @@
     <Compile Include="TaxiServis\Models\TaxiServisDbContext.cs" />
     <Compile Include="TaxiServis\Models\TaxiVozilo.cs" />
     <Compile Include="TaxiServis\Models\TipElementa.cs" />
+    <Compile Include="TaxiServis\Models\TipZahtjevaZaPrevoz.cs" />
     <Compile Include="TaxiServis\Models\Uloga.cs" />
     <Compile Include="TaxiServis\Models\UlogaKorisnik.cs" />
     <Compile Include="TaxiServis\Models\UlogaMeniStavka.cs" />
     <Compile Include="TaxiServis\Models\Uposlenik.cs" />
     <Compile Include="TaxiServis\Models\Vozac.cs" />
+    <Compile Include="TaxiServis\Models\ZahtjevZaPrevozSaPushPinom.cs" />
     <Compile Include="TaxiServis\Models\ZahtjevZaPrevozZaListe.cs" />
     <Compile Include="TaxiServis\Models\ZahtjevZaPrijevoz.cs" />
     <Compile Include="TaxiServis\ViewModels\LogInViewModel.cs" />
@@ -192,11 +195,24 @@
     <None Include="TaxiServisApp_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\directions.png" />
     <Content Include="Assets\IkonaKlijenta.ico" />
+    <Content Include="Assets\klijentNarudzbaOdmah.png" />
+    <Content Include="Assets\klijentNeregistrovaniZahtjev.png" />
+    <Content Include="Assets\klijentRezervacija.png" />
+    <Content Include="Assets\klijentSiva.jpg" />
+    <Content Include="Assets\klijentTrenutni.png" />
+    <Content Include="Assets\klijentZelena.jpg" />
+    <Content Include="Assets\logo1.png" />
+    <Content Include="Assets\PocetnaLogo.ico" />
     <Content Include="Assets\PocetnaLogo2.png" />
     <Content Include="Assets\PocetnaLogoSlika.jpg" />
     <Content Include="Assets\PocetnaPozadina - Copy.jpg" />
     <Content Include="Assets\PocetnaPozadina.jpg" />
+    <Content Include="Assets\taxiOstaliTaxi.png" />
+    <Content Include="Assets\taxiSlobodan.png" />
+    <Content Include="Assets\voziloCrvena.jpg" />
+    <Content Include="Assets\voziloZelena.jpg" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />

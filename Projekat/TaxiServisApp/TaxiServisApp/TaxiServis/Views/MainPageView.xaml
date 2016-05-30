@@ -9,7 +9,8 @@
     mc:Ignorable="d">
     <Page.Resources>
         <DataTemplate x:Key="MeniStavkeItemTemplate"
-x:DataType="viewmodels:MeniStavkeViewModel">
+x:DataType="viewmodels:MeniStavkeViewModel">
+
             <Grid Margin="0,11,0,13">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto" />
@@ -50,6 +51,7 @@ FontSize="36" Click="PrikaziMeni_Click" Background="White" Width="55" Canvas.ZIn
  Grid.Row="1"
  ItemContainerTransitions="{x:Null}"
  ItemTemplate="{StaticResource MeniStavkeItemTemplate}"
+                   
  IsItemClickEnabled="True"
  SelectionChanged="MeniStavkeListView_SelectionChanged">
                     <ListView.ItemContainerStyle>

@@ -12,7 +12,7 @@ namespace TaxiServisApp.TaxiServis.Models
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int id { get; set; }
 
-        public NarudzbaNeregistrovanogKlijenta(int id, DateTime vrijemeNarudzbe, RegistrovaniKlijent klijent, Vozac idVozačPrihvatio, Lokacija odrediste, StatusNarudzbe statusNarudzbe) : base (id, vrijemeNarudzbe, klijent, idVozačPrihvatio, odrediste, statusNarudzbe) { }
+        public NarudzbaNeregistrovanogKlijenta(int id, DateTime vrijemeNarudzbe, RegistrovaniKlijent klijent, int VozacPrihvatioId, int odrediste, StatusNarudzbe statusNarudzbe) : base (id, vrijemeNarudzbe, klijent, VozacPrihvatioId, odrediste, statusNarudzbe) { }
 
     }
 }

@@ -30,8 +30,8 @@ namespace TaxiServisApp.TaxiServis.ViewModels
             RegistracijaCommand = new RelayCommand<object>(stranicaRegistracije);
             MainPageCommand = new RelayCommand<object>(pocetnaStranica);
             var inicijalizacija = new DataSourceMeni();
-            username = "Korisničko ime";
-            pass = "Korisnička šifra";
+            //username = "Korisničko ime";
+            //pass = "Korisnička šifra";
 
         }
 

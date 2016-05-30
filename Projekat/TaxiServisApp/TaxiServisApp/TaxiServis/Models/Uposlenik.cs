@@ -16,15 +16,17 @@ namespace TaxiServisApp
         public DateTime datumRodjenja { get; set; }
         public string korisnickoIme { get; set; }
         public string sifra { get; set; }
+        public bool online { get; set; }
 
-       /* Uposlenik(int id,string ime, string prezime, DateTime datumRodjenja, string korisnickoIme, string Sifra)
-        {
-            this.id = id;
-            this.prezime = prezime;
-            this.datumRodjenja = datumRodjenja;
-            this.korisnickoIme = korisnickoIme;
-            this.sifra = sifra;
-        }*/
+
+        /* Uposlenik(int id,string ime, string prezime, DateTime datumRodjenja, string korisnickoIme, string Sifra)
+         {
+             this.id = id;
+             this.prezime = prezime;
+             this.datumRodjenja = datumRodjenja;
+             this.korisnickoIme = korisnickoIme;
+             this.sifra = sifra;
+         }*/
 
         public Uposlenik(int id, string ime, string prezime, DateTime datumRodjenja, string korisnickoIme, string sifra)
         {

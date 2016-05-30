@@ -6,14 +6,23 @@ using System.Threading.Tasks;
 
 namespace TaxiServisApp.TaxiServis.Models
 {
-    class ZahtjevZaPrevozZaListe
+    public class ZahtjevZaPrevozZaListe
     {
         public ZahtjevZaPrevozZaListe(int id)
         {
             this.id = id;
         }
 
-        int id { get; set; }
+        public ZahtjevZaPrevozZaListe()
+        {
+        }
+
+        public int id { get; set; }
+        public string klijent { get; set; }
+        public TipZahtjevaZaPrevoz tipZahtjeva { get; set; }
+        public string lokacija { get; set; }
+        public TimeSpan vrijemeCekanja { get; set; }
+
 
     }
 }

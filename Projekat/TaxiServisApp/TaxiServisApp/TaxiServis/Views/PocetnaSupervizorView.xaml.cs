@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using TaxiServisApp.TaxiServis.ViewModels;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
@@ -26,28 +27,14 @@ namespace TaxiServisApp.TaxiServis.Views
         {
             this.InitializeComponent();
         }
-
-        private void nazadButton_Click(object sender, RoutedEventArgs e)
+        protected override void OnNavigatedTo(NavigationEventArgs e)
         {
-            //_________________SS-komentar___________________
-            // da se vrati nazad na log in pomocu this.Frame...
+            DataContext = new PocetnaSupervizorViewModel((MainPageView)e.Parameter);
         }
 
-        private void button_Click(object sender, RoutedEventArgs e)
+        private void ListView_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            //_________________SS-komentar___________________
-            //ja mislim da ovako bi trebalo ici sa stranice na stranicu 
-            this.Frame.Navigate(typeof(Views.RegistracijaUposlenikaView));
-        }
-        //_________________SS-komentar___________________
-        /* - da se u gird view ili moze list view prikazu svi podaci iz baze
-        private void Page_Loaded(object sender, RoutedEventArgs e)
-        {
-            using (var db = new RestoranDbContext())
-            {
-                bazaGridView.ItemsSource = db.Uposlenici.OrderBy(c => c.Prezime).ToList();
-            }
-        }*/
 
+        }
     }
 }

@@ -8,6 +8,35 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid HorizontalAlignment="Left" Height="1060" Margin="10,10,0,0" VerticalAlignment="Top" Width="680">
+            <Grid HorizontalAlignment="Left" Height="330" Margin="10,10,0,0" VerticalAlignment="Top" Width="660">
+                <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="160,18,0,0" TextWrapping="Wrap" Text="Ime: " VerticalAlignment="Top" FontSize="26.667" SelectionChanged="textBlock_SelectionChanged"/>
+                <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" Margin="215,18,0,0" TextWrapping="Wrap" Text="{Binding ime}" VerticalAlignment="Top" FontSize="32" RenderTransformOrigin="0.458,0.93"/>
+                <TextBlock x:Name="textBlock_Copy" HorizontalAlignment="Left" Margin="111,61,0,0" TextWrapping="Wrap" Text="Prezime: " VerticalAlignment="Top" FontSize="26.667"/>
+                <TextBlock x:Name="textBlock1_Copy" HorizontalAlignment="Left" Margin="215,61,0,0" TextWrapping="Wrap" Text="{Binding prezime}" VerticalAlignment="Top" FontSize="32" RenderTransformOrigin="0.458,0.93"/>
+                <TextBlock x:Name="textBlock_Copy1" HorizontalAlignment="Left" Margin="130,109,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="26.667">
+                	<Run Text="e-mail"/>
+                	<Run Text=": "/>
+                </TextBlock>
+                <TextBlock x:Name="textBlock1_Copy1" HorizontalAlignment="Left" Margin="215,109,0,0" TextWrapping="Wrap" Text="{Binding mail}" VerticalAlignment="Top" FontSize="32" RenderTransformOrigin="0.458,0.93"/>
+                <TextBlock x:Name="textBlock_Copy2" HorizontalAlignment="Left" Margin="33,157,0,0" TextWrapping="Wrap" Text="Korisničko ime:" VerticalAlignment="Top" FontSize="26.667"/>
+                <TextBlock x:Name="textBlock1_Copy2" HorizontalAlignment="Left" Margin="215,157,0,0" TextWrapping="Wrap" Text="{Binding username}" VerticalAlignment="Top" FontSize="32" RenderTransformOrigin="0.458,0.93"/>
+                <TextBlock x:Name="textBlock_Copy3" HorizontalAlignment="Left" Margin="152,200,0,0" TextWrapping="Wrap" Text="Šifra:" VerticalAlignment="Top" FontSize="26.667" SelectionChanged="textBlock_Copy3_SelectionChanged"/>
+                <TextBlock x:Name="textBlock_Copy4" HorizontalAlignment="Left" Margin="82,243,0,0" TextWrapping="Wrap" Text="Broj vožnji:" VerticalAlignment="Top" FontSize="26.667" SelectionChanged="textBlock_Copy3_SelectionChanged"/>
+                <TextBlock x:Name="textBlock1_Copy4" HorizontalAlignment="Left" Margin="215,243,0,0" TextWrapping="Wrap" Text="{Binding brojVoznji}" VerticalAlignment="Top" FontSize="32" RenderTransformOrigin="0.458,0.93"/>
+                <TextBlock x:Name="textBlock_Copy5" HorizontalAlignment="Left" Margin="20,283,0,0" TextWrapping="Wrap" Text="Kilometri vožnje:" VerticalAlignment="Top" FontSize="26.667" SelectionChanged="textBlock_Copy3_SelectionChanged"/>
+                <TextBlock x:Name="textBlock1_Copy5" HorizontalAlignment="Left" Margin="215,283,0,0" TextWrapping="Wrap" Text="{Binding kilometriVoznje}" VerticalAlignment="Top" FontSize="32" RenderTransformOrigin="0.458,0.93"/>
+                <Button x:Name="button" Content="Promjeni šifru" HorizontalAlignment="Left" Margin="215,200,0,0" VerticalAlignment="Top" Width="210" Height="43"/>
+            </Grid>
+            <Grid HorizontalAlignment="Left" Height="850" Margin="10,385,0,-175" VerticalAlignment="Top" Width="660">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="9*"/>
+                    <ColumnDefinition Width="35*"/>
+                </Grid.ColumnDefinitions>
+                <ListView x:Name="listView" HorizontalAlignment="Left" Height="730" Margin="10,55,0,0" VerticalAlignment="Top" Width="640" Grid.ColumnSpan="2"/>
+            </Grid>
+            <TextBlock x:Name="textBlock_Copy6" HorizontalAlignment="Left" Margin="70,400,0,0" TextWrapping="Wrap" Text="Moji zahtjevi" VerticalAlignment="Top" FontSize="26.667" SelectionChanged="textBlock_Copy3_SelectionChanged"/>
+        </Grid>
 
     </Grid>
 </Page>

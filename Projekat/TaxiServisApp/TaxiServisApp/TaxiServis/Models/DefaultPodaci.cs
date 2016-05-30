@@ -51,9 +51,9 @@ namespace TaxiServisApp.TaxiServis.Models
             }
             if (!context.Lokacije.Any())
             {
-                context.Lokacije.AddRange(new Lokacija() { duzina = "0", sirina = "0" });
-                context.Lokacije.AddRange(new Lokacija() { duzina = "1", sirina = "1" });
-                context.Lokacije.AddRange(new Lokacija() { duzina = "2", sirina = "2" });
+                context.Lokacije.AddRange(new Lokacija() { duzina = 0, sirina = 0 });
+                context.Lokacije.AddRange(new Lokacija() { duzina = 1, sirina = 1 });
+                context.Lokacije.AddRange(new Lokacija() { duzina = 2, sirina = 2 });
 
                 context.SaveChanges();
             }

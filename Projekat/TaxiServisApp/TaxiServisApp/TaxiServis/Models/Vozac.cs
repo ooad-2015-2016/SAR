@@ -11,8 +11,12 @@ namespace TaxiServisApp
     {
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int id { get; set; }
-        public TaxiVozilo vozilo { get; set; }
-        public Lokacija trenutnaLokacija { get; set; }
+        public int voziloId { get; set; }
+        [ForeignKey("voziloId")]
+        public virtual TaxiVozilo TaxiVozilo { get; set; }
+        public int trenutnaLokacijaId { get; set; }
+        [ForeignKey("trenutnaLokacijaId")]
+        public virtual Lokacija Lokacija { get; set; }
         public bool slobodan { get; set; }
         public bool aktivan { get; set; }
 
@@ -20,8 +24,8 @@ namespace TaxiServisApp
            TaxiVozilo vozilo, Lokacija trenutnaLokacija, Boolean slobodan, Boolean aktivan):
                base(id,ime, prezime,datumRodjenja,korisnickoIme,Sifra)
         {
-            this.vozilo = vozilo;
-            this.trenutnaLokacija = trenutnaLokacija;
+            this.voziloId = voziloId;
+            this.trenutnaLokacijaId = trenutnaLokacijaId;
             this.slobodan = slobodan;
             this.aktivan = aktivan;
         }

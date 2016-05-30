@@ -51,27 +51,32 @@ namespace TaxiServisApp
             NavigationCacheMode = NavigationCacheMode.Required;
         }
 
+        private void textBoxUsername_TextChanged(object sender, TextChangedEventArgs e)
+        {
 
-      /*  private async void buttonPrijava_Click(object sender, RoutedEventArgs e)
-         {
+        }
 
-             var korisnickoIme = textBoxUsername.Text;
-             var sifra = textBoxPassword.Password;
-             var korisnik = DataSourceMeni.ProvjeraKorisnika(korisnickoIme, sifra);
-             if (korisnik != null && korisnik.KorisnikId > 0)
-             {
-                MainPageViewModel MPVM = new MainPageViewModel(this);
-                MPVM.korisnik = korisnik;
-                 this.Frame.Navigate(typeof(MainPageView), MPVM);
-             }
-             else
-             {
-                 var dialog = new MessageDialog("Pogrešno korisničko ime/šifra!", "Neuspješna prijava");
 
-                 await dialog.ShowAsync();
-             }
-         }
-         */
+        /*  private async void buttonPrijava_Click(object sender, RoutedEventArgs e)
+           {
+
+               var korisnickoIme = textBoxUsername.Text;
+               var sifra = textBoxPassword.Password;
+               var korisnik = DataSourceMeni.ProvjeraKorisnika(korisnickoIme, sifra);
+               if (korisnik != null && korisnik.KorisnikId > 0)
+               {
+                  MainPageViewModel MPVM = new MainPageViewModel(this);
+                  MPVM.korisnik = korisnik;
+                   this.Frame.Navigate(typeof(MainPageView), MPVM);
+               }
+               else
+               {
+                   var dialog = new MessageDialog("Pogrešno korisničko ime/šifra!", "Neuspješna prijava");
+
+                   await dialog.ShowAsync();
+               }
+           }
+           */
 
     }
 }

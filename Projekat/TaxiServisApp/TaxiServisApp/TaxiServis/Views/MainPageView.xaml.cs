@@ -34,9 +34,9 @@ namespace TaxiServisApp.TaxiServis.Views
         {
             this.InitializeComponent();
             //DataContext = new MainPageViewModel();
-            var currentView = SystemNavigationManager.GetForCurrentView();
+           /* var currentView = SystemNavigationManager.GetForCurrentView();
             currentView.AppViewBackButtonVisibility = AppViewBackButtonVisibility.Visible;
-            SystemNavigationManager.GetForCurrentView().BackRequested += ThisPage_BackRequested;
+            SystemNavigationManager.GetForCurrentView().BackRequested += ThisPage_BackRequested; */
 
         }
         /*protected override void OnNavigatedTo(NavigationEventArgs e)
@@ -88,6 +88,15 @@ namespace TaxiServisApp.TaxiServis.Views
                 
 
             }
+            {
+                var menuPodstranica = (stavke[0] as MeniStavkeViewModel).Podstranica;
+                //Type menuPodstranicaViewModel = (e.AddedItems[0] as MeniStavkeViewModel).PodstranicaViewModel.GetType();
+                //var mpvm = new object();
+                //menuPodstranica = new typeof();
+                naslovna.Text = (stavke[0] as MeniStavkeViewModel).Naziv;
+                if (menuPodstranica != null) sadrzajPodstranice.Navigate(menuPodstranica, this);
+
+            }
         }
 
         //show-hide funkcionalnost menija
@@ -96,8 +105,7 @@ namespace TaxiServisApp.TaxiServis.Views
             MojSplitView.IsPaneOpen = !MojSplitView.IsPaneOpen;
         }
         //Metoda koja na osnovu odabranog menija, poziva podstranicu koja je definisana u meniju
-        private void MeniStavkeListView_SelectionChanged(object sender, SelectionChangedEventArgs
-       e)
+        private void MeniStavkeListView_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             
             if (e.AddedItems.Count > 0)
@@ -107,7 +115,22 @@ namespace TaxiServisApp.TaxiServis.Views
                 //var mpvm = new object();
                 //menuPodstranica = new typeof();
                 naslovna.Text = (e.AddedItems[0] as MeniStavkeViewModel).Naziv;
-                if (menuPodstranica != null) sadrzajPodstranice.Navigate(menuPodstranica, this);
+                if((e.AddedItems[0] as MeniStavkeViewModel).Naziv == "LogOut")
+                {
+                    if (Frame.CanGoBack)
+                    {
+                        
+                        Frame.GoBack();
+                        //e.Handled = true;
+                    }
+                    else
+                    {
+                        var por = new MessageDialog("Nemoze nazad");
+                        por.ShowAsync();
+                    }
+                    
+                }
+                else if (menuPodstranica != null) sadrzajPodstranice.Navigate(menuPodstranica, this);
 
             }
         }

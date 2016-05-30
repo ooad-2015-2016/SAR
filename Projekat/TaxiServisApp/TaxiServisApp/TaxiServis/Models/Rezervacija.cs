@@ -11,16 +11,19 @@ namespace TaxiServisApp
     {
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int id { get; set; }
-        public Lokacija polaznaLokacija { get; set; }
-        public DateTime vrijemeRezervacije { get; set; }
-        public String dodatniZahtjevi { get; set; }
 
-        public Rezervacija(int id, DateTime vrijemeNarudzbe, RegistrovaniKlijent klijent, Vozac idVozačPrihvatio,
-            Lokacija odrediste, StatusNarudzbe statusNarudzbe,
-            Lokacija polaznaLokacija,DateTime vrijemeRezervacije, string dodatniZahtjevi):
-                base(id,vrijemeNarudzbe,klijent,idVozačPrihvatio,odrediste,statusNarudzbe)
+        public int polaznaLokacijaId { get; set; }
+        [ForeignKey("polaznaLokacijaId")]
+        public virtual Lokacija Lokacija { get; set; }
+        public DateTime vrijemeRezervacije { get; set; }
+        public string dodatniZahtjevi { get; set; }
+
+        public Rezervacija(int id, DateTime vrijemeNarudzbe, RegistrovaniKlijent klijent, int VozacPrihvatioId,
+            int odrediste, StatusNarudzbe statusNarudzbe,
+            int polaznaLokacijaId, DateTime vrijemeRezervacije, string dodatniZahtjevi):
+                base(id,vrijemeNarudzbe,klijent, VozacPrihvatioId ,odrediste,statusNarudzbe)
         {
-            this.polaznaLokacija = polaznaLokacija;
+            this.polaznaLokacijaId = polaznaLokacijaId;
             this.vrijemeRezervacije = vrijemeRezervacije;
             this.dodatniZahtjevi = dodatniZahtjevi;
         }

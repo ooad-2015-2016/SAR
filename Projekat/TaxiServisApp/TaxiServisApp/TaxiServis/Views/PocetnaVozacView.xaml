@@ -9,9 +9,20 @@
     xmlns:model="using:TaxiServisApp.TaxiServis.Models"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
+    <Page.Resources>
+        <DataTemplate x:Key="listeZahtjevaTemplate"
+x:DataType="model:ZahtjevZaPrevozZaListe">
+            <Grid>
+                <TextBlock  Style="{ThemeResource BodyTextBlockStyle}" ><LineBreak/><Run Text="{x:Bind klijent}"/><LineBreak/><Run Text="{x:Bind lokacija}"/><LineBreak/><Run Text="{x:Bind vrijemeCekanja}"/><LineBreak/></TextBlock>
+
+
+
+                    </Grid>
+        </DataTemplate>
+    </Page.Resources>
 
     <Page.Background>
-        <ImageBrush Stretch="UniformToFill" ImageSource="ms-appx:///Assets/PocetnaPozadina.jpg"/>
+        <ImageBrush ImageSource="ms-appx:///Assets/PocetnaPozadina.jpg" Stretch="UniformToFill"/>
     </Page.Background>
 
     <Grid RequestedTheme="Light">
@@ -20,15 +31,14 @@
         </Grid.Background>
         <Grid HorizontalAlignment="Left" Height="829" Margin="18,33,0,0" VerticalAlignment="Top" Width="1420">
             <GridView x:Name="gridView" HorizontalAlignment="Left" Margin="-1,10,0,0" VerticalAlignment="Top" Width="270" Height="809" BorderThickness="1">
-                <ListView x:Name="listView_Zahtjevi" Height="799" Width="260" IsItemClickEnabled="True" ItemsSource="{Binding listaZahtjeva}">
-                    <ListView.ItemTemplate>
-                        <DataTemplate>
+                <ListView x:Name="listView_Zahtjevi" Height="799" Width="260" IsItemClickEnabled="True" ItemTemplate="{StaticResource listeZahtjevaTemplate}" ItemsSource="{Binding listaZahtjeva, Mode=OneWay}">
+
                             <StackPanel Orientation="Vertical">
-                            <TextBlock Text="{Binding Path=id}"/>
+                                <GridView>
+                            <!-- <TextBlock Text="{Binding Mode=OneWay}"/> -->
+                        </GridView>
                             </StackPanel>
-                        </DataTemplate>
-                            
-                    </ListView.ItemTemplate>
+
                     <!-- <ListBoxItem Content="Mujo Mujić&#xD;&#xA;Ive Andrića, Alipašino polje&#xD;&#xA;2 km, prije 2 min." Height="120" Background="#FF8CFF72" FontSize="18.667" BorderBrush="#FF969696" BorderThickness="1"/>
                     <ListBoxItem Content="Huso Husić&#xA;Trg Solidarnosti, RTV&#xA;5 km, prije 1 min." Height="120" Background="#FFB4FFA0" FontSize="18.667" BorderBrush="#FF969696" BorderThickness="1"/>
                     <ListBoxItem Content="Emina Eminić&#xA;Safeta Zajke&#xA;12 km, prije 3 min." Height="120" Background="#FFB4FFA0" FontSize="18.667" BorderBrush="#FF969696" BorderThickness="1"/>
@@ -41,10 +51,10 @@
                     </ListView>
             </GridView>
             <Grid HorizontalAlignment="Left" Height="819" Margin="269,0,0,0" VerticalAlignment="Top" Width="1141">
-                <Maps:MapControl x:Name="vozacMapa_MapControl" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" Height="660" Width="1141" BorderBrush="Black"  BorderThickness="1" MapServiceToken="ois1uNA3x2DJUTgdplO1~2foFEDJgDtzslFL6nBuSKg~Ar05QsKorpOPv95HOlSMS_IfXT1LgrCyzNo0w0JVtleydukGTfJBOgTFWuPqqk4A">
+                <Maps:MapControl x:Name="vozacMapa_MapControl" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" Height="660" Width="1141"  BorderBrush="Black"  BorderThickness="1"  MapServiceToken="ois1uNA3x2DJUTgdplO1~2foFEDJgDtzslFL6nBuSKg~Ar05QsKorpOPv95HOlSMS_IfXT1LgrCyzNo0w0JVtleydukGTfJBOgTFWuPqqk4A" ZoomInteractionMode="GestureAndControl" MapElementClick="vozacMapa_MapControl_MapElementClick" TiltInteractionMode="GestureAndControl" RotateInteractionMode="GestureAndControl">
 
                 </Maps:MapControl>
-                <Slider x:Name="mySlider" Orientation="Vertical" HorizontalAlignment="Right" Height="211" Width="45" Margin="0,199,42,230" Minimum="10" Maximum="20" Value="15" ValueChanged="ZoomValueChanged" Foreground="BlueViolet"/>
+                <Slider x:Name="mySlider" Orientation="Vertical" HorizontalAlignment="Right" Height="211" Width="45" Margin="0,199,42,230" Minimum="10" Maximum="20" Value="15" ValueChanged="ZoomValueChanged"  Foreground="BlueViolet"/>
                 <TextBox x:Name="geoDuzina_TextBlock"  Text="{Binding Path=geoDuzina, Mode=TwoWay}" HorizontalAlignment="Left" Margin="10,601,0,0" TextWrapping="Wrap"  VerticalAlignment="Top"/>
                 <TextBox x:Name="geoSirina_TextBlock"  Text="{Binding Path=geoSirina, Mode=TwoWay}" HorizontalAlignment="Left" Margin="10,638,0,0" TextWrapping="Wrap"  VerticalAlignment="Top"/>
 
@@ -52,7 +62,7 @@
                     <GridViewItem Content="Slobodan" Margin="0" Height="134" Width="130" FontSize="21.333" Background="#D3B4B4B4"/>
                     <GridViewItem Content="Zauzet" Margin="0" Height="134" Width="130" FontSize="21.333" Background="#D3FD834A"/>
                 </GridView>
-                <GridView x:Name="gridView1_Copy" HorizontalAlignment="Left" Margin="393,675,0,0" VerticalAlignment="Top" Width="263" Height="134" BorderBrush="Black" BorderThickness="1">
+                <GridView x:Name="gridView1_Copy" HorizontalAlignment="Left" Margin="298,675,0,0" VerticalAlignment="Top" Width="263" Height="134" BorderBrush="Black" BorderThickness="1">
                     <GridViewItem Content="Aktivan" Margin="0" Height="134" Width="130" FontSize="21.333" Background="#D300F74F"/>
                     <GridViewItem Content="Neaktivan" Margin="0" Height="134" Width="130" FontSize="21.333" Background="#D3B4B4B4"/>
                 </GridView>
@@ -63,6 +73,7 @@
                     <ToggleSwitch x:Name="toggleSwitch_Copy1" Header="Zauzeti taxi" HorizontalAlignment="Left" Margin="170,70,0,0" VerticalAlignment="Top"/>
 
                 </Grid>
+                <TextBlock x:Name="textBlock_vozacKorisnickoIme" HorizontalAlignment="Left" Margin="1003,19,0,0" TextWrapping="Wrap" Text="{Binding vozacKorisnickoIme, Mode=OneWay}" VerticalAlignment="Top"/>
             </Grid>
         </Grid>
 

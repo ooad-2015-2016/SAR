@@ -12,9 +12,15 @@ namespace TaxiServisApp
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int id { get; set; }
         public DateTime vrijemeNarudzbe { get; set; }
-        public RegistrovaniKlijent klijent { get; set; }
-        public Vozac idVozačPrihvatio { get; set; }
-        public Lokacija lokacijaKorisika { get; set; }
+        public int klijentId { get; set; }
+        [ForeignKey("klijentId")]
+        public virtual RegistrovaniKlijent RegistrovaniKlijent { get; set; }
+        public int VozacPrihvatioId { get; set; }
+        [ForeignKey("VozacPrihvatioId")]
+        public virtual Vozac Vozac { get; set; }
+        public int lokacijaKorisikaId { get; set; }
+        [ForeignKey("lokacijaKorisikaId")]
+        public virtual Lokacija Lokacija { get; set; }
         public StatusNarudzbe statusNarudzbe { get; set; }
 
        /* ZahtjevZaPrijevoz(int id,DateTime vrijemeNarudzbe, Klijent klijent, Vozač idVozačPrihvatio, 
@@ -28,13 +34,13 @@ namespace TaxiServisApp
             this.statusNarudzbe = statusNarudzbe;
         }*/
         public ZahtjevZaPrijevoz() { }
-        public ZahtjevZaPrijevoz(int id, DateTime vrijemeNarudzbe, RegistrovaniKlijent klijent, Vozac idVozačPrihvatio, Lokacija polaziste, StatusNarudzbe statusNarudzbe1)
+        public ZahtjevZaPrijevoz(int id, DateTime vrijemeNarudzbe, RegistrovaniKlijent klijent, int idVozačPrihvatio, int polaziste, StatusNarudzbe statusNarudzbe1)
         {
             this.id = id;
             this.vrijemeNarudzbe = vrijemeNarudzbe;
-            this.klijent = klijent;
-            this.idVozačPrihvatio = idVozačPrihvatio;
-            this.lokacijaKorisika = polaziste;
+            this.klijentId = klijentId;
+            this.VozacPrihvatioId = idVozačPrihvatio;
+            this.lokacijaKorisikaId = polaziste;
             this.statusNarudzbe = statusNarudzbe1;
         }
     }

@@ -32,7 +32,7 @@ namespace TaxiServisApp
         public DbSet<Vozac> Vozači { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            string databaseFilePath = "TaxiServisBazaPodataka15.db";
+            string databaseFilePath = "TaxiServisBazaPodataka28.db";
             try
             {
 
