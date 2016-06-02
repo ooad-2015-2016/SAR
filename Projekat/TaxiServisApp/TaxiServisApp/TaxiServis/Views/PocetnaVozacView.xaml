@@ -6,18 +6,17 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:Maps="using:Windows.UI.Xaml.Controls.Maps"
     xmlns:viewmodel="using:TaxiServisApp.TaxiServis.ViewModels"
-    xmlns:model="using:TaxiServisApp.TaxiServis.Models"
+    xmlns:model="using:TaxiServisApp"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
     <Page.Resources>
-        <DataTemplate x:Key="listeZahtjevaTemplate"
-x:DataType="model:ZahtjevZaPrevozZaListe">
+        <DataTemplate x:Key="listeZahtjevaTemplate" x:DataType="model:ZahtjevZaPrevozZaListe">
             <Grid>
                 <TextBlock  Style="{ThemeResource BodyTextBlockStyle}" ><LineBreak/><Run Text="{x:Bind klijent}"/><LineBreak/><Run Text="{x:Bind lokacija}"/><LineBreak/><Run Text="{x:Bind vrijemeCekanja}"/><LineBreak/></TextBlock>
 
 
 
-                    </Grid>
+            </Grid>
         </DataTemplate>
     </Page.Resources>
 
@@ -33,11 +32,11 @@ x:DataType="model:ZahtjevZaPrevozZaListe">
             <GridView x:Name="gridView" HorizontalAlignment="Left" Margin="-1,10,0,0" VerticalAlignment="Top" Width="270" Height="809" BorderThickness="1">
                 <ListView x:Name="listView_Zahtjevi" Height="799" Width="260" IsItemClickEnabled="True" ItemTemplate="{StaticResource listeZahtjevaTemplate}" ItemsSource="{Binding listaZahtjeva, Mode=OneWay}">
 
-                            <StackPanel Orientation="Vertical">
-                                <GridView>
+                    <StackPanel Orientation="Vertical">
+                        <GridView>
                             <!-- <TextBlock Text="{Binding Mode=OneWay}"/> -->
                         </GridView>
-                            </StackPanel>
+                    </StackPanel>
 
                     <!-- <ListBoxItem Content="Mujo Mujić&#xD;&#xA;Ive Andrića, Alipašino polje&#xD;&#xA;2 km, prije 2 min." Height="120" Background="#FF8CFF72" FontSize="18.667" BorderBrush="#FF969696" BorderThickness="1"/>
                     <ListBoxItem Content="Huso Husić&#xA;Trg Solidarnosti, RTV&#xA;5 km, prije 1 min." Height="120" Background="#FFB4FFA0" FontSize="18.667" BorderBrush="#FF969696" BorderThickness="1"/>
@@ -48,7 +47,7 @@ x:DataType="model:ZahtjevZaPrevozZaListe">
                     <ListBoxItem Content="..." Height="120" Background="#FFB4FFA0" FontSize="18.667" BorderBrush="#FF969696" BorderThickness="1"/>
                     <ListBoxItem Content="Emina Eminić&#xA;Safeta Zajke&#xA;12 km, prije 7 min." Height="120" Background="#FFB4FFA0" FontSize="18.667"/>
                -->
-                    </ListView>
+                </ListView>
             </GridView>
             <Grid HorizontalAlignment="Left" Height="819" Margin="269,0,0,0" VerticalAlignment="Top" Width="1141">
                 <Maps:MapControl x:Name="vozacMapa_MapControl" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" Height="660" Width="1141"  BorderBrush="Black"  BorderThickness="1"  MapServiceToken="ois1uNA3x2DJUTgdplO1~2foFEDJgDtzslFL6nBuSKg~Ar05QsKorpOPv95HOlSMS_IfXT1LgrCyzNo0w0JVtleydukGTfJBOgTFWuPqqk4A" ZoomInteractionMode="GestureAndControl" MapElementClick="vozacMapa_MapControl_MapElementClick" TiltInteractionMode="GestureAndControl" RotateInteractionMode="GestureAndControl">

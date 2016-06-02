@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TaxiServisApp.TaxiServis.Models;
 
-namespace TaxiServisApp.TaxiServis.Models
+namespace TaxiServisApp
 {
     public class ZahtjevZaPrevozZaListe
     {

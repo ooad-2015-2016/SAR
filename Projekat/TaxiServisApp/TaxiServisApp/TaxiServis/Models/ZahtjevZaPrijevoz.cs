@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TaxiServisApp
+namespace TaxiServisApp.TaxiServis.Models
 {
     abstract public class ZahtjevZaPrijevoz
     {
@@ -42,6 +42,14 @@ namespace TaxiServisApp
             this.VozacPrihvatioId = idVozačPrihvatio;
             this.lokacijaKorisikaId = polaziste;
             this.statusNarudzbe = statusNarudzbe1;
+        }
+
+      
+
+        public bool ispravnoVrijemeNarudjbe()
+        {
+            if ( vrijemeNarudzbe> DateTime.Now) return false;
+            return true;
         }
     }
 }

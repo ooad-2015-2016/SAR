@@ -142,6 +142,7 @@
     <Compile Include="TaxiServis\Models\ZahtjevZaPrevozSaPushPinom.cs" />
     <Compile Include="TaxiServis\Models\ZahtjevZaPrevozZaListe.cs" />
     <Compile Include="TaxiServis\Models\ZahtjevZaPrijevoz.cs" />
+    <Compile Include="TaxiServis\ViewModels\DelegateCommand.cs" />
     <Compile Include="TaxiServis\ViewModels\LogInViewModel.cs" />
     <Compile Include="TaxiServis\ViewModels\MainPageViewModel.cs" />
     <Compile Include="TaxiServis\ViewModels\MeniStavkeViewModel.cs" />
@@ -154,6 +155,9 @@
     <Compile Include="TaxiServis\ViewModels\RegistracijaPageViewModel.cs" />
     <Compile Include="TaxiServis\ViewModels\RegistracijaUposlenikaViewModel.cs" />
     <Compile Include="TaxiServis\ViewModels\RezervacijaViewModel.cs" />
+    <Compile Include="TaxiServis\Views\RegistracijaUposlenikaView.xaml.cs">
+      <DependentUpon>RegistracijaUposlenikaView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="TaxiServis\Views\PocetnaDispecerView.xaml.cs">
       <DependentUpon>PocetnaDispecerView.xaml</DependentUpon>
     </Compile>
@@ -171,9 +175,6 @@
     </Compile>
     <Compile Include="TaxiServis\Views\PodaciOVozacuView.xaml.cs">
       <DependentUpon>PodaciOVozacuView.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="TaxiServis\Views\RegistracijaUposlenikaView.xaml.cs">
-      <DependentUpon>RegistracijaUposlenikaView.xaml</DependentUpon>
     </Compile>
     <Compile Include="TaxiServis\Views\LogInPage.xaml.cs">
       <DependentUpon>LogInPage.xaml</DependentUpon>
@@ -195,6 +196,7 @@
     <None Include="TaxiServisApp_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\add-user-xxl.png" />
     <Content Include="Assets\directions.png" />
     <Content Include="Assets\IkonaKlijenta.ico" />
     <Content Include="Assets\klijentNarudzbaOdmah.png" />
@@ -211,6 +213,7 @@
     <Content Include="Assets\PocetnaPozadina.jpg" />
     <Content Include="Assets\taxiOstaliTaxi.png" />
     <Content Include="Assets\taxiSlobodan.png" />
+    <Content Include="Assets\user-xxl.png" />
     <Content Include="Assets\voziloCrvena.jpg" />
     <Content Include="Assets\voziloZelena.jpg" />
     <Content Include="Properties\Default.rd.xml" />
@@ -227,6 +230,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="TaxiServis\Views\RegistracijaUposlenikaView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="TaxiServis\Views\PocetnaDispecerView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -248,10 +255,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="TaxiServis\Views\PodaciOVozacuView.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="TaxiServis\Views\RegistracijaUposlenikaView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

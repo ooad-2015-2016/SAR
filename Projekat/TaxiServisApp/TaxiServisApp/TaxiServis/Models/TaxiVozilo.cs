@@ -1,7 +1,7 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace TaxiServisApp
+namespace TaxiServisApp.TaxiServis.Models
 {
     public class TaxiVozilo
     {
@@ -23,6 +23,12 @@ namespace TaxiServisApp
 
         public TaxiVozilo()
         {
+        }
+
+        public bool ispravnoGodiste()
+        {
+            if (godiste > DateTime.Now) return false;
+            return true;
         }
     }
 }

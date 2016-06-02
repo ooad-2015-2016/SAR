@@ -3,6 +3,7 @@ using Microsoft.Data.Entity;
 using Microsoft.Data.Entity.Metadata;
 using Microsoft.Data.Entity.Migrations.Infrastructure;
 using TaxiServisApp;
+using TaxiServisApp.TaxiServis.Models;
 
 namespace TaxiServisAppMigrations
 {

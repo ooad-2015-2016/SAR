@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TaxiServisApp
+namespace TaxiServisApp.TaxiServis.Models
 {
     public class Dispecer : Uposlenik
     {

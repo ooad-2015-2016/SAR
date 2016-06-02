@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TaxiServisApp
+namespace TaxiServisApp.TaxiServis.Models
 {
     public class Rezervacija:ZahtjevZaPrijevoz
     {
@@ -26,6 +26,12 @@ namespace TaxiServisApp
             this.polaznaLokacijaId = polaznaLokacijaId;
             this.vrijemeRezervacije = vrijemeRezervacije;
             this.dodatniZahtjevi = dodatniZahtjevi;
+        }
+
+        public bool ispravnoVrijemeRezervacije()
+        {
+            if (vrijemeRezervacije > DateTime.Now) return false;
+            return true;
         }
     }
 }

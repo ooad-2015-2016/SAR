@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TaxiServisApp
+namespace TaxiServisApp.TaxiServis.Models
 {
     public class RegistrovaniKlijent:Klijent
     {
@@ -43,6 +43,33 @@ namespace TaxiServisApp
 
         public RegistrovaniKlijent()
         {
+        }
+        public bool ispravnaSifra()
+        {
+            if (sifra.Length < 4) return false;
+            return true;
+        }
+
+        public bool ispravanDatumRodjena()
+        {
+            if (datumRodjenja > DateTime.Now) return false;
+            return true;
+        }
+        public bool ispravanDatumRegistracije()
+        {
+            if (datumRegistracije > DateTime.Now || datumRegistracije<datumRodjenja) return false;
+            return true;
+        }
+
+        public bool ispravanDatumZadnjePrijave()
+        {
+            if (datumZadnjePrijave > DateTime.Now) return false;
+            return true;
+        }
+        public bool ispravanBrojVoznjiIKilometraze()
+        {
+            if (brojVoznji < 0 || kilometriVoznje < 0) return false;
+            return true;
         }
     }
 }

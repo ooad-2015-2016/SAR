@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using TaxiServisApp.TaxiServis.Helpers;
+using TaxiServisApp.TaxiServis.Models;
 using TaxiServisApp.TaxiServis.Views;
 
 namespace TaxiServisApp.TaxiServis.ViewModels

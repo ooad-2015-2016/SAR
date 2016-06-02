@@ -5,72 +5,47 @@
     xmlns:local="using:TaxiServisApp.TaxiServis.Views"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    
     xmlns:viewmodel="using:TaxiServisApp.TaxiServis.ViewModels"
-    
-    xmlns:model="using:TaxiServisApp"
+    xmlns:models="using:TaxiServisApp"
+    xmlns:m="using:TaxiServisApp.TaxiServis.Models"
     mc:Ignorable="d">
-    <Page.Resources>
-        <DataTemplate x:Key="UposleniciListTemplate"  x:DataType="model:Vozac">
-            <Grid>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto" />
-                    <!--Auto, ne * jer bi onda redovi bili rasireni do dna forme. Auto zauzima onoliko koliko mu treba-->
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="133" />
 
-                    <ColumnDefinition Width="144" />
-                    <ColumnDefinition Width="191" />
-                    <ColumnDefinition Width="371" />
-                </Grid.ColumnDefinitions>
-                <TextBlock Text="{x:Bind ime}" Grid.Column="0"/>
-                <TextBlock Text="{x:Bind prezime}" Grid.Column="1" />
-                <TextBlock Text="{x:Bind datumRodjenja}" Grid.Column="2"/>
-                <TextBlock Text="{x:Bind voziloId}" Grid.Column="3"/>
-            </Grid>
-        </DataTemplate>
-    </Page.Resources>
     <Grid Background="#B2D8D8D5">
         <Grid.RowDefinitions>
-            <RowDefinition Height="113*"/>
-            <RowDefinition Height="405*"/>
-            <RowDefinition Height="563*"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
-        <ListView
-            x:Name="ListView"
-            ItemTemplate="{StaticResource UposleniciListTemplate }" 
-            IsItemClickEnabled="True"
-            ItemsSource="{Binding ListaUposlenika}" BorderThickness="5" Grid.Row="1" Margin="0,0,1081,133" Height="272"  VerticalAlignment="Top" SelectionChanged="ListView_SelectionChanged">
-            <ListView.Template>
-                <ControlTemplate>
-                    <Grid>
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="Auto"/>
-                            <RowDefinition Height="*"/>
-                        </Grid.RowDefinitions>
-                        <Grid Grid.Row="0">
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="140*" />
-                                <ColumnDefinition Width="150*" />
-                                <ColumnDefinition Width="200*" />
-                                <ColumnDefinition Width="350*" />
-                            </Grid.ColumnDefinitions>
-                            <TextBlock Grid.Column="0" Text="Ime" Margin="0,0,32,0"/>
-                            <TextBlock Text="Prezime" Margin="1,0,0,0" Grid.Column="1"/>
-                            <TextBlock Grid.Column="2" Text="Datum Rodenja"/>
-                            <TextBlock Grid.Column="3" Text="Broj taxija"/>
-                        </Grid>
-                        <!-- Ostatak da bude lista koja je orginalno trebala biti -->
-                        <ItemsPresenter Grid.Row="1"></ItemsPresenter>
-                    </Grid>
-                </ControlTemplate>
-            </ListView.Template>
-            <ListView.ItemContainerStyle>
-                <Style TargetType="ListViewItem">
-                    <Setter Property="HorizontalContentAlignment" Value="Stretch" />
-                </Style>
-            </ListView.ItemContainerStyle>
-        </ListView>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+
+        <GridView  IsItemClickEnabled="True" ItemsSource="{Binding ListaUposlenika}" x:Name="gridView" HorizontalAlignment="Left" Height="283" Margin="42,37,0,0" VerticalAlignment="Top" Width="554" BorderThickness="2" Opacity="0.7" Foreground="#FFBD2A2A" BorderBrush="#B2C72121">
+            <GridView.ItemTemplate>
+                <DataTemplate  x:DataType="models:Vozac">
+                    <StackPanel Width="100" Height="100">
+                        <Image  Height="50" Width="50" Source="ms-appx:///Assets/user-xxl.png" />
+                        <TextBlock Text="{x:Bind ime}"/>
+                        <TextBlock Text="{x:Bind prezime}"/>
+                    </StackPanel>
+                </DataTemplate>
+            </GridView.ItemTemplate>
+        </GridView>
+
+        <TextBlock x:Name="label1" HorizontalAlignment="Left" Height="32" Margin="42,0,0,0" TextWrapping="Wrap" Text="Vozači" VerticalAlignment="Top" Width="76" FontSize="20" Foreground="#FFD83030"/>
+
+        <GridView  IsItemClickEnabled="True" ItemsSource="{Binding ListaDispecera}" x:Name="dispeceriGridView" HorizontalAlignment="Left" Height="283" VerticalAlignment="Top" Width="554" Margin="42,32,0,0" BorderBrush="#B26740CD" BorderThickness="2" Grid.Row="1">
+            <GridView.ItemTemplate>
+                <DataTemplate  x:DataType="m:Dispecer">
+                    <StackPanel Width="100" Height="100">
+                        <Image  Height="50" Width="50" Source="ms-appx:///Assets/user-xxl.png" />
+                        <TextBlock Text="{x:Bind ime}"/>
+                        <TextBlock Text="{x:Bind prezime}"/>
+                    </StackPanel>
+                </DataTemplate>
+            </GridView.ItemTemplate>
+        </GridView>
+        <TextBlock x:Name="lable2" HorizontalAlignment="Left" Height="32" Margin="42,0,0,0" TextWrapping="Wrap" Text="Dispečeri" VerticalAlignment="Top" Width="114" FontSize="20" Foreground="#FF6D30D8" SelectionChanged="label1_Copy_SelectionChanged" Grid.Row="1"/>
     </Grid>
 </Page>

@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using TaxiServisApp.TaxiServis.Helpers;
+using TaxiServisApp.TaxiServis.Models;
 using Windows.UI.Popups;
 
 namespace TaxiServisApp.TaxiServis.ViewModels
@@ -34,9 +35,18 @@ namespace TaxiServisApp.TaxiServis.ViewModels
         {
             using (var db = new TaxiServisDbContext())
             {
-                db.Klijenti.Add(new RegistrovaniKlijent()
+                
+            /*    RegistrovaniKlijent noviKlijent = new RegistrovaniKlijent();
+                if(noviKlijent.sifra.Length<4)
                 {
-                    ime = this.ime,
+                    var dialog = new MessageDialog("Uspjesno ste napravili nalog");
+
+                    await dialog.ShowAsync();
+                    MessageDialog("Sifra mora imati 4 karaktera");
+                }
+
+                db.Klijenti.Add(noviKlijent);
+                /*   ime = this.ime,
                     prezime = this.prezime,
                     datumRodjenja = datumRodjenja,
                     brojVoznji = 0,
@@ -45,21 +55,20 @@ namespace TaxiServisApp.TaxiServis.ViewModels
                     korisnickoIme = this.korisnickoIme,
                     sifra = this.sifra,
                     datumRegistracije = DateTime.Now
-                   
+                   */
                     
-                }
+                /*
                 );
                 db.SaveChanges();
                 notifikacijaRegistracije();
                 //registrovaniKlijent = new RegistrovaniKlijent();
-            }
+           */ }
         }
+
         public async void notifikacijaRegistracije()
         {
             {
-                var dialog = new MessageDialog("Uspjesno ste napravili nalog");
-               
-                await dialog.ShowAsync();
+                
             }
         }
         public bool provjeriPravljenjeNaloga(object parametar)

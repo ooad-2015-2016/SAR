@@ -31,7 +31,6 @@ namespace TaxiServisApp.TaxiServis.Models
             {
                 context.Uposlenici.AddRange(new Vozac() { ime = "Mr.", prezime = "Smith", datumRodjenja = Convert.ToDateTime("1/1/1911"), korisnickoIme = "vozac", sifra = "vozac" });
                 context.SaveChanges();
-
                 context.Uposlenici.AddRange(new Vozac() { ime = "A", prezime = "B", datumRodjenja = Convert.ToDateTime("1/1/1941"), korisnickoIme = "vozac2", sifra = "vozac2" });
                 context.SaveChanges();
                 context.Uposlenici.AddRange(new Vozac() { ime = "Mrs.", prezime = "Smitth", datumRodjenja = Convert.ToDateTime("1/1/1941"), korisnickoIme = "Vozac3", sifra = "Vozac3" });

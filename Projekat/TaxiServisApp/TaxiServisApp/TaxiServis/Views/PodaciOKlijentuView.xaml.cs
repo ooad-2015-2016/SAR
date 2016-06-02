@@ -12,6 +12,8 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using TaxiServisApp.TaxiServis.Models;
+using TaxiServisApp.TaxiServis.ViewModels;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -26,8 +28,12 @@ namespace TaxiServisApp.TaxiServis.Views
         {
             this.InitializeComponent();
         }
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
 
-        private void textBlock_SelectionChanged(object sender, RoutedEventArgs e)
+            DataContext = new PodaciOKlijentuViewModel((MainPageView)e.Parameter);
+
+        }        private void textBlock_SelectionChanged(object sender, RoutedEventArgs e)
         {
 
         }

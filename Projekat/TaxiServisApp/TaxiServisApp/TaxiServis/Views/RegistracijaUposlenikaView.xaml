@@ -7,25 +7,27 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid Background="#B2D8D8D5">
-        <RelativePanel HorizontalAlignment="Left" Height="696" Margin="227,10,0,0" VerticalAlignment="Top" Width="874">
-            <RadioButton x:Name="dispecerRB"  Content="Dispečer" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="1.483,0.385" Margin="539,416,-539,-416" IsChecked="{Binding Path=IsDispecer,Mode=TwoWay}" Checked="dispecerRB_Checked"  />
-            <RadioButton x:Name="vozacRB" Content="Vozač" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="289,416,-289,-416" IsChecked="{Binding Path=IsVozac, Mode=TwoWay}" Checked="vozacRB_Checked"/>
-            <DatePicker x:Name="DatumRodenjaUposlenika" Date="{Binding Path=DatumRodenja , Mode=TwoWay}" HorizontalAlignment="Left" Height="32" VerticalAlignment="Top" Width="370" Foreground="#FFEA6FD9" Margin="289,343,-289,-343"/>
-            <TextBlock x:Name="datumRodenjaLabel" HorizontalAlignment="Left" Height="32" TextWrapping="Wrap" Text="Datum rođenja" VerticalAlignment="Top" Width="165" FontSize="24" Foreground="#FF4B4848" Margin="66,343,-66,-343" />
-            <TextBlock x:Name="prezimeLabel" HorizontalAlignment="Left" Height="32" TextWrapping="Wrap" Text="Prezime" VerticalAlignment="Top" Width="165" FontSize="24" Foreground="#FF4B4848" RenderTransformOrigin="0.57,2.083" Margin="66,291,-66,-291"/>
-            <TextBox x:Name="prezimeTB" HorizontalAlignment="Center" Margin="289,291,45,-291" TextWrapping="Wrap"  VerticalAlignment="Top" Width="370" Text="{Binding username, Mode=TwoWay}"/>
-            <TextBlock x:Name="imeLabel" HorizontalAlignment="Left" Height="32" TextWrapping="Wrap" Text="Ime" VerticalAlignment="Top" Width="165" FontSize="24" Foreground="#FF4B4848" Margin="66,228,-66,-228"/>
-            <TextBox x:Name="imeTB" HorizontalAlignment="Center" Margin="289,228,45,-228" TextWrapping="Wrap"  VerticalAlignment="Top" Width="370" Text="{Binding username, Mode=TwoWay}"/>
-            <Image x:Name="image" HorizontalAlignment="Center" Height="101" VerticalAlignment="Top" Width="288" Source="ms-appx:///Assets/lllogooo.png" Stretch="Fill" Margin="321,10,95,-16"/>
-            <Button Content="Dodaj" HorizontalAlignment="Left" Height="42" VerticalAlignment="Top" Width="150" Margin="509,542,-443,-522" Command="{Binding  RegistrujUposlenikaCommand}"/>
-            <TextBlock x:Name="imeLabel_Copy" HorizontalAlignment="Left" Height="32" TextWrapping="Wrap" Text="Korisničko ime" VerticalAlignment="Top" Width="165" FontSize="24" Foreground="#FF4B4848" Margin="66,171,-66,-171" SelectionChanged="imeLabel_Copy_SelectionChanged"/>
-            <TextBox x:Name="korisnickoImeTB" Text="{Binding Path=Username, Mode=TwoWay}" HorizontalAlignment="Center" Margin="289,171,45,-171" TextWrapping="Wrap"  VerticalAlignment="Top" Width="370"/>
-            <TextBlock x:Name="imeLabel_Copy1" HorizontalAlignment="Left" Height="32" TextWrapping="Wrap" Text="Lozinka" VerticalAlignment="Top" Width="165" FontSize="24" Foreground="#FF4B4848" Margin="66,116,-66,-116"/>
-            <TextBlock x:Name="brojVozilaLabel" Height="32" TextWrapping="Wrap" Text="Broj vozila" VerticalAlignment="Top" FontSize="24" Foreground="#FF4B4848" Margin="66,488,-66,-488" Visibility="Collapsed"/>
-            <TextBox x:Name="brojVozilaTB" HorizontalAlignment="Center" Margin="289,488,45,-488" TextWrapping="Wrap"  VerticalAlignment="Top" Width="370" Text="{Binding username, Mode=TwoWay}" Visibility="Collapsed"/>
-            <PasswordBox x:Name="textBoxPassword" HorizontalAlignment="Center" Margin="289,116,-299,-116" VerticalAlignment="Top" Width="370" Password="{Binding Path=Sifra, Mode=TwoWay}" PlaceholderText="Šifra"/>
-        </RelativePanel>
-
+    <Grid Background="#C9EFF3D6">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="50"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Image x:Name="image" Grid.Column="1" HorizontalAlignment="Center" Height="171" VerticalAlignment="Top" Width="480" Source="ms-appx:///Assets/logo1.png" Stretch="Fill"/>
+        <Button Content="Dodaj" HorizontalAlignment="Right" Height="42" VerticalAlignment="Top" Width="150" Command="{Binding RegistrujUposlenikaCommand}" Grid.Column="1" Margin="0,588,0,0"/>
+        <TextBlock x:Name="korisnickoImeLabel" HorizontalAlignment="Left" Height="25" TextWrapping="Wrap" Text="Korisničko ime" VerticalAlignment="Top" Width="190" FontSize="14" Foreground="#FF4B4848" Margin="0,203,0,0" Grid.Column="1" />
+        <TextBox x:Name="korisnickoImeTB" Text="{Binding Username, Mode=TwoWay}" HorizontalAlignment="Right" TextWrapping="Wrap"  VerticalAlignment="Top" Width="295" FontSize="14" Grid.Column="1" Margin="0,196,10,0"/>
+        <TextBlock x:Name="imeLabel" HorizontalAlignment="Left" Height="35" TextWrapping="Wrap" Text="Lozinka" VerticalAlignment="Top" Width="190" FontSize="14" Foreground="#FF4B4848" Margin="0,248,0,0" Grid.Column="1"/>
+        <PasswordBox x:Name="textBoxPassword" HorizontalAlignment="Center" VerticalAlignment="Top" Width="295"  Height="35" Password="{Binding Sifra, Mode=TwoWay}" PlaceholderText="Šifra" FontSize="14" Grid.Column="1" Margin="211,248,10,0"/>
+        <TextBlock x:Name="imeLabel1" HorizontalAlignment="Left" Height="35"  TextWrapping="Wrap" Text="Ime" VerticalAlignment="Top" Width="190" FontSize="14" Foreground="#FF4B4848" RenderTransformOrigin="0.509,0.875" Margin="0,297,0,0" Grid.Column="1"/>
+        <TextBox x:Name="imeTB" HorizontalAlignment="Center" TextWrapping="Wrap"  VerticalAlignment="Top" Width="295" Text="{Binding username, Mode=TwoWay}" FontSize="14" Grid.Column="1" Margin="211,300,10,0"/>
+        <TextBlock x:Name="prezimeLabel" HorizontalAlignment="Left" Height="35" TextWrapping="Wrap" Text="Prezime" VerticalAlignment="Top" Width="190" FontSize="14" Foreground="#FF4B4848" RenderTransformOrigin="0.57,2.083" Margin="0,354,0,0" Grid.Column="1"/>
+        <TextBox x:Name="prezimeTB" HorizontalAlignment="Center" TextWrapping="Wrap"  VerticalAlignment="Top" Width="295" Text="{Binding username, Mode=TwoWay}" FontSize="14" Grid.Column="1" Margin="211,354,10,0"/>
+        <TextBlock x:Name="datumRodenjaLabel" HorizontalAlignment="Left" Height="32" TextWrapping="Wrap" Text="Datum rođenja" VerticalAlignment="Top" Width="190" FontSize="14" Foreground="#FF4B4848" Margin="0,407,0,0" Grid.Column="1" />
+        <DatePicker x:Name="DatumRodenjaUposlenika" Date="{Binding DatumRodenja, Mode=TwoWay}" HorizontalAlignment="Left" Height="32" VerticalAlignment="Top" Width="295" Foreground="#FFEA6FD9" FontSize="14" Grid.Column="1" Margin="211,405,0,0"/>
+        <RadioButton x:Name="dispecerRB"  Content="Dispečer" HorizontalAlignment="Right" VerticalAlignment="Top" RenderTransformOrigin="1.483,0.385" IsChecked="{Binding IsDispecer, Mode=TwoWay}" Checked="dispecerRB_Checked" Width="133" FontSize="14"  Grid.Column="1" Margin="0,456,172,0"  />
+        <RadioButton x:Name="vozacRB" Content="Vozač" HorizontalAlignment="Right" VerticalAlignment="Top" IsChecked="{Binding IsVozac, Mode=TwoWay}" Checked="vozacRB_Checked" Width="128" FontSize="14" Grid.Column="1" Margin="0,456,9,0"/>
+        <TextBox x:Name="brojVozilaTB" HorizontalAlignment="Center" Margin="211,519,10,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="295" Text="{Binding username, Mode=TwoWay}" Visibility="Visible" FontSize="14" Grid.Column="1"/>
+        <TextBlock x:Name="brojVozilaLabel" Height="35" TextWrapping="Wrap" Text="Broj vozila" VerticalAlignment="Top" FontSize="14" Foreground="#FF4B4848" Visibility="Visible" Margin="4,519,326,0" Grid.Column="1"/>
     </Grid>
 </Page>

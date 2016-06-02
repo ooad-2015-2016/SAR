@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TaxiServisApp
+namespace TaxiServisApp.TaxiServis.Models
 {
     abstract public class Uposlenik
     {
@@ -41,5 +41,19 @@ namespace TaxiServisApp
         public Uposlenik()
         {
         }
+
+        public bool ispravnaSifra()
+        {
+            if (sifra.Length < 4) return false;
+            return true;
+        }
+        
+        public bool ispravanDatumRodjena()
+        {
+            if (datumRodjenja > DateTime.Now) return false;
+            return true;
+        }
+
+       
     }
 }

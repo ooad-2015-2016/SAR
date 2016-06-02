@@ -43,7 +43,7 @@
       <FileName>TaxiServis\Models\Mapa.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="TaxiServisApp.NarudzbaOdmah" Collapsed="true">
+  <Class Name="TaxiServisApp.TaxiServis.Models.NarudzbaOdmah" Collapsed="true">
     <Position X="2.75" Y="4.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgA=</HashCode>

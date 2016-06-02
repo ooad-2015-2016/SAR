@@ -4,6 +4,9 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TaxiServisApp.TaxiServis.Models;
+
+using TaxiServisApp.TaxiServis.Views;
 
 namespace TaxiServisApp
 {

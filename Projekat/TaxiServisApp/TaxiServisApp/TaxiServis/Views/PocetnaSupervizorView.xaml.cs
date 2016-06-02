@@ -36,5 +36,10 @@ namespace TaxiServisApp.TaxiServis.Views
         {
 
         }
+
+        private void label1_Copy_SelectionChanged(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

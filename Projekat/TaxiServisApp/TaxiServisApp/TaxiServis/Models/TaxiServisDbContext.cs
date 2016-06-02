@@ -10,7 +10,7 @@ using Microsoft.CodeAnalysis.CSharp;
 using System.Data.Common;
 using TaxiServisApp.TaxiServis.Models;
 
-namespace TaxiServisApp
+namespace TaxiServisApp.TaxiServis.Models
 {
     class TaxiServisDbContext : DbContext
     {
