@@ -21,7 +21,7 @@ namespace TaxiServisApp.TaxiServis.ViewModels
         public string Prezime { get; set; }
         public string Sifra { get; set; }
         public string Username { get; set; }
-        public int BrojTaxija { get; set; }
+        public string BrojTaxija { get; set; }
         public RegistracijaUposlenikaViewModel(MainPageView parameter)
         {
             this.parameter = parameter;
@@ -33,6 +33,7 @@ namespace TaxiServisApp.TaxiServis.ViewModels
         {
             if (IsVozac == true)
             {
+
                 using (var db = new TaxiServisDbContext())
                 {
                     db.Vozači.Add(new Vozac()
@@ -40,7 +41,23 @@ namespace TaxiServisApp.TaxiServis.ViewModels
                         ime = Ime,
                         prezime = Prezime,
                         datumRodjenja = DatumRodenja,
-
+                        voziloId = Int32.Parse(BrojTaxija),
+                        korisnickoIme = Username,
+                        sifra = Sifra
+                    }
+                    );
+                    db.SaveChanges();
+                }
+            }
+            else
+            {
+                using (var db = new TaxiServisDbContext())
+                {
+                    db.Dispeceri.Add(new Dispecer()
+                    {
+                        ime = Ime,
+                        prezime = Prezime,
+                        datumRodjenja = DatumRodenja,
                         korisnickoIme = Username,
                         sifra = Sifra
                     }

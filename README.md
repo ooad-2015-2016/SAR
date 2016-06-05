@@ -1,4 +1,4 @@
-#Taxi servis
+﻿#Taxi servis
 Članovi Tima:
 
     1.Amina Spahić 
@@ -115,6 +115,22 @@ Akteri su na listi sortirani po pravu pristupa sistemu:
 4. **Dispečer** - Lice zadužena za komunikaciju sa vozačima i klijentima, njihovo povezivanje, te usmjeravanje vozača na određene lokacije po potrebi.
 
 5. **Supervizor** - Lice zaduženo za nadgledanje i upravljanje cjelokupnog sistema.
+
+
+ZAKLJUČNO - šta radi do sada, šta je obuhvaćeno od zadataka
+
+ - Koristimo SQLite, lokalnu bazu. (checked)
+ - Koristimo jedino GPS, koristi se kada se loguje vozač ili korisnik da im se odredi lokacija (checked)
+ (Nemanja dopuni ovo) 
+ - Za sada samo na prvoj LogIn formi prilikom unosa pogrešnog passworda.
+ - koji eksterni servis/i se koriste i gdje je kod koji poziva servis ili napisati nije uradjeno - koliko znam ovo nisu ni trazili na pocetku, ali mi koristimo one mape ako to ima veze
+ - Imamo na početnoj formi, sve je centrirano bez obzira na uređaj (tablet, PC, ili mobitel), zatim na formama dodavanja vazi za tablete i PC, dok na ekranu za mobitele nismo predvidjeli da se otvaraju forme tog tipa (SupervizorPočetna i RegistracijaUposlenika). Prilagođena su forme za vozača.  (checked - možemo još doraditi) 
+ - mobilna funkcionalnost se koristi (gps accelerometar itd.) i gdje se nalazi kod ili napisati nije uradjeno
+(staviti link na klasu na git repositoriju gdje se nalazi kod) - da li ovdje treba pisati o GPS ili iznad
+ - Web servis koji pruzate sa asp.net i koristite u UWP aplikaciji - Dzenane dopuni
+ - Za igricu obavezno napraviti build exe verziju koja se moze pokretati bez unity okruzenja i commitati - Dzenan xD
+ 
+(kako obavite koji zadatak dopunjavajte ovo ili na kraju sutra dodajte, ja imam jos validaciju i help dugme)
 
 
 

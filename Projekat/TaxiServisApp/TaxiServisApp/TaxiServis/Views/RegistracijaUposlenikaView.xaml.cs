@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using TaxiServisApp.TaxiServis.ViewModels;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
@@ -22,9 +23,30 @@ namespace TaxiServisApp.TaxiServis.Views
     /// </summary>
     public sealed partial class RegistracijaUposlenikaView : Page
     {
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            DataContext = new RegistracijaUposlenikaViewModel((MainPageView)e.Parameter);
+        }
         public RegistracijaUposlenikaView()
         {
+
             this.InitializeComponent();
+
+
+        }
+        private void nazadButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void imeLabel_Copy_SelectionChanged(object sender, RoutedEventArgs e)
+        {
+
         }
 
         private void vozacRB_Checked(object sender, RoutedEventArgs e)
@@ -37,6 +59,11 @@ namespace TaxiServisApp.TaxiServis.Views
         {
             brojVozilaLabel.Visibility = Visibility.Collapsed;
             brojVozilaTB.Visibility = Visibility.Collapsed;
+        }
+
+        private void textBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
         }
     }
 }

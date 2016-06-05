@@ -9,7 +9,6 @@
     xmlns:models="using:TaxiServisApp"
     xmlns:m="using:TaxiServisApp.TaxiServis.Models"
     mc:Ignorable="d">
-
     <Grid Background="#B2D8D8D5">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
@@ -25,9 +24,9 @@
             <GridView.ItemTemplate>
                 <DataTemplate  x:DataType="models:Vozac">
                     <StackPanel Width="100" Height="100">
-                        <Image  Height="50" Width="50" Source="ms-appx:///Assets/user-xxl.png" />
-                        <TextBlock Text="{x:Bind ime}"/>
-                        <TextBlock Text="{x:Bind prezime}"/>
+                        <Image  Height="50" Width="50" Source="ms-appx:///Assets/taxi-xxl.png" />
+                        <TextBlock Width="95"  Text="{x:Bind ime}"/>
+                        <TextBlock Width="95"  Text="{x:Bind prezime}"/>
                     </StackPanel>
                 </DataTemplate>
             </GridView.ItemTemplate>
@@ -39,13 +38,13 @@
             <GridView.ItemTemplate>
                 <DataTemplate  x:DataType="m:Dispecer">
                     <StackPanel Width="100" Height="100">
-                        <Image  Height="50" Width="50" Source="ms-appx:///Assets/user-xxl.png" />
-                        <TextBlock Text="{x:Bind ime}"/>
-                        <TextBlock Text="{x:Bind prezime}"/>
+                        <Image  Height="50" Width="50" Source="ms-appx:///Assets/user-2-xxl (1).png" />
+                        <TextBlock Width="95"  Text="{x:Bind ime}"/>
+                        <TextBlock Width="95"  Text="{x:Bind prezime}"/>
                     </StackPanel>
                 </DataTemplate>
             </GridView.ItemTemplate>
         </GridView>
-        <TextBlock x:Name="lable2" HorizontalAlignment="Left" Height="32" Margin="42,0,0,0" TextWrapping="Wrap" Text="Dispečeri" VerticalAlignment="Top" Width="114" FontSize="20" Foreground="#FF6D30D8" SelectionChanged="label1_Copy_SelectionChanged" Grid.Row="1"/>
+        <TextBlock x:Name="lable2" HorizontalAlignment="Left" Height="32" Margin="42,0,0,0" TextWrapping="Wrap" Text="Dispečeri" VerticalAlignment="Top" Width="114" FontSize="20" Foreground="#FF6D30D8"  Grid.Row="1"/>
     </Grid>
 </Page>
