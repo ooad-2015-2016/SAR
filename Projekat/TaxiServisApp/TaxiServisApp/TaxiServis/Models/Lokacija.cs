@@ -4,6 +4,8 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Windows.Devices.Geolocation;
+using Windows.Services.Maps;
 
 namespace TaxiServisApp.TaxiServis.Models
 {
@@ -33,6 +35,30 @@ namespace TaxiServisApp.TaxiServis.Models
         {
             this.duzina = geoDuzina;
             this.sirina = geoSirina;
+        }
+        public string postaviNazivLokacije()
+        {
+            postaviNazivLokacijeAsync();
+            return nazivLokacije;
+        }
+
+          async void postaviNazivLokacijeAsync()
+        {
+            double lat = this.sirina;
+            double lon = this.duzina;
+            BasicGeoposition b = new BasicGeoposition();
+            b.Latitude = lat;// zahtjevOdmah.lokacijaKorisika.duzina;
+            b.Longitude = lon;
+            Geopoint pointToReverseGeocode = new Geopoint(b);
+            MapLocationFinderResult result = await MapLocationFinder.FindLocationsAtAsync(pointToReverseGeocode);
+            string ispisLokacije;
+            if (result.Status == MapLocationFinderStatus.Success)
+            {
+                ispisLokacije = result.Locations[0].Address.Street + " " + result.Locations[0].Address.District.ToString() + " " + result.Locations[0].Address.Town.ToString() + ", " + result.Locations[0].Address.Country.ToString();
+            }
+            else ispisLokacije = lat.ToString() + ", " + lon.ToString();
+
+            nazivLokacije = ispisLokacije;
         }
     }
 }

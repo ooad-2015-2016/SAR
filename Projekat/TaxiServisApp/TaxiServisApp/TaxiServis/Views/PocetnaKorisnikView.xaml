@@ -15,17 +15,21 @@
         <Grid.Background>
             <ImageBrush Stretch="UniformToFill" ImageSource="ms-appx:///Assets/PocetnaPozadina.jpg"/>
         </Grid.Background>
+        <Grid>
+            <Maps:MapControl x:Name="korisnickaMapa_MapControl" HorizontalAlignment="Stretch"    VerticalAlignment="Stretch"  ZoomLevelChanged="KorisnickaMapa_MapControl_ZoomLevelChanged" MapServiceToken="ois1uNA3x2DJUTgdplO1~2foFEDJgDtzslFL6nBuSKg~Ar05QsKorpOPv95HOlSMS_IfXT1LgrCyzNo0w0JVtleydukGTfJBOgTFWuPqqk4A" TiltInteractionMode="GestureAndControl" RotateInteractionMode="GestureAndControl">
+                <TextBlock x:Name="textBlock_korisnik" Height="100"  TextWrapping="Wrap" Text="{Binding klijentKorisnickoIme, Mode=OneWay}" Width="100"/>
+            </Maps:MapControl>
 
-        <Maps:MapControl x:Name="korisnickaMapa_MapControl" HorizontalAlignment="Stretch"    VerticalAlignment="Stretch"  ZoomLevelChanged="KorisnickaMapa_MapControl_ZoomLevelChanged" MapServiceToken="ois1uNA3x2DJUTgdplO1~2foFEDJgDtzslFL6nBuSKg~Ar05QsKorpOPv95HOlSMS_IfXT1LgrCyzNo0w0JVtleydukGTfJBOgTFWuPqqk4A"  Margin="0,-5,0,111">
-        </Maps:MapControl>
-        <Slider x:Name="mySlider" Orientation="Vertical" HorizontalAlignment="Right" Height="211" Width="45" Margin="0,199,42,230" Minimum="10" Maximum="20" Value="15" ValueChanged="ZoomValueChanged" Foreground="BlueViolet"/>
-        <Button x:Name="button" Content="Naruči Taxi" HorizontalAlignment="Left" Margin="0,529,0,0" VerticalAlignment="Top" Height="70" Width="360" Command="{Binding Path=naruciTaxiOdmah}" RenderTransformOrigin="0.5,0.5" Background="#D4FFA200">
-            <Button.RenderTransform>
-                <CompositeTransform/>
-            </Button.RenderTransform>
-        </Button>
-        <TextBox x:Name="geoDuzina_TextBlock"  Text="{Binding Path=geoDuzina, Mode=TwoWay}" HorizontalAlignment="Left" Margin="10,472,0,0" TextWrapping="Wrap"  VerticalAlignment="Top"/>
-        <TextBox x:Name="geoSirina_TextBlock"  Text="{Binding Path=geoSirina, Mode=TwoWay}" HorizontalAlignment="Left" Margin="10,497,0,0" TextWrapping="Wrap"  VerticalAlignment="Top"/>
+            <Button x:Name="button" Content="Naruči Taxi" HorizontalAlignment="Stretch" VerticalAlignment="Bottom" Height="70" Command="{Binding naruciTaxiOdmah}" RenderTransformOrigin="0.5,0.5" Background="#D4FFA200">
+                <Button.RenderTransform>
+                    <CompositeTransform/>
+                </Button.RenderTransform>
+            </Button>
+            <Slider x:Name="mySlider" Orientation="Vertical" HorizontalAlignment="Left" Height="211" Margin="0,334,0,535" Minimum="10" Maximum="20" Value="15" ValueChanged="ZoomValueChanged" Foreground="LightYellow" Canvas.ZIndex="0"/>
+
+            <TextBox x:Name="geoSirina_TextBlock"  Text="{Binding geoSirina, Mode=TwoWay}" HorizontalAlignment="Left" Margin="10,0,0,122" TextWrapping="Wrap"  VerticalAlignment="Bottom" Visibility="Collapsed"/>
+            <TextBox x:Name="geoDuzina_TextBlock"  Text="{Binding geoDuzina, Mode=TwoWay}" HorizontalAlignment="Left" Margin="10,0,0,90" TextWrapping="Wrap"  VerticalAlignment="Bottom" Visibility="Collapsed"/>
+        </Grid>
         <!-- <Text="{x:Bind geoSirina, Mode=TwoWay}" -->
     </Grid>
     <!--

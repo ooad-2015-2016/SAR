@@ -14,7 +14,10 @@ namespace TaxiServisApp.TaxiServis.Models
 
         public int polaznaLokacijaId { get; set; }
         [ForeignKey("polaznaLokacijaId")]
-        public virtual Lokacija Lokacija { get; set; }
+        public virtual Lokacija LokacijaPocetna { get; set; }
+        public int krajnjaLokacijaId { get; set; }
+        [ForeignKey("krajnjaLokacijaId")]
+        public virtual Lokacija LokacijaKrajnja { get; set; }
         public DateTime vrijemeRezervacije { get; set; }
         public string dodatniZahtjevi { get; set; }
 
@@ -26,6 +29,10 @@ namespace TaxiServisApp.TaxiServis.Models
             this.polaznaLokacijaId = polaznaLokacijaId;
             this.vrijemeRezervacije = vrijemeRezervacije;
             this.dodatniZahtjevi = dodatniZahtjevi;
+        }
+
+        public Rezervacija()
+        {
         }
 
         public bool ispravnoVrijemeRezervacije()

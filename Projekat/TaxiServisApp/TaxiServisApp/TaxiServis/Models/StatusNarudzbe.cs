@@ -8,6 +8,6 @@ namespace TaxiServisApp.TaxiServis.Models
 {
     public enum StatusNarudzbe
     {
-        Prihvacena, Odbijena, Ispunjena, Kreirana
+        Prihvacena, Odbijena, Ispunjena, Kreirana, Poništena
     }
 }

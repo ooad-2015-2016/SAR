@@ -11,7 +11,12 @@ namespace TaxiServisApp.TaxiServis.Models
     {
         public static void Initialize(TaxiServisDbContext context)
         {
-            if (!context.TaxiVozila.Any())
+            if (!context.Cijenovnici.Any())
+            {
+                context.Cijenovnici.Add(new Cijenovnik());
+            }
+
+                if (!context.TaxiVozila.Any())
             {
                 context.TaxiVozila.AddRange(new TaxiVozilo()
                 {
@@ -27,14 +32,33 @@ namespace TaxiServisApp.TaxiServis.Models
                 // context.TaxiVozila.AddRange( new TaxiVozilo(1, "Plava", "Porche", Convert.ToDateTime("1.1.2002"), "Malo ostecen"));
                 context.SaveChanges();
             }
+            if (!context.Lokacije.Any())
+            {
+                context.Lokacije.AddRange(new Lokacija() { duzina = 0, sirina = 0 });
+                context.Lokacije.AddRange(new Lokacija() { duzina = 1, sirina = 1 });
+                context.Lokacije.AddRange(new Lokacija() { duzina = 2, sirina = 2 });
+
+                context.SaveChanges();
+            }
             if (!context.Vozači.Any())
             {
-                context.Uposlenici.AddRange(new Vozac() { ime = "Mr.", prezime = "Smith", datumRodjenja = Convert.ToDateTime("1/1/1911"), korisnickoIme = "vozac", sifra = "vozac" });
+                Lokacija l1 = new Lokacija();
+                context.Lokacije.Add(l1);
                 context.SaveChanges();
-
-                context.Uposlenici.AddRange(new Vozac() { ime = "A", prezime = "B", datumRodjenja = Convert.ToDateTime("1/1/1941"), korisnickoIme = "vozac2", sifra = "vozac2" });
+                l1 = context.Lokacije.Last();
+                context.Uposlenici.AddRange(new Vozac() { ime = "Mr.", prezime = "Smith", datumRodjenja = Convert.ToDateTime("1/1/1911"), korisnickoIme = "vozac", sifra = "vozac", Lokacija =  l1, trenutnaLokacijaId = l1.id, online=false, slobodan = true, aktivan = false});
                 context.SaveChanges();
-                context.Uposlenici.AddRange(new Vozac() { ime = "Mrs.", prezime = "Smitth", datumRodjenja = Convert.ToDateTime("1/1/1941"), korisnickoIme = "Vozac3", sifra = "Vozac3" });
+                 l1 = new Lokacija();
+                context.Lokacije.Add(l1);
+                context.SaveChanges();
+                l1 = context.Lokacije.Last();
+                context.Uposlenici.AddRange(new Vozac() { ime = "A", prezime = "B", datumRodjenja = Convert.ToDateTime("1/1/1941"), korisnickoIme = "vozac2", sifra = "vozac2", Lokacija = l1, trenutnaLokacijaId = l1.id, online = false, slobodan = true, aktivan = false });
+                context.SaveChanges();
+                 l1 = new Lokacija();
+                context.Lokacije.Add(l1);
+                context.SaveChanges();
+                l1 = context.Lokacije.Last();
+                context.Uposlenici.AddRange(new Vozac() { ime = "Mrs.", prezime = "Smitth", datumRodjenja = Convert.ToDateTime("1/1/1941"), korisnickoIme = "Vozac3", sifra = "Vozac3", Lokacija = l1, trenutnaLokacijaId = l1.id, online = false, slobodan = true, aktivan = false });
                 context.SaveChanges();
             }
             if (!context.Dispeceri.Any())
@@ -49,14 +73,7 @@ namespace TaxiServisApp.TaxiServis.Models
                 context.Uposlenici.AddRange(new Supervizor() { ime = "supervizor", prezime = "Supervizor", datumRodjenja = Convert.ToDateTime("1/1/1941"), korisnickoIme = "supervizor", sifra = "supervizor" });
                 context.SaveChanges();
             }
-            if (!context.Lokacije.Any())
-            {
-                context.Lokacije.AddRange(new Lokacija() { duzina = 0, sirina = 0 });
-                context.Lokacije.AddRange(new Lokacija() { duzina = 1, sirina = 1 });
-                context.Lokacije.AddRange(new Lokacija() { duzina = 2, sirina = 2 });
 
-                context.SaveChanges();
-            }
             if (!context.NeregistrovaniKlijenti.Any())
             {
                 context.Klijenti.AddRange(new NeregistrovaniKlijent() { });

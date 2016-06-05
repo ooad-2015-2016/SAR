@@ -7,58 +7,53 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
     xmlns:model="using:TaxiServisApp"
-    xmlns:viewmodel="using:TaxiServisApp">
+    xmlns:viewmodel="using:TaxiServisApp.TaxiServis.ViewModels">
 
     <Page.Resources>
-        <DataTemplate x:Key="NarudzbeOdmahListTemplate"  x:DataType="model:NarudzbaOdmah">
+        <DataTemplate x:Key="ListaNarudzbiListTemplate"  x:DataType="model:ZahtjevZaPrevozZaListe">
             <Grid>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto" />
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="133" />
-
-                    <ColumnDefinition Width="144" />
-                    <ColumnDefinition Width="191" />
-                    <ColumnDefinition Width="371" />
-                </Grid.ColumnDefinitions>
-           <!--     <TextBlock Text="{x:Bind ime}" Grid.Column="0"/>
-                <TextBlock Text="{x:Bind prezime}" Grid.Column="1" />
-                <TextBlock Text="{x:Bind datumRodjenja}" Grid.Column="2"/>
-                <TextBlock Text="{x:Bind voziloId}" Grid.Column="3"/>-->
+                <TextBlock  Style="{ThemeResource BodyTextBlockStyle}" ><LineBreak/><Run Text="{x:Bind tipZahtjevaString}"/><LineBreak/><Run Text="{x:Bind lokacija}"/><LineBreak/><Run Text="{x:Bind vrijemeNarudzbe}"/><LineBreak/><Run Text="{x:Bind statusNarudzbe}"/><LineBreak/></TextBlock>
             </Grid>
         </DataTemplate>
     </Page.Resources>
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <Grid HorizontalAlignment="Left" Height="1060" Margin="10,10,0,0" VerticalAlignment="Top" Width="680">
-            <Grid HorizontalAlignment="Left" Height="330" Margin="10,10,0,0" VerticalAlignment="Top" Width="660">
-                <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="160,18,0,0" TextWrapping="Wrap" Text="Ime: " VerticalAlignment="Top" FontSize="26.667" SelectionChanged="textBlock_SelectionChanged"/>
-                <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" Margin="215,18,0,0" TextWrapping="Wrap" Text="{Binding Path=klijent.ime, Mode=OneWay}" VerticalAlignment="Top" FontSize="32" RenderTransformOrigin="0.458,0.93"/>
-                <TextBlock x:Name="textBlock_Copy" HorizontalAlignment="Left" Margin="111,61,0,0" TextWrapping="Wrap" Text="Prezime: " VerticalAlignment="Top" FontSize="26.667"/>
-                <TextBlock x:Name="textBlock1_Copy" HorizontalAlignment="Left" Margin="215,61,0,0" TextWrapping="Wrap" Text="{Binding klijent.prezime, Mode=OneWay}" VerticalAlignment="Top" FontSize="32" RenderTransformOrigin="0.458,0.93"/>
-                <TextBlock x:Name="textBlock_Copy1" HorizontalAlignment="Left" Margin="130,109,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="26.667">
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Margin="0,0,-30,0">
+        <Grid Margin="10,10,0,0" Width="1911">
+            <Grid Height="245" Margin="12,10,2,0" VerticalAlignment="Top" Width="1897">
+                <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="137,0,0,0" TextWrapping="Wrap" Text="Ime: " VerticalAlignment="Top" FontSize="26.667" SelectionChanged="textBlock_SelectionChanged" RenderTransformOrigin="0.76,0.429"/>
+                <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" Margin="192,6,0,0" TextWrapping="Wrap" Text="{Binding Path=klijent.ime, Mode=OneWay}" VerticalAlignment="Top" FontSize="26.667" RenderTransformOrigin="0.458,0.93"/>
+                <TextBlock x:Name="textBlock_Copy" HorizontalAlignment="Left" Margin="88,40,0,0" TextWrapping="Wrap" Text="Prezime: " VerticalAlignment="Top" FontSize="26.667" RenderTransformOrigin="0.273,0.429"/>
+                <TextBlock x:Name="textBlock1_Copy" HorizontalAlignment="Left" Margin="192,40,0,0" TextWrapping="Wrap" Text="{Binding klijent.prezime, Mode=OneWay}" VerticalAlignment="Top" FontSize="26.667" RenderTransformOrigin="0.458,0.93"/>
+                <TextBlock x:Name="textBlock_Copy1" HorizontalAlignment="Left" Margin="107,80,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="26.667">
                 	<Run Text="e-mail"/>
                 	<Run Text=": "/>
                 </TextBlock>
-                <TextBlock x:Name="textBlock1_Copy1" HorizontalAlignment="Left" Margin="215,109,0,0" TextWrapping="Wrap" Text="{Binding klijent.mail, Mode=OneWay}" VerticalAlignment="Top" FontSize="32" RenderTransformOrigin="0.458,0.93"/>
-                <TextBlock x:Name="textBlock_Copy2" HorizontalAlignment="Left" Margin="33,157,0,0" TextWrapping="Wrap" Text="Korisničko ime:" VerticalAlignment="Top" FontSize="26.667"/>
-                <TextBlock x:Name="textBlock1_Copy2" HorizontalAlignment="Left" Margin="215,157,0,0" TextWrapping="Wrap" Text="{Binding klijent.username, Mode=OneWay}" VerticalAlignment="Top" FontSize="32" RenderTransformOrigin="0.458,0.93"/>
-                <TextBlock x:Name="textBlock_Copy3" HorizontalAlignment="Left" Margin="152,200,0,0" TextWrapping="Wrap" Text="Šifra:" VerticalAlignment="Top" FontSize="26.667" SelectionChanged="textBlock_Copy3_SelectionChanged"/>
-                <TextBlock x:Name="textBlock_Copy4" HorizontalAlignment="Left" Margin="82,243,0,0" TextWrapping="Wrap" Text="Broj vožnji:" VerticalAlignment="Top" FontSize="26.667" SelectionChanged="textBlock_Copy3_SelectionChanged"/>
-                <TextBlock x:Name="textBlock1_Copy4" HorizontalAlignment="Left" Margin="215,243,0,0" TextWrapping="Wrap" Text="{Binding klijent.brojVoznji, Mode=OneWay}" VerticalAlignment="Top" FontSize="32" RenderTransformOrigin="0.458,0.93"/>
-                <TextBlock x:Name="textBlock_Copy5" HorizontalAlignment="Left" Margin="20,283,0,0" TextWrapping="Wrap" Text="Kilometri vožnje:" VerticalAlignment="Top" FontSize="26.667" SelectionChanged="textBlock_Copy3_SelectionChanged"/>
-                <TextBlock x:Name="textBlock1_Copy5" HorizontalAlignment="Left" Margin="215,283,0,0" TextWrapping="Wrap" Text="{Binding klijent.kilometriVoznje, Mode=OneWay}" VerticalAlignment="Top" FontSize="32" RenderTransformOrigin="0.458,0.93"/>
-                <Button x:Name="button" Content="Promjeni šifru" HorizontalAlignment="Left" Margin="215,200,0,0" VerticalAlignment="Top" Width="210" Height="43"/>
+                <TextBlock x:Name="textBlock1_Copy1" HorizontalAlignment="Left" Margin="192,80,0,0" TextWrapping="Wrap" Text="{Binding klijent.mail, Mode=OneWay}" VerticalAlignment="Top" FontSize="26.667" RenderTransformOrigin="0.458,0.93"/>
+                <TextBlock x:Name="textBlock_Copy2" HorizontalAlignment="Left" Margin="10,120,0,0" TextWrapping="Wrap" Text="Korisničko ime:" VerticalAlignment="Top" FontSize="26.667"/>
+                <TextBlock x:Name="textBlock1_Copy2" HorizontalAlignment="Left" Margin="192,120,0,0" TextWrapping="Wrap" Text="{Binding klijent.username, Mode=OneWay}" VerticalAlignment="Top" FontSize="26.667" RenderTransformOrigin="0.458,0.93" Width="0"/>
+                <TextBlock x:Name="textBlock_Copy4" HorizontalAlignment="Left" Margin="59,160,0,0" TextWrapping="Wrap" Text="Broj vožnji:" VerticalAlignment="Top" FontSize="26.667" SelectionChanged="textBlock_Copy3_SelectionChanged"/>
+                <TextBlock x:Name="textBlock1_Copy4" HorizontalAlignment="Left" Margin="192,160,0,0" TextWrapping="Wrap" Text="{Binding klijent.brojVoznji, Mode=OneWay}" VerticalAlignment="Top" FontSize="26.667" RenderTransformOrigin="0.458,0.93"/>
+                <TextBlock x:Name="textBlock_Copy5" HorizontalAlignment="Left" Margin="10,200,0,0" TextWrapping="Wrap" Text="Kilometri vožnje:" VerticalAlignment="Top" FontSize="26.667" SelectionChanged="textBlock_Copy3_SelectionChanged"/>
+                <TextBlock x:Name="textBlock1_Copy5" HorizontalAlignment="Left" Margin="210,200,0,0" TextWrapping="Wrap" Text="{Binding klijent.kilometriVoznje, Mode=OneWay}" VerticalAlignment="Top" FontSize="26.667" RenderTransformOrigin="0.458,0.93" Width="0"/>
             </Grid>
-            <Grid HorizontalAlignment="Left" Height="850" Margin="10,385,0,-175" VerticalAlignment="Top" Width="660">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="9*"/>
-                    <ColumnDefinition Width="35*"/>
-                </Grid.ColumnDefinitions>
-                <ListView x:Name="listView" HorizontalAlignment="Left" Height="730" Margin="10,55,0,0" VerticalAlignment="Top" Width="640" Grid.ColumnSpan="2"/>
+            <Grid Margin="10,255,10,0">
+
+                <TextBlock x:Name="textBlock_Copy6" HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="Moji zahtjevi" VerticalAlignment="Top" FontSize="26.667" SelectionChanged="textBlock_Copy3_SelectionChanged" Grid.ColumnSpan="2"/>
+                <Grid Margin="10,89,10,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="11*"/>
+                        <ColumnDefinition Width="14*"/>
+                    </Grid.ColumnDefinitions>
+                    <ListView  ScrollViewer.VerticalScrollBarVisibility="Visible" ScrollViewer.VerticalScrollMode="Enabled" x:Name="listView" Margin="10,-24,10,10"
+                		ItemTemplate="{StaticResource ListaNarudzbiListTemplate}" ItemsSource="{Binding zahtjeviZaPrevozZaListe, Mode=OneWay}" Background="#FFFFE9BA" Grid.ColumnSpan="2" >
+                        <!--    <ListView.ItemContainerStyle>
+                        <Style TargetType="ListViewItem" s>
+                            <Setter  Property="HorizontalContentAlignment" Value="Right" /> 
+                        </Style>
+                    </ListView.ItemContainerStyle>-->
+                    </ListView>
+                </Grid>
             </Grid>
-            <TextBlock x:Name="textBlock_Copy6" HorizontalAlignment="Left" Margin="70,400,0,0" TextWrapping="Wrap" Text="Moji zahtjevi" VerticalAlignment="Top" FontSize="26.667" SelectionChanged="textBlock_Copy3_SelectionChanged"/>
         </Grid>
 
     </Grid>

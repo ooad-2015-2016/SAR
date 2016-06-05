@@ -5,10 +5,12 @@
     xmlns:local="using:TaxiServisApp"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:viewmodel="using:TaxiServisApp.TaxiServis.ViewModels"
     mc:Ignorable="d">
     <Page.Background>
         <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/PocetnaPozadina.jpg"/>
     </Page.Background>
+
 
     <Grid RequestedTheme="Dark">
         <Grid.Background>
@@ -30,8 +32,8 @@
         <TextBox x:Name="textBox_Copy" HorizontalAlignment="Center" Margin="35,155,25,0" TextWrapping="Wrap" Text="{Binding Path=prezime, Mode=TwoWay}" VerticalAlignment="Top" Width="300" PlaceholderText="Prezime"/>
         <TextBox x:Name="textBox_Copy1" HorizontalAlignment="Center" Margin="35,192,25,0" TextWrapping="Wrap" Text="{Binding Path=mail, Mode=TwoWay}" VerticalAlignment="Top" Width="300" PlaceholderText="E-mail"/>
         <TextBox x:Name="textBox_Copy2" HorizontalAlignment="Center" Margin="35,270,25,0" TextWrapping="Wrap" Text="{Binding Path=korisnickoIme, Mode=TwoWay}" VerticalAlignment="Top" Width="300" PlaceholderText="Korisnicko ime"/>
-        <PasswordBox x:Name="Password" HorizontalAlignment="Center" Margin="35,307,25,0" VerticalAlignment="Top" Width="300" Password="{Binding Path=sifra, Mode=TwoWay}"  PasswordRevealMode="Visible" PasswordChanged="Password_PasswordChanged" PlaceholderText="Šifra (min. 8 znakova)"/>
-        <PasswordBox x:Name="Password_Copy" HorizontalAlignment="Center" Margin="35,344,25,0" VerticalAlignment="Top" Width="300" Password="{Binding Path=sifra, Mode=TwoWay}"  PasswordRevealMode="Visible" PasswordChanged="Password_PasswordChanged" ToolTipService.ToolTip="Ponovite šifru"/>
+        <PasswordBox x:Name="Password" HorizontalAlignment="Center" Margin="35,307,25,0" VerticalAlignment="Top" Width="300" Password="{Binding Path=sifra, Mode=TwoWay}"  PasswordRevealMode="Peek" PasswordChanged="Password_PasswordChanged" PlaceholderText="Šifra (min. 8 znakova)"/>
+        <PasswordBox x:Name="Password_Copy" HorizontalAlignment="Center" Margin="35,344,25,0" VerticalAlignment="Top" Width="300" Password="{Binding Path=ponovljenaSifra, Mode=TwoWay}"  PasswordRevealMode="Peek" PasswordChanged="Password_PasswordChanged" ToolTipService.ToolTip="Ponovite šifru"/>
         <DatePicker HorizontalAlignment="Center" Margin="35,441,25,0" VerticalAlignment="Top" Date="{Binding Path=datumRodjenja, Mode=TwoWay}" Width="300"/> 
         <TextBlock x:Name="UputeZaPrijavuTextBlock" HorizontalAlignment="Center" Margin="36,416,221,0" TextWrapping="Wrap" Text="Datum rođenja:" VerticalAlignment="Top" SelectionChanged="UputeZaPrijavuTextBlock_SelectionChanged" Foreground="Black"/>
 

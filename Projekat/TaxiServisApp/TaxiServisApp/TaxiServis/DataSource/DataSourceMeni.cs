@@ -233,13 +233,13 @@ namespace TaxiServisApp.TaxiServis.DataSource
             //k1.DodajUloguKorisnika(u1);
             //Dodavanje stavki ulozi i uloge vozacu 
             u2.DodajMeniStavkuUlozi(ms4);
-            u2.DodajMeniStavkuUlozi(ms5);
+            //u2.DodajMeniStavkuUlozi(ms5);
             u2.DodajMeniStavkuUlozi(ms10);
 
             // k2.DodajUloguKorisnika(u2);
             //dispecer isto
             u3.DodajMeniStavkuUlozi(ms6);
-            u3.DodajMeniStavkuUlozi(ms2);
+            //u3.DodajMeniStavkuUlozi(ms2);
             u3.DodajMeniStavkuUlozi(ms10);
 
             // k3.DodajUloguKorisnika(u3);

@@ -117,7 +117,7 @@ Akteri su na listi sortirani po pravu pristupa sistemu:
 5. **Supervizor** - Lice zaduženo za nadgledanje i upravljanje cjelokupnog sistema.
 
 
-ZAKLJUČNO 
+ZAKLJUČNO - UWP app se nalazi u folderu Projekat -> TaxiServisApp
 
  - Koristimo SQLite, lokalnu bazu. 
  - Koristimo jedino GPS, koristi se kada se loguje vozač ili korisnik da im se odredi lokacija 

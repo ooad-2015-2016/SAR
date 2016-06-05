@@ -9,6 +9,7 @@
     xmlns:models="using:TaxiServisApp"
     xmlns:m="using:TaxiServisApp.TaxiServis.Models"
     mc:Ignorable="d">
+   
     <Grid Background="#B2D8D8D5">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
@@ -19,26 +20,27 @@
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
 
-
-        <GridView  IsItemClickEnabled="True" ItemsSource="{Binding ListaUposlenika}" x:Name="gridView" HorizontalAlignment="Left" Height="283" Margin="42,37,0,0" VerticalAlignment="Top" Width="554" BorderThickness="2" Opacity="0.7" Foreground="#FFBD2A2A" BorderBrush="#B2C72121">
+        <!--GridView za vozace-->
+        <GridView SelectedItem="{Binding Path=SelectedItem , Mode=TwoWay}" IsItemClickEnabled="True" ItemsSource="{Binding ListaUposlenika}" x:Name="gridView" HorizontalAlignment="Left" Height="283" Margin="42,37,0,0" VerticalAlignment="Top" Width="554" BorderThickness="2" Opacity="0.7" Foreground="#FFBD2A2A" BorderBrush="#B2C72121">
             <GridView.ItemTemplate>
                 <DataTemplate  x:DataType="models:Vozac">
                     <StackPanel Width="100" Height="100">
                         <Image  Height="50" Width="50" Source="ms-appx:///Assets/taxi-xxl.png" />
-                        <TextBlock Width="95"  Text="{x:Bind ime}"/>
-                        <TextBlock Width="95"  Text="{x:Bind prezime}"/>
+                        <TextBlock Width="95"  Text="{x:Bind ime, Mode=TwoWay}"/>
+                        <TextBlock Width="95"  Text="{x:Bind prezime, Mode=TwoWay}"/>
+
                     </StackPanel>
                 </DataTemplate>
             </GridView.ItemTemplate>
         </GridView>
 
-        <TextBlock x:Name="label1" HorizontalAlignment="Left" Height="32" Margin="42,0,0,0" TextWrapping="Wrap" Text="Vozači" VerticalAlignment="Top" Width="76" FontSize="20" Foreground="#FFD83030"/>
+        <TextBlock  x:Name="label1" HorizontalAlignment="Left" Height="32" Margin="42,0,0,0" TextWrapping="Wrap" Text="Vozači" VerticalAlignment="Top" Width="76" FontSize="20" Foreground="#FFD83030"/>
 
-        <GridView  IsItemClickEnabled="True" ItemsSource="{Binding ListaDispecera}" x:Name="dispeceriGridView" HorizontalAlignment="Left" Height="283" VerticalAlignment="Top" Width="554" Margin="42,32,0,0" BorderBrush="#B26740CD" BorderThickness="2" Grid.Row="1">
+        <GridView SelectedItem="{Binding Path=SelectedItemDispecer , Mode=TwoWay}" IsItemClickEnabled="True" ItemsSource="{Binding ListaDispecera}" x:Name="dispeceriGridView" HorizontalAlignment="Left" Height="283" VerticalAlignment="Top" Width="554" Margin="42,32,0,0" BorderBrush="#B26740CD" BorderThickness="2" Grid.Row="1">
             <GridView.ItemTemplate>
                 <DataTemplate  x:DataType="m:Dispecer">
                     <StackPanel Width="100" Height="100">
-                        <Image  Height="50" Width="50" Source="ms-appx:///Assets/user-2-xxl (1).png" />
+                        <Image  Height="50" Width="50" Source="ms-appx:///Assets/user-2-xxl.png" />
                         <TextBlock Width="95"  Text="{x:Bind ime}"/>
                         <TextBlock Width="95"  Text="{x:Bind prezime}"/>
                     </StackPanel>
@@ -46,5 +48,20 @@
             </GridView.ItemTemplate>
         </GridView>
         <TextBlock x:Name="lable2" HorizontalAlignment="Left" Height="32" Margin="42,0,0,0" TextWrapping="Wrap" Text="Dispečeri" VerticalAlignment="Top" Width="114" FontSize="20" Foreground="#FF6D30D8"  Grid.Row="1"/>
+        <Button x:Name="obrisiVozacaButton" Command="{Binding ObrisiVozacaCommand}" Content="Obriši vozača" Grid.Column="1" HorizontalAlignment="Left" Height="91" Margin="35,56,0,0" VerticalAlignment="Top" Width="191" Background="#33FF1616" />
+        <TextBox Text="{Binding ImeVozacaEdit, Mode=TwoWay}" x:Name="ImeEdit" Grid.Column="1" HorizontalAlignment="Left" Height="43" Margin="261,37,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="371"/>
+        <TextBox Text="{Binding PrezimeVozacaEdit, Mode=TwoWay}" x:Name="prezimeEdit" Grid.Column="1" HorizontalAlignment="Left" Height="43" Margin="261,102,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="371"/>
+        <TextBox Text="{Binding VoziloIdEdit, Mode=TwoWay}" x:Name="voziloIdEdit" Grid.Column="1" HorizontalAlignment="Left" Height="43" Margin="261,267,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="371"/>
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Height="26" TextWrapping="Wrap" VerticalAlignment="Top" Width="244" Foreground="#B2E627B2" FontSize="11" Grid.Column="1" Margin="261,236,0,0" Text="Broj vozila:"/>
+        <TextBox Text="{Binding  KorisnickoImeVozacaEdit ,Mode =TwoWay}" x:Name="korisnickoImeVozaca" Grid.Column="1" HorizontalAlignment="Left" Height="43" Margin="261,164,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="371">
+        </TextBox>
+
+        <TextBox Text="{Binding ImeDispeceraEdit, Mode=TwoWay}" x:Name="ImeDispeceraEdit" Grid.Column="1" HorizontalAlignment="Left" Height="43" Margin="261,55,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="371" Grid.Row="1"/>
+        <TextBox Text="{Binding PrezimeDispeceraEdit, Mode=TwoWay}" x:Name="prezimeDispeceraEdit" Grid.Column="1" HorizontalAlignment="Left" Height="43" Margin="261,120,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="371" Grid.Row="1"/>
+        <TextBox x:Name="korisnickoImeDispeceraEdit" Text="{Binding KorisnickoImeDispeceraEdit, Mode=TwoWay}" Grid.Column="1" HorizontalAlignment="Left" Height="43" Margin="261,182,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="371" Grid.Row="1"/>
+        <Button x:Name="obrisiDispecera" Command="{Binding ObrisiDispeceraCommand}" Content="Obriši dispečera" Grid.Column="1" HorizontalAlignment="Left" Height="92" Margin="35,55,0,0" Grid.Row="1" VerticalAlignment="Top" Width="191" Background="#33FF1616"/>
+        <Button x:Name="izmjeniDispecera" Command="{Binding IzmjeniDispeceraCommand}" Content="Izmijeni" Grid.Column="1" HorizontalAlignment="Left" Height="92" Margin="35,163,0,0" Grid.Row="1" VerticalAlignment="Top" Width="191" Background="#330A9C53"/>
+        <Button x:Name="IzmjeniVozacaB" Command="{Binding IzmjenivozacaCommand}" Content="Izmjeni" Grid.Column="1" HorizontalAlignment="Left" Height="92" Margin="35,164,0,0" VerticalAlignment="Top" Width="191" Background="#330A9C53"/>
+        <ItemsControl Grid.Column="1" HorizontalAlignment="Left" Height="32" Margin="35,283,0,0" VerticalAlignment="Top" Width="597" Grid.Row="1" ItemsSource="{Binding Errors}" />
     </Grid>
 </Page>

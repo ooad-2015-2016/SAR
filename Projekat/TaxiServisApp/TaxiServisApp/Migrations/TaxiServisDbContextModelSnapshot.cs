@@ -2,7 +2,6 @@ using System;
 using Microsoft.Data.Entity;
 using Microsoft.Data.Entity.Metadata;
 using Microsoft.Data.Entity.Migrations.Infrastructure;
-using TaxiServisApp;
 using TaxiServisApp.TaxiServis.Models;
 
 namespace TaxiServisAppMigrations
@@ -14,52 +13,6 @@ namespace TaxiServisAppMigrations
         {
             builder
                 .Annotation("ProductVersion", "7.0.0-beta6-13815");
-
-            builder.Entity("TaxiServisApp.Dispecer", b =>
-                {
-                    b.Property<int>("id")
-                        .ValueGeneratedOnAdd();
-
-                    b.Property<DateTime>("datumRodjenja");
-
-                    b.Property<string>("ime");
-
-                    b.Property<string>("korisnickoIme");
-
-                    b.Property<bool>("online");
-
-                    b.Property<string>("prezime");
-
-                    b.Property<string>("sifra");
-
-                    b.Key("id");
-                });
-
-            builder.Entity("TaxiServisApp.Klijent", b =>
-                {
-                    b.Property<int>("id")
-                        .ValueGeneratedOnAdd();
-
-                    b.Property<int?>("Lokacijaid");
-
-                    b.Property<int>("trenutnaLokacijaId");
-
-                    b.Key("id");
-                });
-
-            builder.Entity("TaxiServisApp.Lokacija", b =>
-                {
-                    b.Property<int>("id")
-                        .ValueGeneratedOnAdd();
-
-                    b.Property<double>("duzina");
-
-                    b.Property<string>("nazivLokacije");
-
-                    b.Property<double>("sirina");
-
-                    b.Key("id");
-                });
 
             builder.Entity("TaxiServisApp.NarudzbaOdmah", b =>
                 {
@@ -85,7 +38,35 @@ namespace TaxiServisAppMigrations
                     b.Key("id");
                 });
 
-            builder.Entity("TaxiServisApp.NeregistrovaniKlijent", b =>
+            builder.Entity("TaxiServisApp.TaxiServis.Models.Cijenovnik", b =>
+                {
+                    b.Property<int>("id")
+                        .ValueGeneratedOnAdd();
+
+                    b.Key("id");
+                });
+
+            builder.Entity("TaxiServisApp.TaxiServis.Models.Dispecer", b =>
+                {
+                    b.Property<int>("id")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<DateTime>("datumRodjenja");
+
+                    b.Property<string>("ime");
+
+                    b.Property<string>("korisnickoIme");
+
+                    b.Property<bool>("online");
+
+                    b.Property<string>("prezime");
+
+                    b.Property<string>("sifra");
+
+                    b.Key("id");
+                });
+
+            builder.Entity("TaxiServisApp.TaxiServis.Models.Klijent", b =>
                 {
                     b.Property<int>("id")
                         .ValueGeneratedOnAdd();
@@ -97,7 +78,57 @@ namespace TaxiServisAppMigrations
                     b.Key("id");
                 });
 
-            builder.Entity("TaxiServisApp.RegistrovaniKlijent", b =>
+            builder.Entity("TaxiServisApp.TaxiServis.Models.Lokacija", b =>
+                {
+                    b.Property<int>("id")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<double>("duzina");
+
+                    b.Property<string>("nazivLokacije");
+
+                    b.Property<double>("sirina");
+
+                    b.Key("id");
+                });
+
+            builder.Entity("TaxiServisApp.TaxiServis.Models.NarudzbaNeregistrovanogKlijenta", b =>
+                {
+                    b.Property<int>("id")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<int?>("Lokacijaid");
+
+                    b.Property<int?>("RegistrovaniKlijentid");
+
+                    b.Property<int>("VozacPrihvatioId");
+
+                    b.Property<int?>("Vozacid");
+
+                    b.Property<int>("klijentId");
+
+                    b.Property<int>("lokacijaKorisikaId");
+
+                    b.Property<int>("statusNarudzbe");
+
+                    b.Property<DateTime>("vrijemeNarudzbe");
+
+                    b.Key("id");
+                });
+
+            builder.Entity("TaxiServisApp.TaxiServis.Models.NeregistrovaniKlijent", b =>
+                {
+                    b.Property<int>("id")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<int?>("Lokacijaid");
+
+                    b.Property<int>("trenutnaLokacijaId");
+
+                    b.Key("id");
+                });
+
+            builder.Entity("TaxiServisApp.TaxiServis.Models.RegistrovaniKlijent", b =>
                 {
                     b.Property<int>("id")
                         .ValueGeneratedOnAdd();
@@ -133,10 +164,14 @@ namespace TaxiServisAppMigrations
                     b.Key("id");
                 });
 
-            builder.Entity("TaxiServisApp.Rezervacija", b =>
+            builder.Entity("TaxiServisApp.TaxiServis.Models.Rezervacija", b =>
                 {
                     b.Property<int>("id")
                         .ValueGeneratedOnAdd();
+
+                    b.Property<int?>("LokacijaKrajnjaid");
+
+                    b.Property<int?>("LokacijaPocetnaid");
 
                     b.Property<int?>("Lokacijaid");
 
@@ -149,6 +184,8 @@ namespace TaxiServisAppMigrations
                     b.Property<string>("dodatniZahtjevi");
 
                     b.Property<int>("klijentId");
+
+                    b.Property<int>("krajnjaLokacijaId");
 
                     b.Property<int>("lokacijaKorisikaId");
 
@@ -163,7 +200,7 @@ namespace TaxiServisAppMigrations
                     b.Key("id");
                 });
 
-            builder.Entity("TaxiServisApp.SesijaKlijent", b =>
+            builder.Entity("TaxiServisApp.TaxiServis.Models.SesijaKlijent", b =>
                 {
                     b.Property<int>("id")
                         .ValueGeneratedOnAdd();
@@ -171,7 +208,7 @@ namespace TaxiServisAppMigrations
                     b.Key("id");
                 });
 
-            builder.Entity("TaxiServisApp.Supervizor", b =>
+            builder.Entity("TaxiServisApp.TaxiServis.Models.Supervizor", b =>
                 {
                     b.Property<int>("id")
                         .ValueGeneratedOnAdd();
@@ -191,31 +228,7 @@ namespace TaxiServisAppMigrations
                     b.Key("id");
                 });
 
-            builder.Entity("TaxiServisApp.TaxiServis.Models.NarudzbaNeregistrovanogKlijenta", b =>
-                {
-                    b.Property<int>("id")
-                        .ValueGeneratedOnAdd();
-
-                    b.Property<int?>("Lokacijaid");
-
-                    b.Property<int?>("RegistrovaniKlijentid");
-
-                    b.Property<int>("VozacPrihvatioId");
-
-                    b.Property<int?>("Vozacid");
-
-                    b.Property<int>("klijentId");
-
-                    b.Property<int>("lokacijaKorisikaId");
-
-                    b.Property<int>("statusNarudzbe");
-
-                    b.Property<DateTime>("vrijemeNarudzbe");
-
-                    b.Key("id");
-                });
-
-            builder.Entity("TaxiServisApp.TaxiVozilo", b =>
+            builder.Entity("TaxiServisApp.TaxiServis.Models.TaxiVozilo", b =>
                 {
                     b.Property<int>("id")
                         .ValueGeneratedOnAdd();
@@ -231,7 +244,7 @@ namespace TaxiServisAppMigrations
                     b.Key("id");
                 });
 
-            builder.Entity("TaxiServisApp.Uposlenik", b =>
+            builder.Entity("TaxiServisApp.TaxiServis.Models.Uposlenik", b =>
                 {
                     b.Property<int>("id")
                         .ValueGeneratedOnAdd();
@@ -247,6 +260,30 @@ namespace TaxiServisAppMigrations
                     b.Property<string>("prezime");
 
                     b.Property<string>("sifra");
+
+                    b.Key("id");
+                });
+
+            builder.Entity("TaxiServisApp.TaxiServis.Models.ZahtjevZaPrijevoz", b =>
+                {
+                    b.Property<int>("id")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<int?>("Lokacijaid");
+
+                    b.Property<int?>("RegistrovaniKlijentid");
+
+                    b.Property<int>("VozacPrihvatioId");
+
+                    b.Property<int?>("Vozacid");
+
+                    b.Property<int>("klijentId");
+
+                    b.Property<int>("lokacijaKorisikaId");
+
+                    b.Property<int>("statusNarudzbe");
+
+                    b.Property<DateTime>("vrijemeNarudzbe");
 
                     b.Key("id");
                 });
@@ -283,44 +320,13 @@ namespace TaxiServisAppMigrations
                     b.Key("id");
                 });
 
-            builder.Entity("TaxiServisApp.ZahtjevZaPrijevoz", b =>
-                {
-                    b.Property<int>("id")
-                        .ValueGeneratedOnAdd();
-
-                    b.Property<int?>("Lokacijaid");
-
-                    b.Property<int?>("RegistrovaniKlijentid");
-
-                    b.Property<int>("VozacPrihvatioId");
-
-                    b.Property<int?>("Vozacid");
-
-                    b.Property<int>("klijentId");
-
-                    b.Property<int>("lokacijaKorisikaId");
-
-                    b.Property<int>("statusNarudzbe");
-
-                    b.Property<DateTime>("vrijemeNarudzbe");
-
-                    b.Key("id");
-                });
-
-            builder.Entity("TaxiServisApp.Klijent", b =>
-                {
-                    b.Reference("TaxiServisApp.Lokacija")
-                        .InverseCollection()
-                        .ForeignKey("Lokacijaid");
-                });
-
             builder.Entity("TaxiServisApp.NarudzbaOdmah", b =>
                 {
-                    b.Reference("TaxiServisApp.Lokacija")
+                    b.Reference("TaxiServisApp.TaxiServis.Models.Lokacija")
                         .InverseCollection()
                         .ForeignKey("Lokacijaid");
 
-                    b.Reference("TaxiServisApp.RegistrovaniKlijent")
+                    b.Reference("TaxiServisApp.TaxiServis.Models.RegistrovaniKlijent")
                         .InverseCollection()
                         .ForeignKey("RegistrovaniKlijentid");
 
@@ -329,42 +335,72 @@ namespace TaxiServisAppMigrations
                         .ForeignKey("Vozacid");
                 });
 
-            builder.Entity("TaxiServisApp.NeregistrovaniKlijent", b =>
+            builder.Entity("TaxiServisApp.TaxiServis.Models.Klijent", b =>
                 {
-                    b.Reference("TaxiServisApp.Lokacija")
+                    b.Reference("TaxiServisApp.TaxiServis.Models.Lokacija")
                         .InverseCollection()
                         .ForeignKey("Lokacijaid");
-                });
-
-            builder.Entity("TaxiServisApp.RegistrovaniKlijent", b =>
-                {
-                    b.Reference("TaxiServisApp.Lokacija")
-                        .InverseCollection()
-                        .ForeignKey("Lokacijaid");
-                });
-
-            builder.Entity("TaxiServisApp.Rezervacija", b =>
-                {
-                    b.Reference("TaxiServisApp.Lokacija")
-                        .InverseCollection()
-                        .ForeignKey("Lokacijaid");
-
-                    b.Reference("TaxiServisApp.RegistrovaniKlijent")
-                        .InverseCollection()
-                        .ForeignKey("RegistrovaniKlijentid");
-
-                    b.Reference("TaxiServisApp.Vozac")
-                        .InverseCollection()
-                        .ForeignKey("Vozacid");
                 });
 
             builder.Entity("TaxiServisApp.TaxiServis.Models.NarudzbaNeregistrovanogKlijenta", b =>
                 {
-                    b.Reference("TaxiServisApp.Lokacija")
+                    b.Reference("TaxiServisApp.TaxiServis.Models.Lokacija")
                         .InverseCollection()
                         .ForeignKey("Lokacijaid");
 
-                    b.Reference("TaxiServisApp.RegistrovaniKlijent")
+                    b.Reference("TaxiServisApp.TaxiServis.Models.RegistrovaniKlijent")
+                        .InverseCollection()
+                        .ForeignKey("RegistrovaniKlijentid");
+
+                    b.Reference("TaxiServisApp.Vozac")
+                        .InverseCollection()
+                        .ForeignKey("Vozacid");
+                });
+
+            builder.Entity("TaxiServisApp.TaxiServis.Models.NeregistrovaniKlijent", b =>
+                {
+                    b.Reference("TaxiServisApp.TaxiServis.Models.Lokacija")
+                        .InverseCollection()
+                        .ForeignKey("Lokacijaid");
+                });
+
+            builder.Entity("TaxiServisApp.TaxiServis.Models.RegistrovaniKlijent", b =>
+                {
+                    b.Reference("TaxiServisApp.TaxiServis.Models.Lokacija")
+                        .InverseCollection()
+                        .ForeignKey("Lokacijaid");
+                });
+
+            builder.Entity("TaxiServisApp.TaxiServis.Models.Rezervacija", b =>
+                {
+                    b.Reference("TaxiServisApp.TaxiServis.Models.Lokacija")
+                        .InverseCollection()
+                        .ForeignKey("LokacijaKrajnjaid");
+
+                    b.Reference("TaxiServisApp.TaxiServis.Models.Lokacija")
+                        .InverseCollection()
+                        .ForeignKey("LokacijaPocetnaid");
+
+                    b.Reference("TaxiServisApp.TaxiServis.Models.Lokacija")
+                        .InverseCollection()
+                        .ForeignKey("Lokacijaid");
+
+                    b.Reference("TaxiServisApp.TaxiServis.Models.RegistrovaniKlijent")
+                        .InverseCollection()
+                        .ForeignKey("RegistrovaniKlijentid");
+
+                    b.Reference("TaxiServisApp.Vozac")
+                        .InverseCollection()
+                        .ForeignKey("Vozacid");
+                });
+
+            builder.Entity("TaxiServisApp.TaxiServis.Models.ZahtjevZaPrijevoz", b =>
+                {
+                    b.Reference("TaxiServisApp.TaxiServis.Models.Lokacija")
+                        .InverseCollection()
+                        .ForeignKey("Lokacijaid");
+
+                    b.Reference("TaxiServisApp.TaxiServis.Models.RegistrovaniKlijent")
                         .InverseCollection()
                         .ForeignKey("RegistrovaniKlijentid");
 
@@ -375,28 +411,13 @@ namespace TaxiServisAppMigrations
 
             builder.Entity("TaxiServisApp.Vozac", b =>
                 {
-                    b.Reference("TaxiServisApp.Lokacija")
+                    b.Reference("TaxiServisApp.TaxiServis.Models.Lokacija")
                         .InverseCollection()
                         .ForeignKey("Lokacijaid");
 
-                    b.Reference("TaxiServisApp.TaxiVozilo")
+                    b.Reference("TaxiServisApp.TaxiServis.Models.TaxiVozilo")
                         .InverseCollection()
                         .ForeignKey("TaxiVoziloid");
-                });
-
-            builder.Entity("TaxiServisApp.ZahtjevZaPrijevoz", b =>
-                {
-                    b.Reference("TaxiServisApp.Lokacija")
-                        .InverseCollection()
-                        .ForeignKey("Lokacijaid");
-
-                    b.Reference("TaxiServisApp.RegistrovaniKlijent")
-                        .InverseCollection()
-                        .ForeignKey("RegistrovaniKlijentid");
-
-                    b.Reference("TaxiServisApp.Vozac")
-                        .InverseCollection()
-                        .ForeignKey("Vozacid");
                 });
         }
     }
