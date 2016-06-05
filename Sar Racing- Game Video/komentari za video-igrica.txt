@@ -1,0 +1,3 @@
+0.17s - Button Bonus nam omoguæava ostvarivanje bonus bodova u kratkom vremenskom periodu.
+0.26s - Suparnièki automobili srazmjerno stadiju igre ubrzavaju
+0.27s - Takodjer, suparnièki automobili kako igra odmièe dolaze sve èešæe.

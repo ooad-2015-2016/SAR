@@ -127,8 +127,12 @@ ZAKLJUČNO - šta radi do sada, šta je obuhvaćeno od zadataka
  - Imamo na početnoj formi, sve je centrirano bez obzira na uređaj (tablet, PC, ili mobitel), zatim na formama dodavanja vazi za tablete i PC, dok na ekranu za mobitele nismo predvidjeli da se otvaraju forme tog tipa (SupervizorPočetna i RegistracijaUposlenika). Prilagođena su forme za vozača.  (checked - možemo još doraditi) 
  - mobilna funkcionalnost se koristi (gps accelerometar itd.) i gdje se nalazi kod ili napisati nije uradjeno
 (staviti link na klasu na git repositoriju gdje se nalazi kod) - da li ovdje treba pisati o GPS ili iznad
- - Web servis koji pruzate sa asp.net i koristite u UWP aplikaciji - Dzenane dopuni
- - Za igricu obavezno napraviti build exe verziju koja se moze pokretati bez unity okruzenja i commitati - Dzenan xD
+ - Web servis koji pruzate sa asp.net i koristite u UWP aplikaciji - 
+Pružamo Sar Taxi Web aplikaciju : https://github.com/ooad-2015-2016/SAR/tree/master/WebAplikacijaTaxiServis
+video:https://github.com/ooad-2015-2016/SAR/blob/master/web-aplikacija%20asp.net%20video.mp4
+ - Za igricu obavezno napraviti build exe verziju koja se moze pokretati bez unity okruzenja i commitati - 
+https://github.com/ooad-2015-2016/SAR/tree/master/Sar%20Game
+Video: https://github.com/ooad-2015-2016/SAR/tree/master/Sar%20Racing-%20Game%20Video
  
 (kako obavite koji zadatak dopunjavajte ovo ili na kraju sutra dodajte, ja imam jos validaciju i help dugme)
 
