@@ -33,7 +33,7 @@ Svi registrovani korisnici sistema mogu da pristupe sistemu nakon unosa njihovih
 **Naručivanje usluga taxi servisa**
 Klijent putem aplikacije šalje zahtjev za taxi uslugu. Zahtjev može poslati na četiri načina:
 - Klikom na dugme, sistem na osnovu GPS lokacije klijenta upućuje najbliže slobodno taxi vozilo.
-- Klikom na označeno slobodno vozilo praćeno GPS sistemom na mapi, klijent dobija osnovne podatke o vozilu i vozaču, i zatim klikom      šalje zahtjev za uslugu. 
+- Klikom na označeno slobodno vozilo praćeno GPS sistemom na mapi, klijent dobija osnovne podatke o vozilu i vozaču, i zatim klikom  šalje zahtjev za uslugu. 
 - Pozivom na broj kompanije, razgovor sa dispečerom koji obavještava taxi vozače. 
 - Rezervacija taxi vozila za određeni datum i odredište uz dodatne usluge.
 
@@ -123,7 +123,7 @@ ZAKLJUČNO
  - Koristimo jedino GPS, koristi se kada se loguje vozač ili korisnik da im se odredi lokacija 
  - Na prvoj LogIn formi prilikom pogresne lozinke, na formama supervizora tokom unosa podataka
  - Koristimo ASP.NET i Bing Mape 
- - Imamo na početnoj formi, sve je centrirano bez obzira na uređaj (tablet, PC, ili mobitel), zatim na formama dodavanja vazi za tablete i PC, dok na ekranu za mobitele nismo predvidjeli da se otvaraju forme tog tipa (SupervizorPočetna i RegistracijaUposlenika). Prilagođena su forme za vozača.  (checked - možemo još doraditi) 
+ - Imamo na početnoj formi, sve je centrirano bez obzira na uređaj (tablet, PC, ili mobitel), zatim na formama dodavanja vazi za tablete i PC, dok na ekranu za mobitele nismo predvidjeli da se otvaraju forme tog tipa (SupervizorPočetna i RegistracijaUposlenika). Prilagođena su forme za vozača.    
  - GPS
  - Web servis koji pruzate sa asp.net i koristite u UWP aplikaciji - 
 	Pružamo Sar Taxi Web aplikaciju : https://github.com/ooad-2015-2016/SAR/tree/master/WebAplikacijaTaxiServis
