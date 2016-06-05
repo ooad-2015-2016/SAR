@@ -10,14 +10,14 @@ namespace WebApplication3.Models
 
         public int Id { get; set; }
        
-        public DateTime vrijemeRezervacije { get; set; }
+        public int vrijemeRezervacije { get; set; }
         public String dodatniZahtjevi { get; set; }
 
         public Rezervacija()
         { }
 
         public Rezervacija(
-             DateTime vrijemeRezervacije, string dodatniZahtjevi) 
+             int vrijemeRezervacije, string dodatniZahtjevi) 
                 
         {
             

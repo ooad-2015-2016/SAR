@@ -235,6 +235,8 @@
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\NarudzbaController.cs" />
+    <Compile Include="Controllers\ONamaController.cs" />
     <Compile Include="Controllers\Rezervacija1Controller.cs" />
     <Compile Include="Controllers\RezervacijaController.cs" />
     <Compile Include="Controllers\RezervacijaServiceController.cs" />
@@ -320,6 +322,7 @@
     <Content Include="Views\Rezervacija1\Details.cshtml" />
     <Content Include="Views\Rezervacija1\Edit.cshtml" />
     <Content Include="Views\Rezervacija1\Index.cshtml" />
+    <Content Include="Views\ONama\Index1.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

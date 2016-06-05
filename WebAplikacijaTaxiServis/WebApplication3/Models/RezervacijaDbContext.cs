@@ -12,10 +12,12 @@ namespace WebApplication3.Models
         public DbSet<RegistrovaniKlijent> RegistrovaniKlijenti { get; set; }
         public DbSet<Lokacija> Lokacije { get; set; }
         public DbSet<Rezervacija> Rezervacije { get; set; }
-
+        
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
         }
+
+        
     }
 }

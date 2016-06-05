@@ -44,14 +44,14 @@
     </script>
     <!--[if lt IE 8]>
         <div style=' clear: both; text-align:center; position: relative;'>
-            <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
-                <img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." />
+            <a href="@Url.Content("~/Content/MyTemplate/")http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
+                <img src="@Url.Content("~/Content/MyTemplate/")http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." />
             </a>
         </div>
         <![endif]-->
     <!--[if lt IE 9]>
-        <script src="js/html5shiv.js"></script>
-        <link rel="stylesheet" media="screen" href="css/ie.css">
+        <script src="@Url.Content("~/Content/MyTemplate/")js/html5shiv.js"></script>
+        <link rel="stylesheet" media="screen" href="@Url.Content("~/Content/MyTemplate/")css/ie.css">
     <![endif]-->
 
 </head>
@@ -66,11 +66,11 @@
                         <div class="grid_12">
                             <nav class="horizontal-nav full-width horizontalNav-notprocessed">
                                 <ul class="sf-menu">
-                                    <li class="current"><a href="index.html">Home</a></li>
-                                    <li><a href="index-1.html">O Nama</a></li>
+                                    <li class="current"><a href="@Url.Content("~/Home/")Index">Home</a></li>
+                                    <li><a href="@Url.Content("~/ONama/")Index1">O Nama</a></li>
                                     <li><a href="@Url.Content("~/Rezervacija1/")Create">Rezervacija</a></li>
-                                    <li><a href="index-3.html">Naručivanje</a></li>
-                                    <li><a href="index-4.html">Kontakt</a></li>
+                                    <li><a href="@Url.Content("~/Narudzba/")">Naručivanje</a></li>
+                                    <li><a href="@Url.Content("~/Content/MyTemplate/")index-4.html">Kontakt</a></li>
                                 </ul>
                             </nav>
                             <div class="clear"></div>
@@ -81,8 +81,8 @@
                 <div class="container_12">
                     <div class="grid_12">
                         <h1>
-                            <a href="index.html">
-                                <img src="images/logo.png" alt="Your Happy Family">
+                            <a href="@Url.Content("~/Content/MyTemplate/")index.html">
+                                <img src="@Url.Content("~/Content/MyTemplate/")images/logo.png" alt="Your Happy Family">
                             </a>
                         </h1>
                     </div>
@@ -91,9 +91,9 @@
             </header>
             <div class="slider_wrapper ">
                 <div id="camera_wrap" class="">
-                    <div data-src="images/slide.jpg"></div>
-                    <div data-src="images/slide1.jpg"></div>
-                    <div data-src="images/slide2.jpg"></div>
+                    <div data-src="@Url.Content("~/Content/MyTemplate/")images/slide.jpg"></div>
+                    <div data-src="@Url.Content("~/Content/MyTemplate/")images/slide1.jpg"></div>
+                    <div data-src="@Url.Content("~/Content/MyTemplate/")images/slide2.jpg"></div>
                 </div>
             </div>
             <div class="container_12">
@@ -101,7 +101,7 @@
                     <div class="banner">
                         <div class="maxheight">
                             <div class="banner_title">
-                                <img src="images/icon1.png" alt="">
+                                <img src="@Url.Content("~/Content/MyTemplate/")images/icon1.png" alt="">
                                 <div class="extra_wrapper">
                                     Brzo
                                     <div class="color1">Pouzdano</div>
@@ -115,7 +115,7 @@
                     <div class="banner">
                         <div class="maxheight">
                             <div class="banner_title">
-                                <img src="images/icon2.png" alt="">
+                                <img src="@Url.Content("~/Content/MyTemplate/")images/icon2.png" alt="">
                                 <div class="extra_wrapper">
                                     Najbolja
                                     <div class="color1">Cijena</div>
@@ -128,7 +128,7 @@
                     <div class="banner">
                         <div class="maxheight">
                             <div class="banner_title">
-                                <img src="images/icon3.png" alt="">
+                                <img src="@Url.Content("~/Content/MyTemplate/")images/icon3.png" alt="">
                                 <div class="extra_wrapper">
                                     Jedan
                                     <div class="color1">Klik</div>
