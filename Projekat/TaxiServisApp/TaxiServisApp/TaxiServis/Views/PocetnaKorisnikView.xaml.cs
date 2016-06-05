@@ -11,7 +11,9 @@ using TaxiServisApp.TaxiServis.Views;
 using Windows.Devices.Geolocation;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.Services.Maps;
 using Windows.Storage.Streams;
+using Windows.UI;
 using Windows.UI.Core;
 using Windows.UI.Popups;
 using Windows.UI.Xaml;
@@ -38,6 +40,14 @@ namespace TaxiServisApp.TaxiServis.Views
         bool ponavljanjePetljeLociranja;
         Korisnik _korisnik { get; set; }
         NavigationEventArgs _e;
+        BasicGeoposition b;
+        //Lokacija l;
+        Geopoint geoPoint;
+        MapIcon pin;
+        VozacSaPushPinom vozacPushPin;
+        RegistrovaniKlijent klijent;
+        bool raditiUpdateMape;
+
         public PocetnaKorisnikView()
         {
             this.InitializeComponent();
@@ -45,16 +55,33 @@ namespace TaxiServisApp.TaxiServis.Views
             mapIcon = new MapIcon();
             mapIcon.Image = RandomAccessStreamReference.CreateFromUri(new Uri("ms-appx:///Assets/klijentTrenutni.png"));
             mapIcon.Title = "Vaša lokacija";
-            mapIcon.NormalizedAnchorPoint = new Point(0.5, 0.5);
+            mapIcon.NormalizedAnchorPoint = new Point(0, 1);
+            _korisnik = new Korisnik();
+            klijent = new RegistrovaniKlijent();
+            string vozacUsername = textBlock_korisnik.Text;
 
-            korisnickaMapa_MapControl.MapElements.Add(mapIcon);
+            using (var db = new TaxiServisDbContext())
+            {
+                foreach (var k in db.RegistrovaniKlijenti)
+                {
+                    if (k.korisnickoIme == vozacUsername)
+                        this.klijent = k;
+
+                    break;
+                }
+            }
+            raditiUpdateMape = true;
+
+                korisnickaMapa_MapControl.MapElements.Add(mapIcon);
             ponavljanjePetljeLociranja = true;
             locirajMe();
+            
         }
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             _e = e;
             DataContext = new PocetnaKorisnikViewModel((MainPageView)_e.Parameter);
+           
         }
         private async void PocetnaKorisnikView_Loaded(object sender, RoutedEventArgs e)
         {
@@ -160,6 +187,121 @@ namespace TaxiServisApp.TaxiServis.Views
         {
             var dialog = new MessageDialog(message.ToString());
             await Dispatcher.RunAsync(CoreDispatcherPriority.Normal, async () => await dialog.ShowAsync());
+        }
+
+        public async void updateTaxiVozila()
+        {
+            bool imaZahtjevPrihvacen = false;
+            using (var db = new TaxiServisDbContext())
+            {
+                //listaZahtjevaPushpin.Clear();
+                korisnickaMapa_MapControl.MapElements.Clear();
+                korisnickaMapa_MapControl.Children.Clear();
+                korisnickaMapa_MapControl.Routes.Clear();
+                vozacPushPin = new VozacSaPushPinom();
+                NarudzbaOdmah narudzba = new NarudzbaOdmah();
+                if (db.Vozači != null)
+                    korisnickaMapa_MapControl.MapElements.Add(mapIcon);
+                try
+                {
+                    foreach(var z in db.NarudzbeOdmah)
+                    {
+                        if (z.klijentId == klijent.id && z.statusNarudzbe == StatusNarudzbe.Prihvacena)
+                        {
+                            imaZahtjevPrihvacen = true;
+                            narudzba = z;
+                        }
+                    }
+
+                    foreach (var vozac in db.Vozači)
+                    {
+                        if ((vozac.aktivan == true && vozac.slobodan == true) && imaZahtjevPrihvacen == false)
+                        {
+                            vozacPushPin.vozac = vozac;
+                            b = new BasicGeoposition();
+                            double d = (from l in db.Lokacije where l.id == vozac.trenutnaLokacijaId select l.duzina).First();
+                            double s = (from l in db.Lokacije where l.id == vozac.trenutnaLokacijaId select l.sirina).First();
+                            b.Latitude = s;
+                            b.Longitude = d;
+                            geoPoint = new Geopoint(b);
+                            pin = new MapIcon();
+                            pin.Location = geoPoint;
+                                pin.Image = RandomAccessStreamReference.CreateFromUri(new Uri("ms-appx:///Assets/taxiSlobodan.png"));
+                            pin.NormalizedAnchorPoint = new Point(0, 1);
+                            pin.Title = vozacPushPin.vozac.korisnickoIme;
+                            //prikaz rute/puta do klijenta
+                           
+                            korisnickaMapa_MapControl.MapElements.Add(pin);
+                            //listaZahtjevaSaPushpinom.Add(zahtjevZaSaPushpinom);
+                            // var dialog = new MessageDialog("dodanPushpin", vozacMapa_MapControl.MapElements.Count().ToString());
+                            //  dialog.ShowAsync();
+                        }
+                        else if ((vozac.aktivan == true && vozac.slobodan == false) && imaZahtjevPrihvacen == true)
+                        {
+                            vozacPushPin.vozac = vozac;
+                            b = new BasicGeoposition();
+                            double d = (from l in db.Lokacije where l.id == vozac.trenutnaLokacijaId select l.duzina).First();
+                            double s = (from l in db.Lokacije where l.id == vozac.trenutnaLokacijaId select l.sirina).First();
+                            b.Latitude = s;
+                            b.Longitude = d;
+                            geoPoint = new Geopoint(b);
+                            pin = new MapIcon();
+                            pin.Location = geoPoint;
+                            pin.Image = RandomAccessStreamReference.CreateFromUri(new Uri("ms-appx:///Assets/taxiOstaliTaxi.png"));
+                            pin.NormalizedAnchorPoint = new Point(0, 1);
+                            pin.Title = vozacPushPin.vozac.korisnickoIme;
+                            //prikaz rute/puta do klijenta
+
+                            korisnickaMapa_MapControl.MapElements.Add(pin);
+                            //lokacija klijenta
+                            BasicGeoposition startLocation = new BasicGeoposition() { Latitude = mapIcon.Location.Position.Latitude, Longitude = mapIcon.Location.Position.Longitude };
+                            //lokacija taxija
+                            BasicGeoposition endLocation = new BasicGeoposition() { Latitude = pin.Location.Position.Latitude, Longitude = pin.Location.Position.Longitude };
+
+
+                            // Get the route between the points.
+                            MapRouteFinderResult routeResult =
+                                  await MapRouteFinder.GetDrivingRouteAsync(
+                                  new Geopoint(startLocation),
+                                  new Geopoint(endLocation),
+                                  MapRouteOptimization.Time,
+                                  MapRouteRestrictions.None);
+
+                            if (routeResult.Status == MapRouteFinderStatus.Success)
+                            {
+                                // Use the route to initialize a MapRouteView.
+                                MapRouteView viewOfRoute = new MapRouteView(routeResult.Route);
+                                viewOfRoute.RouteColor = Colors.LightGreen;
+                                viewOfRoute.OutlineColor = Colors.DarkGray;
+
+                                // Add the new MapRouteView to the Routes collection
+                                // of the MapControl.
+                                korisnickaMapa_MapControl.Routes.Add(viewOfRoute);
+
+                                // Fit the MapControl to the route.
+                                /*     await vozacMapa_MapControl.TrySetViewBoundsAsync(
+                                           routeResult.Route.BoundingBox,
+                                           null,
+                                           Windows.UI.Xaml.Controls.Maps.MapAnimationKind.None);*/
+                            }
+                        }
+                    }
+                }
+                catch (System.Exception)
+                { }
+               
+            }
+        }
+
+        public async void updateMapeStalno()
+        {
+            while (raditiUpdateMape)
+            {
+                updateTaxiVozila();
+                await Task.Delay(5000);
+            };
+
+
         }
     }
 }

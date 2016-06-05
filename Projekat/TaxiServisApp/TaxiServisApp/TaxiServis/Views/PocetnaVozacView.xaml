@@ -13,9 +13,6 @@
         <DataTemplate x:Key="listeZahtjevaTemplate" x:DataType="model:ZahtjevZaPrevozZaListe">
             <Grid>
                 <TextBlock  Style="{ThemeResource BodyTextBlockStyle}" ><LineBreak/><Run Text="{x:Bind klijent}"/><LineBreak/><Run Text="{x:Bind lokacija}"/><LineBreak/><Run Text="{x:Bind vrijemeCekanja}"/><LineBreak/></TextBlock>
-
-
-
             </Grid>
         </DataTemplate>
     </Page.Resources>
@@ -28,9 +25,9 @@
         <Grid.Background>
             <ImageBrush Stretch="Fill" ImageSource="Assets/PocetnaPozadina.jpg"/>
         </Grid.Background>
-        <Grid HorizontalAlignment="Left" Height="829" Margin="18,33,0,0" VerticalAlignment="Top" Width="1420">
-            <GridView x:Name="gridView" HorizontalAlignment="Left" Margin="-1,10,0,0" VerticalAlignment="Top" Width="270" Height="809" BorderThickness="1">
-                <ListView x:Name="listView_Zahtjevi" Height="799" Width="260" IsItemClickEnabled="True" ItemTemplate="{StaticResource listeZahtjevaTemplate}" ItemsSource="{Binding listaZahtjeva, Mode=OneWay}">
+        <Grid>
+            <GridView x:Name="gridView" HorizontalAlignment="Left" Margin="-1,10,0,0" Width="270" BorderThickness="1" Background="White" ScrollViewer.VerticalScrollBarVisibility="Visible">
+                <ListView x:Name="listView_Zahtjevi" Width="260" IsItemClickEnabled="True" ItemTemplate="{StaticResource listeZahtjevaTemplate}" ItemsSource="{Binding listaZahtjeva, Mode=OneWay}" Height="125">
 
                     <StackPanel Orientation="Vertical">
                         <GridView>
@@ -49,28 +46,21 @@
                -->
                 </ListView>
             </GridView>
-            <Grid HorizontalAlignment="Left" Height="819" Margin="269,0,0,0" VerticalAlignment="Top" Width="1141">
-                <Maps:MapControl x:Name="vozacMapa_MapControl" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" Height="660" Width="1141"  BorderBrush="Black"  BorderThickness="1"  MapServiceToken="ois1uNA3x2DJUTgdplO1~2foFEDJgDtzslFL6nBuSKg~Ar05QsKorpOPv95HOlSMS_IfXT1LgrCyzNo0w0JVtleydukGTfJBOgTFWuPqqk4A" ZoomInteractionMode="GestureAndControl" MapElementClick="vozacMapa_MapControl_MapElementClick" TiltInteractionMode="GestureAndControl" RotateInteractionMode="GestureAndControl">
+            <Grid Margin="269,0,0,0">
+                <Grid VerticalAlignment="Top" Height="682" BorderThickness="0,0,0,150">
+                    <Maps:MapControl x:Name="vozacMapa_MapControl"  BorderBrush="Black"  BorderThickness="1"  MapServiceToken="ois1uNA3x2DJUTgdplO1~2foFEDJgDtzslFL6nBuSKg~Ar05QsKorpOPv95HOlSMS_IfXT1LgrCyzNo0w0JVtleydukGTfJBOgTFWuPqqk4A" ZoomInteractionMode="GestureAndControl" MapElementClick="vozacMapa_MapControl_MapElementClick" TiltInteractionMode="GestureAndControl" RotateInteractionMode="GestureAndControl"/>
+                    <Slider x:Name="mySlider" Orientation="Vertical" HorizontalAlignment="Right" Height="211" Width="45" Margin="0,199,42,230" Minimum="10" Maximum="20" Value="15" ValueChanged="ZoomValueChanged"  Foreground="BlueViolet"/>
+                    <TextBox x:Name="geoDuzina_TextBlock"  Text="{Binding Path=geoDuzina, Mode=TwoWay}" HorizontalAlignment="Left" Margin="0,601,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Visibility="Collapsed"/>
+                    <TextBox x:Name="geoSirina_TextBlock"  Text="{Binding Path=geoSirina, Mode=TwoWay}" HorizontalAlignment="Left" Margin="0,638,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Visibility="Collapsed"/>
+                </Grid>
 
-                </Maps:MapControl>
-                <Slider x:Name="mySlider" Orientation="Vertical" HorizontalAlignment="Right" Height="211" Width="45" Margin="0,199,42,230" Minimum="10" Maximum="20" Value="15" ValueChanged="ZoomValueChanged"  Foreground="BlueViolet"/>
-                <TextBox x:Name="geoDuzina_TextBlock"  Text="{Binding Path=geoDuzina, Mode=TwoWay}" HorizontalAlignment="Left" Margin="10,601,0,0" TextWrapping="Wrap"  VerticalAlignment="Top"/>
-                <TextBox x:Name="geoSirina_TextBlock"  Text="{Binding Path=geoSirina, Mode=TwoWay}" HorizontalAlignment="Left" Margin="10,638,0,0" TextWrapping="Wrap"  VerticalAlignment="Top"/>
 
-                <GridView x:Name="gridView1" HorizontalAlignment="Left" Margin="-1,675,0,0" VerticalAlignment="Top" Width="263" Height="134" BorderBrush="Black" BorderThickness="1">
-                    <GridViewItem Content="Slobodan" Margin="0" Height="134" Width="130" FontSize="21.333" Background="#D3B4B4B4"/>
-                    <GridViewItem Content="Zauzet" Margin="0" Height="134" Width="130" FontSize="21.333" Background="#D3FD834A"/>
-                </GridView>
-                <GridView x:Name="gridView1_Copy" HorizontalAlignment="Left" Margin="298,675,0,0" VerticalAlignment="Top" Width="263" Height="134" BorderBrush="Black" BorderThickness="1">
-                    <GridViewItem Content="Aktivan" Margin="0" Height="134" Width="130" FontSize="21.333" Background="#D300F74F"/>
-                    <GridViewItem Content="Neaktivan" Margin="0" Height="134" Width="130" FontSize="21.333" Background="#D3B4B4B4"/>
-                </GridView>
-                <Grid HorizontalAlignment="Left" Height="134" Margin="798,675,0,0" VerticalAlignment="Top" Width="333" BorderBrush="Black" BorderThickness="1">
+
+                <Grid Height="200" Margin="0,115,0,0" BorderBrush="Black" BorderThickness="1" VerticalAlignment="Bottom">
                     <TextBlock x:Name="textBlock" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Prikaz:" VerticalAlignment="Top" FontSize="29.333"/>
-                    <ToggleSwitch x:Name="toggleSwitch" Header="Svi klijenti" HorizontalAlignment="Left" Margin="10,64,0,0" VerticalAlignment="Top"/>
+                    <ToggleSwitch x:Name="toggleSwitch" Header="Svi klijenti" HorizontalAlignment="Left" Margin="0,71,0,0" VerticalAlignment="Top"/>
                     <ToggleSwitch x:Name="toggleSwitch_Copy" Header="Slobodni taxi" HorizontalAlignment="Left" Margin="170,10,0,0" VerticalAlignment="Top"/>
                     <ToggleSwitch x:Name="toggleSwitch_Copy1" Header="Zauzeti taxi" HorizontalAlignment="Left" Margin="170,70,0,0" VerticalAlignment="Top"/>
-
                 </Grid>
                 <TextBlock x:Name="textBlock_vozacKorisnickoIme" HorizontalAlignment="Left" Margin="1003,19,0,0" TextWrapping="Wrap" Text="{Binding vozacKorisnickoIme, Mode=OneWay}" VerticalAlignment="Top"/>
             </Grid>

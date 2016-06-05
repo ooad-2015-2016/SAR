@@ -24,6 +24,7 @@
         <Button x:Name="buttonPrijava" HorizontalAlignment="Center" Margin="35,462,25,0" VerticalAlignment="Top" RenderTransformOrigin="0.548,0.539" Height="45" Width="300" Background="#D3FFA000"  Content="Prijava" Command="{Binding Path=MainPageCommand}" />
         <TextBlock x:Name="textBlockRegistracija" HorizontalAlignment="Center" Margin="35,532,87,0" TextWrapping="Wrap" Text="Niste registrovani? Napravite nalog!" VerticalAlignment="Top" Foreground="Black"/>
         <Button x:Name="buttonRegistracija" Content="Registrujte se!" HorizontalAlignment="Center" Margin="35,557,25,0" VerticalAlignment="Top" RenderTransformOrigin="0.548,0.539" Height="45" Width="300" Background="#D300F0C8" Command="{Binding Path=RegistracijaCommand}"/>
+        <Button x:Name="helpbutton" Command="{Binding HelpCommand}" Content="Help" HorizontalAlignment="Center" Height="49" Margin="0,261,0,0" VerticalAlignment="Top" Width="300" Background="#4C0D4781" Foreground="#FF1F11A4"/>
 
     </Grid>
 </Page>

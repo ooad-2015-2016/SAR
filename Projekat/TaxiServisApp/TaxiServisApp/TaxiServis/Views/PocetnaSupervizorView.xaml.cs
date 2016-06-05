@@ -32,9 +32,6 @@ namespace TaxiServisApp.TaxiServis.Views
             DataContext = new PocetnaSupervizorViewModel((MainPageView)e.Parameter);
         }
 
-        private void ListView_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
 
-        }
     }
 }

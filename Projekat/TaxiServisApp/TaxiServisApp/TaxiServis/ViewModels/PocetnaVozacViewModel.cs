@@ -93,9 +93,12 @@ namespace TaxiServisApp.TaxiServis.ViewModels
                 ZahtjevZaPrevozZaListe zahtjevZaListe = new ZahtjevZaPrevozZaListe();
                 foreach (var zahtjevOdmah in db.NarudzbeOdmah.ToList())
                 {
-                   // var dialog = new MessageDialog("radiUnos");
+                    // var dialog = new MessageDialog("radiUnos");
                     //dialog.ShowAsync();
-                        zahtjevZaListe.vrijemeCekanja = DateTime.Now -  zahtjevOdmah.vrijemeNarudzbe;
+                    DateTime trenutnoVrijeme = DateTime.Now;
+                        zahtjevZaListe.vrijemeCekanja = trenutnoVrijeme -  zahtjevOdmah.vrijemeNarudzbe;
+                    zahtjevZaListe.vrijemeCekanjaString = zahtjevZaListe.vrijemeCekanja.ToString(@"hh\:mm\:ss");
+                    //zahtjevZaListe.vrijemeCekanja.
                     zahtjevZaListe.id = zahtjevOdmah.id;
                     zahtjevZaListe.tipZahtjeva = TipZahtjevaZaPrevoz.NarudzbaRegistrovaniKlijent;
                     zahtjevZaListe.klijent = (from k in db.RegistrovaniKlijenti where k.id == zahtjevOdmah.klijentId select k.korisnickoIme).First().ToString();

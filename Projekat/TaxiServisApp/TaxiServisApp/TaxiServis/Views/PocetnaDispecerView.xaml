@@ -8,35 +8,42 @@
     x:Class="TaxiServisApp.TaxiServis.Views.PocetnaDispecerView"
     mc:Ignorable="d">
 
-    <Grid Background="#B2D8D8D5">
-        <RelativePanel HorizontalAlignment="Left" Height="146" VerticalAlignment="Top" Width="988">
-            <AppBarButton x:Name="promjenaLozinkeButton" Icon="Edit" Label="Izmjeni lozinku" Margin="740,2,-898,-78" Height="144" Width="240" Background="#B2EA85EE" FontSize="22">
-                <CaptureElement Height="100" Width="100"/>
-            </AppBarButton>
-            <AppBarButton x:Name="nazadButton" Label="Nazad" Margin="0,0,-185,-86" Width="260" Height="146" HorizontalAlignment="Center" VerticalAlignment="Top" Click="nazadButton_Click" Background="#66EE17DA" Icon="Back" FontSize="20">
-                <RelativePanel Height="100" Width="100"/>
-            </AppBarButton>
-            <Button x:Name="button" Content="Button" HorizontalAlignment="Left" Height="146" Margin="260,2,-431,-116" VerticalAlignment="Top" Width="240" Background="#3319DAEE"/>
-            <Button x:Name="button_Copy" Content="Button" HorizontalAlignment="Left" Height="145" Margin="500,0,-671,-114" VerticalAlignment="Top" Width="240" Background="#3319DAEE"/>
-        </RelativePanel>
-        <Image x:Name="image" HorizontalAlignment="Left" Height="160" Margin="1026,0,0,0" VerticalAlignment="Top" Width="208" Source="ms-appx:///Assets/directions.png"/>
-        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="361" Margin="290,289,0,0" VerticalAlignment="Top" Width="956">
-            <Maps:MapControl Margin="-1,-1,1,-1"/>
-        </Border>
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid Height="45" Margin="340,0,0,0" VerticalAlignment="Top">
+            <AutoSuggestBox QueryIcon="Find" Margin="10,10,10,0" VerticalAlignment="Top"/>
+        </Grid>
+        <Grid x:Name="MapaIOstalo" Margin="340,0,0,0">
+            <Grid Margin="0,60,0,235">
 
-        <ListBox x:Name="listView1" Width="260" Margin="10,170,1010,70" HorizontalAlignment="Left" VerticalAlignment="Top">
-            <ListBoxItem Content="Mujo Mujić&#xD;&#xA;Ive Andrića, Alipašino polje&#xD;&#xA;2 km, prije 2 min." Height="120" Background="#3319DAEE" FontSize="18.667" BorderBrush="#FF969696" BorderThickness="1"/>
-            <ListBoxItem Content="Huso Husić&#xA;Trg Solidarnosti, RTV&#xA;5 km, prije 1 min." Height="120" Background="#B2B4FFA0" FontSize="18.667" BorderBrush="#FF969696" BorderThickness="1"/>
-            <ListBoxItem Content="Emina Eminić&#xA;Safeta Zajke&#xA;12 km, prije 3 min." Height="120" Background="#4CEA85EE" FontSize="18.667" BorderBrush="#FF969696" BorderThickness="1"/>
-            <ListBoxItem Content="R: Maja Majić, u 16:30&#xA;Aleja Lipa&#xA;22 km, više..." Height="120" Background="#3319DAEE" FontSize="18.667" BorderBrush="#FF969696" BorderThickness="1"/>
-            <ListBoxItem Content="Haris Harić&#xA;Želj. stanica, Alipašino polje&#xA;4 km, prije 1 min." Height="120" Background="#FFB4FFA0" FontSize="18.667" BorderBrush="#FF969696" BorderThickness="1"/>
-            <ListBoxItem Content="Huso Husić&#xA;Aut. stanica, Pofalići&#xA;15 km, prije 4 min." Height="120" Background="#FFB4FFA0" FontSize="18.667" BorderBrush="#FF969696" BorderThickness="1"/>
-            <ListBoxItem Content="..." Height="120" Background="#FFB4FFA0" FontSize="18.667" BorderBrush="#FF969696" BorderThickness="1"/>
-            <ListBoxItem Content="Emina Eminić&#xA;Safeta Zajke&#xA;12 km, prije 7 min." Height="120" Background="#FFB4FFA0" FontSize="18.667"/>
-        </ListBox>
-        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Height="45" Margin="290,170,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="252" FontSize="22" Foreground="#FF190808">
-        	<Run Text="Slobodni taxi"/>
-        	<Run Text=":"/>
-        </TextBlock>
+                <Maps:MapControl x:Name="dispecer_MapControl" Margin="0" ZoomLevel="15" MapServiceToken="ois1uNA3x2DJUTgdplO1~2foFEDJgDtzslFL6nBuSKg~Ar05QsKorpOPv95HOlSMS_IfXT1LgrCyzNo0w0JVtleydukGTfJBOgTFWuPqqk4A" ZoomInteractionMode="GestureAndControl" RotateInteractionMode="Auto" MapTapped="registracija_MapControl_MapTapped" TiltInteractionMode="GestureAndControl">
+
+                </Maps:MapControl>
+            </Grid>
+            <Grid Height="198" Margin="10,0,1236,32" VerticalAlignment="Bottom" HorizontalAlignment="Center" Width="334">
+                <TextBlock x:Name="textBlock" HorizontalAlignment="Center" Margin="13,0,139,0" TextWrapping="Wrap" Text="Datum rezervacije" VerticalAlignment="Top" SelectionChanged="textBlock_SelectionChanged" Width="176"/>
+                <DatePicker x:Name="datumRez_DatePicker" HorizontalAlignment="Center" Margin="13,20,11,0" VerticalAlignment="Top" Width="286"/>
+                <TextBlock x:Name="textBlock1" HorizontalAlignment="Center" Margin="13,57,174,0" TextWrapping="Wrap" Text="Vrijeme rezervacije" VerticalAlignment="Top" Width="141"/>
+                <TimePicker x:Name="vrijemeRez_TimePicker" HorizontalAlignment="Center" Margin="13,77,11,0" VerticalAlignment="Top" Width="296"/>
+                <TextBlock x:Name="textBlock2" HorizontalAlignment="Center" Margin="22,114,174,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="132">
+            	<Run Text="Dodatni "/>
+            	<Run Text="zahtjevi"/>
+                </TextBlock>
+                <TextBox x:Name="zahtjevi_textbox" HorizontalAlignment="Center" Margin="13,134,11,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="62" Width="296" PlaceholderText="Unesite Vaše zahtjeve"/>
+            </Grid>
+            <Button x:Name="button" Content="Napravi rezervaciju neregistrovanog korisnika" HorizontalAlignment="Stretch" Margin="0" VerticalAlignment="Bottom" Command="{Binding napraviRezervacijuCommand}" Click="button_Click"/>
+            <Grid Height="193" Margin="380,850,856,0" VerticalAlignment="Top">
+                <RadioButton x:Name="polazna_radioButton" Content="Polazna" HorizontalAlignment="Left" Margin="10,18,0,-10" VerticalAlignment="Top" Checked="radioButton_Checked"/>
+                <RadioButton x:Name="krajnja_radioButton" Content="Krajnja" HorizontalAlignment="Left" Margin="10,44,0,0" VerticalAlignment="Top"/>
+                <CheckBox x:Name="checkBox" Content="Samo polazna lokacija" HorizontalAlignment="Left" Margin="10,-5,0,0" VerticalAlignment="Top" Checked="checkBox_Checked" Unchecked="checkBox_Unchecked"/>
+                <TextBlock x:Name="rastojanje_textBlock" HorizontalAlignment="Left" Margin="10,69,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="19">
+            	<Run Text="Rastojanje"/>
+            	<Run Text=":"/>
+                </TextBlock>
+                <TextBlock x:Name="cijena_textBlock" HorizontalAlignment="Left" Margin="10,90,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="19" Text="Cijena: "/>
+                <TextBlock x:Name="korisnik_TextBlock" HorizontalAlignment="Center" TextWrapping="Wrap" Text="{Binding klijenKorisnickoIme, Mode=OneWay}" VerticalAlignment="Center" Margin="1060,15,675,15" Width="185" Foreground="#FF8D4D4D"/>
+
+            </Grid>
+        </Grid>
+        <Grid HorizontalAlignment="Left" Margin="10,10,0,0" Width="325"/>
     </Grid>
 </Page>

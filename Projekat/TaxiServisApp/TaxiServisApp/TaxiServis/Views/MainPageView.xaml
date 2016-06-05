@@ -28,7 +28,7 @@ BaseTextBlockStyle}" />
 
     <Grid>
         <Grid.Background>
-            <ImageBrush Stretch="UniformToFill" ImageSource="ms-appx:///Assets/PocetnaPozadina.jpg"/>
+            <ImageBrush ImageSource="ms-appx:///Assets/PocetnaPozadina.jpg" Stretch="UniformToFill"/>
         </Grid.Background>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" MinHeight="48" />
@@ -43,8 +43,7 @@ FontSize="36" Click="PrikaziMeni_Click" Background="White" Width="55" Canvas.ZIn
  Grid.Row="1"
  DisplayMode="CompactOverlay"
  OpenPaneLength="200"
- CompactPaneLength="0"
- HorizontalAlignment="Left" Width="1910">
+ CompactPaneLength="0" Margin="0">
             <SplitView.Pane>
                 <ListView
  x:Name="MeniStavkeListView"

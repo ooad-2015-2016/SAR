@@ -101,16 +101,18 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\20160530125018_InitialMigration.cs" />
-    <Compile Include="Migrations\20160530125018_InitialMigration.designer.cs">
-      <DependentUpon>20160530125018_InitialMigration.cs</DependentUpon>
+    <Compile Include="Migrations\20160605094934_InitialMigration.cs" />
+    <Compile Include="Migrations\20160605094934_InitialMigration.designer.cs">
+      <DependentUpon>20160605094934_InitialMigration.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\TaxiServisDbContextModelSnapshot.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TaxiServis\DataSource\DataSourceMeni.cs" />
+    <Compile Include="TaxiServis\Helpers\DelegateCommand.cs" />
     <Compile Include="TaxiServis\Helpers\INavigationService.cs" />
     <Compile Include="TaxiServis\Helpers\RelayCommand.cs" />
     <Compile Include="TaxiServis\Models\BingMaps.cs" />
+    <Compile Include="TaxiServis\Models\Cijenovnik.cs" />
     <Compile Include="TaxiServis\Models\DefaultPodaci.cs" />
     <Compile Include="TaxiServis\Models\Dispecer.cs" />
     <Compile Include="TaxiServis\Models\ElementMape.cs" />
@@ -139,6 +141,7 @@
     <Compile Include="TaxiServis\Models\UlogaMeniStavka.cs" />
     <Compile Include="TaxiServis\Models\Uposlenik.cs" />
     <Compile Include="TaxiServis\Models\Vozac.cs" />
+    <Compile Include="TaxiServis\Models\VozacSaPushPinom.cs" />
     <Compile Include="TaxiServis\Models\ZahtjevZaPrevozSaPushPinom.cs" />
     <Compile Include="TaxiServis\Models\ZahtjevZaPrevozZaListe.cs" />
     <Compile Include="TaxiServis\Models\ZahtjevZaPrijevoz.cs" />
@@ -212,7 +215,7 @@
     <Content Include="Assets\taxi-xxl.png" />
     <Content Include="Assets\taxiOstaliTaxi.png" />
     <Content Include="Assets\taxiSlobodan.png" />
-    <Content Include="Assets\user-2-xxl %281%29.png" />
+    <Content Include="Assets\user-2-xxl.png" />
     <Content Include="Assets\voziloCrvena.jpg" />
     <Content Include="Assets\voziloZelena.jpg" />
     <Content Include="Properties\Default.rd.xml" />
