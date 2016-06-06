@@ -1,0 +1,15 @@
+Klikom na dugme   Registruj se  vršite registraciju unosom Vaših osnovnih podataka, u cilju dodatnih popusta i besplatnih vožnji.
+Nakon registracije, Vašu prijavu na sistem vršite klikom na dugme  „Prijava“ , unosom korisnickog imena i šifre.Prijavom na sistem, 
+otvori Vam se mapa grada u kojem se nalazite i Vaša trenutacna lokacija.U lijevom uglu nalazi se lista usluga: 
+1.NARUDŽBA TAXIA 
+2.REZERVACIJA TAXIA
+3.PODACI O KLIJENT
+LOG OUT
+NARUDŽBA TAXIA:
+Klikom na dugme  „Naruci taxi“ , narucujete taxi, koji dolazi na Vašu trenutacnu lokaciju, ili lokaciju koju oznacite na mapi kao polaznu.
+Takoder možete klikom na mapi oznaciti i Vašu krajnju destinaciju, i tako i dobiti i uvid u cijenu narucene vožnje, koja ce Vam biti 
+prikazana u u gornjem lijevom uglu.
+REZERVACIJA TAXIA:\nVrši se na potpuno isti nacin kao i i uobicajna NARUDŽBA TAXi - a.Imate mogucnost rezervacije taxia za unaprijed 
+dogovoreni period i željenu destinaciju.Imate uvid u cijenu vožnje, kao i mogucnost biranja taxia ili nekih drugih dodatnih zatjeva 
+koje navodite u Vašoj rezervaciji.\nPODACI O KLIJENTU:\nTu se nalaze Vaši osnovni podaci, kao i broj dosadašnjih vožnji i evidencija o 
+popustima.\nLOG OUT:\nIzlazite iz aplikacije ukoliko ste izvršili narudžbi ili ste odustali od nje.
